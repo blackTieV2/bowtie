@@ -140,6 +140,15 @@ pub struct TreeRow {
     pub title: String,
     pub sort_order: i64,
     pub depth: i64,
+    pub description: String,
+    pub properties: serde_json::Value,
+}
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct LinkRow {
+    pub source_id: String,
+    pub target_id: String,
+    pub relation: String,
 }
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -148,15 +157,16 @@ pub struct CaseSnapshot {
     pub path: Option<String>,
     pub dirty: bool,
     pub tree: Vec<TreeRow>,
+    pub links: Vec<LinkRow>,
 }
-struct ActiveCase {
-    db: Connection,
+pub(crate) struct ActiveCase {
+    pub(crate) db: Connection,
     path: Option<PathBuf>,
-    dirty: bool,
+    pub(crate) dirty: bool,
 }
 #[derive(Default)]
 pub struct CaseStore {
-    active: Option<ActiveCase>,
+    pub(crate) active: Option<ActiveCase>,
 }
 
 impl CaseStore {
@@ -168,7 +178,7 @@ impl CaseStore {
             .db
             .query_row("SELECT title FROM case_info WHERE id=1", [], |r| r.get(0))
             .map_err(error_text)?;
-        let mut query = case.db.prepare("SELECT id,parent_id,kind,title,sort_order,depth FROM case_tree ORDER BY depth,sort_order,id").map_err(error_text)?;
+        let mut query = case.db.prepare("SELECT t.id,t.parent_id,t.kind,t.title,t.sort_order,t.depth,e.description,coalesce((SELECT json_group_object(property_key,json(value_json)) FROM entity_property WHERE entity_id=t.id),'{}') FROM case_tree t JOIN entity e ON e.id=t.id ORDER BY t.depth,t.sort_order,t.id").map_err(error_text)?;
         let tree = query
             .query_map([], |r| {
                 Ok(TreeRow {
@@ -178,6 +188,26 @@ impl CaseStore {
                     title: r.get(3)?,
                     sort_order: r.get(4)?,
                     depth: r.get(5)?,
+                    description: r.get(6)?,
+                    properties: serde_json::from_str(&r.get::<_, String>(7)?).map_err(|e| {
+                        rusqlite::Error::FromSqlConversionFailure(
+                            7,
+                            rusqlite::types::Type::Text,
+                            Box::new(e),
+                        )
+                    })?,
+                })
+            })
+            .map_err(error_text)?
+            .collect::<rusqlite::Result<Vec<_>>>()
+            .map_err(error_text)?;
+        let mut link_query = case.db.prepare("SELECT source_id,target_id,relation FROM entity_link ORDER BY source_id,relation,target_id").map_err(error_text)?;
+        let links = link_query
+            .query_map([], |r| {
+                Ok(LinkRow {
+                    source_id: r.get(0)?,
+                    target_id: r.get(1)?,
+                    relation: r.get(2)?,
                 })
             })
             .map_err(error_text)?
@@ -188,6 +218,7 @@ impl CaseStore {
             path: case.path.as_ref().map(|p| p.display().to_string()),
             dirty: case.dirty,
             tree,
+            links,
         }))
     }
     pub fn create(&mut self, title: &str, organization: &str) -> CaseResult<CaseSnapshot> {

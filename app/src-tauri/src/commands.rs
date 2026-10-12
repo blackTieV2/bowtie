@@ -1,4 +1,5 @@
 use crate::case::{CaseSnapshot, CaseStore};
+use crate::editing::Position;
 use std::{path::Path, sync::Mutex};
 use tauri::State;
 
@@ -57,4 +58,51 @@ pub fn case_add_diagram(
     with_store(state, |s| {
         s.add_diagram(&parent_id, &hazard_title, &top_event_title)
     })
+}
+#[tauri::command]
+pub fn case_add_entity(
+    state: Store<'_>,
+    parent_id: String,
+    kind: String,
+    title: String,
+    description: String,
+    properties: serde_json::Value,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| {
+        s.add_entity(&parent_id, &kind, &title, &description, &properties)
+    })
+}
+#[tauri::command]
+pub fn case_edit_entity(
+    state: Store<'_>,
+    id: String,
+    title: String,
+    description: String,
+    properties: serde_json::Value,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| {
+        s.edit_entity(&id, &title, &description, &properties)
+    })
+}
+#[tauri::command]
+pub fn case_delete_entity(state: Store<'_>, id: String) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.delete_entity(&id))
+}
+#[tauri::command]
+pub fn case_set_positions(
+    state: Store<'_>,
+    diagram_id: String,
+    positions: Vec<Position>,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.set_positions(&diagram_id, &positions))
+}
+#[tauri::command]
+pub fn case_link(
+    state: Store<'_>,
+    source_id: String,
+    target_id: String,
+    relation: String,
+    remove: bool,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.link(&source_id, &target_id, &relation, remove))
 }
