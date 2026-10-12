@@ -1,0 +1,13 @@
+run_id: ""
+compiled_at: ""
+
+# Context is compiled, not accumulated. List exactly what was loaded.
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: ""
+  references: []
+  prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
+
+tool_profile: ""           # from _config/tool-profiles.yaml
+live_target_verified_at: ""
+live_target_state: ""

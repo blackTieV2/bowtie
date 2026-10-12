@@ -1,0 +1,25 @@
+run_id: ""
+project: bowtie
+target: ""
+status: created            # created | in-progress | blocked | awaiting-review | accepted | abandoned
+
+current_stage: ""
+current_step: ""
+
+completed_steps: []
+pending_steps: []
+
+approval_required: false
+approval_status: ""
+
+actor: ""
+model: ""
+
+started_at: ""
+updated_at: ""
+
+input_hashes: {}
+output_hashes: {}
+
+rollback_reference: ""
+resume_instruction: ""
