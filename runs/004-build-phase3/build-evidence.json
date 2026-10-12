@@ -1,0 +1,8 @@
+{
+  "status": "NOT_RUN",
+  "reason": "Human migration-review gate reached at AR45 before application changes",
+  "startingHead": "1fc5d75a91d25ac031cc47e644b1c9b4766461d7",
+  "sourceChanged": false,
+  "phase3NativeBuild": false,
+  "screenshots": "not generated; no Phase 3 UI exists yet"
+}

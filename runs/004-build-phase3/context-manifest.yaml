@@ -1,0 +1,22 @@
+run_id: 004-build-phase3
+compiled_at: 2026-10-13
+
+# Context is compiled, not accumulated. List exactly what was loaded.
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: stages/04-build/CONTEXT.md
+  references:
+    - stages/04-build/references/REBUILD-MASTER-PROMPT.md
+    - stages/01-intake/references/spec/README.md
+    - SPEC-013 sections 7.12-7.13 and 15.1-15.7
+    - app/src-tauri/schema/001-initial.sql (risk tables and triggers)
+    - app/src-tauri/src/case.rs (version and exact schema validation)
+    - scripts/check_phase1_schema.py (existing threat rejection assertion)
+    - stages/04-build/output/AMBIGUITY-RESOLUTIONS.md (AR37-AR44 accepted by current human)
+    - runs/_template/task-packet.md and run-state.yaml
+    - runs/004-build-phase3/task-packet.md
+  prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
+
+tool_profile: build
+live_target_verified_at: 2026-10-13
+live_target_state: Sole root and origin verified; clean Phase 2 tip 1fc5d75; TARGET GATE PASS; new Phase 3 branch owned by this writer.

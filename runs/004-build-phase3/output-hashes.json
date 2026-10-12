@@ -1,0 +1,19 @@
+{
+  "normalization": "actual artifact bytes",
+  "excluded": [
+    "run-state.yaml",
+    "output-hashes.json"
+  ],
+  "hashes": {
+    "runs/004-build-phase3/build-evidence.json": "fb6773967f0fca2fd783fc2dc1d8279b4fc2146f779e06c9b00565a5ab7b698e",
+    "runs/004-build-phase3/context-manifest.yaml": "d92d6fc882a48292014bb8211ab1be46305923c62dc1ec49e006249c5b482a74",
+    "runs/004-build-phase3/input-hashes.json": "625f6291ac84d5df03107d76bf215b5424fd4600f920744f2a07478466cdeb0a",
+    "runs/004-build-phase3/memory-promotion-review.md": "bda2f8b642090c74489840475d67e63a91df41419ac4f91fd8c723aec6848dc2",
+    "runs/004-build-phase3/retrieval-feedback.yaml": "56932fbc36bb29c269e2a38b5c6acac60db55acd60cb33a657d6faa1ee6a8d21",
+    "runs/004-build-phase3/risk-target-review.md": "2bbbc9d41588753f9848920f1c0eae2737b9a49a2d27c60369af46aee6b11de4",
+    "runs/004-build-phase3/task-packet.md": "0b923947bd9ab0dd6c5c389cdeb072a0622d6fd448578ed9954dcc6183d0e8a3",
+    "runs/004-build-phase3/validation-results.json": "7f042d2af6b7a7f0d80f1df3cffdd74feef6a33ef03a53c8ee443747aca1292d",
+    "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md": "98670799e16dfa6ef86801828a09aa0b2eb21f162fb740b605e65e28dd658c61",
+    "stages/04-build/output/phase-3-report.md": "a589bab21953ddb53ca1b38eaae2cb9e9d822307e31198c589cbfc19d60d0fc5"
+  }
+}

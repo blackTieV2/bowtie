@@ -1,0 +1,25 @@
+run_id: 004-build-phase3
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: awaiting-review
+
+current_stage: 04-build
+current_step: AR45-risk-target-migration-review-stop
+
+completed_steps: [target-gate-pass, branch-and-packet, primary-risk-and-property-spec-review, in-memory-schema-target-probe, AR45-review-proposal, stop-report]
+pending_steps: [human-risk-target-resolution, phase-3-implementation, rust-tests, native-build-and-gui-walkthrough, phase-3-completion-review]
+
+approval_required: true
+approval_status: Phase 3 authorized; risk-target conflict requires explicit scope correction or migration approval
+
+actor: codex
+model: model-neutral-record
+
+started_at: 2026-10-13
+updated_at: 2026-10-13
+
+input_hashes: {manifest: runs/004-build-phase3/input-hashes.json}
+output_hashes: {manifest: runs/004-build-phase3/output-hashes.json}
+
+rollback_reference: 1fc5d75a91d25ac031cc47e644b1c9b4766461d7
+resume_instruction: STOP for AR45 human resolution. Do not migrate, bypass triggers or silently substitute top events for threats. Then resume Phase 3 only under the resolved target scope.

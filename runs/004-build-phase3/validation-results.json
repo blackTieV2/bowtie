@@ -1,0 +1,17 @@
+{
+  "status": "STOPPED_FOR_AR45_REVIEW",
+  "phase3Implemented": false,
+  "scope": "read-only repository recon and in-memory approved-schema risk-target probe",
+  "targetGate": "PASS",
+  "foreignKeys": 1,
+  "probe": {
+    "top_event": "accepted",
+    "consequence": "accepted",
+    "threat": "rejected: Only top events and consequences have risk assessments"
+  },
+  "applicationFilesChanged": false,
+  "schemaChanged": false,
+  "phase3RustSuite": "not run; implementation stopped before source changes",
+  "phase3NativeGuiWalkthrough": "not run; implementation stopped before source changes",
+  "independentValidation": "pending; probe is producer evidence"
+}
