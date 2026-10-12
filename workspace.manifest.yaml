@@ -1,0 +1,40 @@
+version: 1.0.0
+created: 2026-10-12
+project: bowtie
+repository: https://github.com/blackTieV2/bowtie
+
+governance:
+  constitution_version: "1.0.0"
+  canonical_entrypoint: AGENTS.md
+  status_profile: PROJECT_STATUS.md
+  stage_router: CONTEXT.md
+  stages:
+    - stages/00-triage
+    - stages/01-intake
+    - stages/02-research
+    - stages/03-design
+    - stages/04-build
+    - stages/05-qa
+    - stages/06-handoff
+
+memory:
+  knowledge_root: shared/knowledge/okf
+  evidence_root: shared/memory/evidence
+  candidates_root: shared/memory/candidates
+  events_root: shared/memory/events
+  templates_root: shared/templates/memory
+  runtime_root: .runtime
+  retrieval: filesystem-exact-then-fulltext   # no vector DB until evidence shows need
+
+runs:
+  root: runs
+  template: runs/_template
+
+policies:
+  authority: _config/authority-policy.yaml
+  memory: _config/memory-policy.yaml
+  retrieval: _config/retrieval-policy.yaml
+  tools: _config/tool-profiles.yaml
+
+model_neutrality: true
+notes: Model-specific integration notes belong only in model-adapters/ and contain no unique project truth.

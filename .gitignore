@@ -1,68 +1,32 @@
-# Prerequisites
-*.d
+# Transient / sensitive runtime material
+.runtime/
+projects/*/.runtime/
+.env
+.env.*
+!.env.example
+*.local
+secrets.*
+*.pem
+*.key
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Generated caches / derived (non-authoritative) retrieval infrastructure
+cache/
+*.cache
+.vector-index/
+embeddings/
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
+# Temporary logs
+tmp/
+temp/
 *.log
-*.bak
-*.swp
 
-# vcpkg
-vcpkg_installed/
+# Node / Rust / Python build output
+node_modules/
+dist/
+target/
+__pycache__/
+*.pyc
 
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# OS noise
+.DS_Store
+Thumbs.db
