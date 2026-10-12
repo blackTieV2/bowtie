@@ -15,7 +15,7 @@ updated_at: 2026-10-12T00:00:00Z   # rev 3: scope expanded to audit + incident m
 
 current_stage: 00-triage
 execution_hold: false
-build_approved: true`
+build_approved: true
 qa_approved: false
 deployment_approved: false
 release_approved: false
