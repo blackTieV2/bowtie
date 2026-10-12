@@ -1,0 +1,17 @@
+evidence_id: SPEC-012
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: ffd8a40f4793cfbd62f5b71400a43c0950d55c37db11d886c5ed5f25f25d551a
+media_type: application/pdf
+size_bytes: 1318923
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [04-build]}
+notes: IncidentXP brochure (2 pp). Incident module overview.

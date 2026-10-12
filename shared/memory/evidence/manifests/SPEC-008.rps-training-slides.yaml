@@ -1,0 +1,17 @@
+evidence_id: SPEC-008
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: c07b27cc488968169fe8928d24cf85e1e4901c5a41150dbe4ffe587bc78681a4
+media_type: application/pdf
+size_bytes: 22148609
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [01-intake, 03-design]}
+notes: RPS training slides edition 2.3 (175 pp). Methodology and UI reference.

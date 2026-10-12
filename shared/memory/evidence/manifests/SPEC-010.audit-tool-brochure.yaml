@@ -1,0 +1,17 @@
+evidence_id: SPEC-010
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: 55ec33b827031d38807a37f2186b796f8b515eba503ce4304bc634c2bb73c80e
+media_type: application/pdf
+size_bytes: 187979
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: []}
+notes: Audit Tool brochure (2 pp). Out of scope v1.
