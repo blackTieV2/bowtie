@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "platform": "Windows",
+  "command": "npm run tauri build -- --no-bundle",
+  "release_build_duration": "1m 05s",
+  "executable": "app/src-tauri/target/release/barrier-atlas.exe",
+  "executable_sha256": "90f6d36a843eb2a237ab5e16530b7ab91ca4574e0f35bcde136dabee2869088a",
+  "rust_tests": 13,
+  "rust_test_failures": 0,
+  "frontend": "TypeScript/Vite PASS",
+  "warning": "Vite minified JavaScript chunk 583.86 kB",
+  "schema_sha256": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+  "source_rule_scan": "No legacy product names in runtime source/new tests",
+  "review_status": "producer-verified; awaiting human review and independent QA"
+}

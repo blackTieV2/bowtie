@@ -1,0 +1,32 @@
+{
+  "normalization": "actual artifact bytes",
+  "implementation_commit": "b78d18f",
+  "excluded": [
+    "run-state.yaml",
+    "output-hashes.json"
+  ],
+  "hashes": {
+    "app/src-tauri/src/case.rs": "40979cb67c289c9b632f1e6a3d297477c0315703ab9907ff8af0e1baed8658b8",
+    "app/src-tauri/src/commands.rs": "c7b5d3ad796b6eb41b05f778d65b590d94bd1257305b881a04a2bb069b79f4a2",
+    "app/src-tauri/src/editing.rs": "7328dc8c67a05eca2b414bef6683f33f7c6febcaad7b0f6850c8a31dad1a3d30",
+    "app/src-tauri/src/lib.rs": "8a2cc5b94761698702d601e64234b24c4600edf63532e678fd7063dadfb66d9a",
+    "app/src/App.tsx": "0f9899bbf8f7b96d05eb2de0dfc72307afaf3e53a009ef1dff7aa8ae03fe9f28",
+    "app/src/DiagramCanvas.tsx": "a40bec286c726706edee0b347bdc22021db4f2dbfa861b4a1e175da79e9baf6c",
+    "app/src/EntityEditor.tsx": "d03666f1503f13b88365da2162533824184ac43ab4d4bedae3df3d9ebc2e7f31",
+    "app/src/model.ts": "25fa9143b49592224f930dbd97ac7f494622c5adc1972e3c3439d4705e7278d4",
+    "app/src/style.css": "19094100aaa6fee3aa4bd1af407acd950e7368db2910d8cdeabadc91fea92cbe",
+    "runs/003-build-phase2/build-evidence.json": "d45f4040035417af6ab88ec16c9c5546f42c27ed2af377f4d9bbc299fb32db87",
+    "runs/003-build-phase2/context-manifest.yaml": "9cd35084c36ec7a18685ca69e03093effb0f133f055322ac69c69bc602ea5b18",
+    "runs/003-build-phase2/evidence/canvas.png": "8e59358c0eb02bb95177cb9cb3003d8da32d48f42447f139518715b8b273d377",
+    "runs/003-build-phase2/input-hashes.json": "5438f68890c9b7fc42271db1e979de7433db4c8bd8e318e327cab4f22323d228",
+    "runs/003-build-phase2/memory-promotion-review.md": "849c5521cd58c10ed9596b0fc55eebe88fcd99b01baf0e7dfe8e7ddef0c22f06",
+    "runs/003-build-phase2/retrieval-feedback.yaml": "d96b0e67aefeb22b247540ba95abc3e335e2f4c5d2fab39ee43bb8986ab0e335",
+    "runs/003-build-phase2/task-packet.md": "fea46de447ed2e0d9fbe21a5bae3c43105ccf4ea9de1858d2ebfb269aebeb171",
+    "runs/003-build-phase2/validation-results.json": "285d67e26120020279d18a10afcc36c463950bf7c059bf7a779e3303ca5f7268",
+    "scripts/check_phase2_native.mjs": "64ea3ee8fab4c763bb1d615c1fa652cd52bb0942d4cc15cfecd71ec5379de7e1",
+    "scripts/check_phase2_native.ps1": "39ed59be7fc64542164f4fb90f13828ebcc96fedea0ee2775afc66ab25bd9863",
+    "SPEC-TRACEABILITY.md": "cafd3ae1ca538246c4b6ba3c6b12c92ef924f45fa154c4c2dbe009885ad1d12a",
+    "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md": "9888773a75ccb42cb0e878dc33b095ed653805b6d0cf4a9678ec6c757ce06b44",
+    "stages/04-build/output/phase-2-report.md": "b46d4f2049b36f5b1d3d4816f58e3932d288e427d38a6084fc4aee91a82aa155"
+  }
+}

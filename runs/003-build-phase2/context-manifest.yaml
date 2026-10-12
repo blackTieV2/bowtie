@@ -1,0 +1,30 @@
+run_id: 003-build-phase2
+compiled_at: 2026-10-13
+
+# Context is compiled, not accumulated. List exactly what was loaded.
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: stages/04-build/CONTEXT.md
+  references:
+    - stages/04-build/references/REBUILD-MASTER-PROMPT.md (Phase 2 and standing rules)
+    - stages/01-intake/references/spec/README.md (roles)
+    - SPEC-013 sections 3.4-3.12, 7.5, 8.2.4
+    - SPEC-004 twelve-step method
+    - app/src-tauri/schema/001-initial.sql (approved schema)
+    - stages/04-build/output/AMBIGUITY-RESOLUTIONS.md (accepted AR01-AR36)
+    - runs/_template/ (packet formats)
+    - _config/tool-profiles.yaml (build capabilities)
+    - runs/003-build-phase2/task-packet.md (current authority/scope)
+    - app/src/App.tsx, style.css, model.ts, DiagramCanvas.tsx, EntityEditor.tsx
+    - app/src-tauri/src/case.rs, commands.rs, lib.rs, editing.rs
+    - app/package.json, tsconfig.json, src-tauri/tauri.conf.json
+    - scripts/check_phase1_native.mjs (original project's test harness reference)
+    - SPEC-TRACEABILITY.md (prior behavior citations)
+    - runs/002-build-phase1/run-state.yaml, output-hashes.json (historical formats/state)
+    - https://konvajs.org/docs/react/Drag_And_Drop.html
+    - https://konvajs.org/docs/sandbox/Zooming_Relative_To_Pointer.html
+  prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
+
+tool_profile: build
+live_target_verified_at: 2026-10-13
+live_target_state: Clean feature/phase-1-data-model at 21fe114; expected root and origin. TARGET GATE PASS; new phase branch owned by this writer.

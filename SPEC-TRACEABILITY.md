@@ -1,4 +1,4 @@
-# Spec traceability — Phase 1 runtime
+# Spec traceability — Barrier Atlas (Phases 1–2)
 
 Run `002-build-phase1`. The human approved schema/scaffold and AR01–AR33 and authorized runtime case IPC/tree work under the selected name Barrier Atlas. Schema checks, runtime service tests and Windows built-app smoke are distinct evidence; none establishes independent QA or deployment. Source filenames expand in `stages/04-build/output/feature-inventory.md`.
 
@@ -20,4 +20,19 @@ Run `002-build-phase1`. The human approved schema/scaffold and AR01–AR33 and a
 | Future incident/barrier association | SPEC-021 §29.2; SPEC-002 §10.2; SPEC-022 linking chapter | separate incident identity/join tables; Phase 7 not implemented |
 | Offline Barrier Atlas Tauri/React shell and original icons | Fixed stack/standing offline and clean-room rules; human product-name decision; SPEC-013 §6.6 | Windows native build and IPC smoke passed; local dialogs/case commands only; Konva declared but no canvas code |
 
-Full inventory and later sequencing are separate. Eight Rust runtime tests and the native Windows smoke cover this continuation; the twelve-step script remains schema-level coverage for later entities. Native file-dialog chooser UX, full twelve-step GUI authoring, independent QA and macOS/Linux builds/runs remain pending. Phase 2 has not started.
+The Phase 1 evidence above is retained as history. The human approved its runtime boundary and authorized Phase 2.
+
+## Phase 2 interactive canvas — run 003-build-phase2
+
+| Implemented behavior / artifacts | Spec locator | Verification |
+|---|---|---|
+| Konva shapes/paths and classic auto-layout | SPEC-013 §§3.5–3.9, 8.2.4 | DiagramCanvas.tsx/model.ts; twelve-step structure and pointer test |
+| Add/edit/delete typed entities; empty diagram deletion as a unit | SPEC-013 §§3.4–3.12, 7.4 | CaseStore editing.rs, EntityEditor.tsx; trigger/RESTRICT tests and GUI edit/delete |
+| Persist drag coordinates and explicit auto-layout via IPC/SQLite | SPEC-013 §§3.8–3.9, 8.2.4; human coordinate requirement | Atomic diagram-scoped position batch; pointer drag and save/reopen |
+| Fit/100%/zoom, Ctrl-wheel pointer zoom; wheel/Shift-wheel, background-drag and arrows pan | SPEC-013 §7.5 | DiagramCanvas.tsx; built-app pointer assertions; AR42 |
+| Central activity/document/job title/product/system/competency editing, typed links/backlinks/unlink | SPEC-013 §§3.11.2–3.11.4, 7.2, 7.4.2 | EntityEditor/LinkEditor; SQLite properties/link snapshot; GUI steps 9–11 |
+| Recurring task timing/instructions/responsible role, verification/output evidence | SPEC-004 steps 9–11; SPEC-013 §§3.11, 7.2 | GUI walkthrough activity, responsibility/document/output links; save/reopen |
+| One-off action and manually entered improvement/ALARP rationale | SPEC-004 step 12; SPEC-013 §§3.12.1–3.12.4 | GUI action/hazard rationale; no automatic ALARP or Phase 3 register |
+| Named RESTRICT blockers, explicit owned-property cleanup, shared-item preservation | SPEC-013 §§3.11.2–3.11.3.3; human RESTRICT requirement | Rust rollback/named-reference tests; GUI blocked/successful deletion |
+
+Source filenames are indexed in stages/01-intake/references/spec/README.md. Actual outcomes are recorded in the Phase 2 report/run packet. Producer validation is not independent QA; native chooser UX and macOS/Linux execution remain manual/pending.
