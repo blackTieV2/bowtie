@@ -1,0 +1,10 @@
+{
+  "identifier": "main-local",
+  "description": "Core local window only; no filesystem, network, shell, SQL, or updater commands exposed.",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default"
+  ]
+}

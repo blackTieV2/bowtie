@@ -1,0 +1,41 @@
+{
+  "normalization": "actual artifact bytes",
+  "excluded": [
+    "run-state.yaml",
+    "output-hashes.json"
+  ],
+  "hashes": {
+    "SPEC-TRACEABILITY.md": "1803a175b327f58644796f2ac343d476cf435d55dd879b57b1107896d37dbadc",
+    "app/README.md": "8c91393975f69d6b14b8eb1d56c3416ff0461df5405ee5b0d1a6a55b9c9e60dc",
+    "app/assets/window-mark.svg": "cc32ca875028bf239c99ee8c286611dae97f62cf65ea20ad7ed9b14a6a410ed5",
+    "app/index.html": "0002ed4540851a713e19b8b8fe3dfb4a7c0e3169b63c0cadb9b72d829821a1ad",
+    "app/package-lock.json": "e09de7594f73ec6ed38eb9fec0dd15f94bad475870d65843541d2b616ab739ba",
+    "app/package.json": "b505bd9f90fb45840f76fb5ade951d835ee132470cd7bb593522ff70ba59bf5d",
+    "app/src-tauri/Cargo.toml": "807d4481ae8c0ad59fa8348a2f6b08458765d21be48f18e3f81356e105f553c7",
+    "app/src-tauri/build.rs": "ce55d94ef836cc138523951d99018387fd9eba7a8ae5875a622aada3f5b06ce1",
+    "app/src-tauri/capabilities/default.json": "6b09ee8297fad11e71bd3f9968267ff3d1615ce964c8e8e5f5f308b2486b664f",
+    "app/src-tauri/icons/icon.icns": "a4286a39526fc0c70161b4580dd7b15298150a134c4f601b075036d327eb76f1",
+    "app/src-tauri/icons/icon.ico": "49da866b1404ccba4c94893da91a9fe416e7c8f119655c647072f5d93d35fab8",
+    "app/src-tauri/icons/icon.png": "e5d36fe6e544dc96f675953309bd4961a6796ba2dfb067613d28a1d161dfcd4b",
+    "app/src-tauri/schema/001-initial.sql": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+    "app/src-tauri/src/lib.rs": "3d80272b46bd41f3adc58223f64fcffdf8cdaf834ae5d424cb56048dff91486d",
+    "app/src-tauri/src/main.rs": "eb1b532e388a401ee68cf6693663dec5c150c3a5d287dc6318eaec0469db48a7",
+    "app/src-tauri/tauri.conf.json": "70240e97a4835e3ae1642a8b18b1a0df58169bb69a119439177f23073817b8a5",
+    "app/src/App.tsx": "104871bb35591e215811f801d8f1640fcfe6c0e8a00b17e6bd1d413909be38bf",
+    "app/src/main.tsx": "50b07eb2bf03d1c95ca72f0217cee2e45e5438e832988308f967b47f8a77570a",
+    "app/src/style.css": "a392b4be331babc3824ba3bcf7332218318672c720ae0f7cd1ca4f52e184cc6c",
+    "app/tsconfig.json": "9f1367d280d130d59b8d753d6df97dc5e76259a03cc5839bdd1b434e68a30432",
+    "app/vite.config.ts": "3a3240a63ca7683f0e9116e9d6296d2da8a211e6caa5d86fccd20fe1a27ff3d9",
+    "runs/002-build-phase1/context-manifest.yaml": "ee6650e2fa7a8e11d33566381bb82acd345c6f4ad2efcb7e1d3cea2e10ee4993",
+    "runs/002-build-phase1/memory-promotion-review.md": "76846bb6615db7bf4531accdbdf46e84018306b0e92a6c1bca19a9effac9b011",
+    "runs/002-build-phase1/retrieval-feedback.yaml": "da90651d4f91bb3014933e287505fdc0df84d7f9b08ffe2e9133836eeed9f7b8",
+    "runs/002-build-phase1/task-packet.md": "f80bb7cca2d11790a3e0973aeb9df88724f8bd876d49e21a4f86dd341b31b857",
+    "runs/002-build-phase1/validation-results.json": "af25004f5773d07fd6493368e547dab7dd062047378320dd88b8b6b455bcebea",
+    "scripts/check_phase1_schema.py": "db379d2a50cee601228c5834fd66684b8547caff984df36cb14ee8576761a469",
+    "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md": "8b8aebd08145eadfba195891220c448c47993ea889cc3ad9f8fb1355436c94cc",
+    "stages/04-build/output/feature-inventory.md": "ba25b57c0a7f4140f6fd0cc462e4d25b95a9fba7ba0f28979138b6188353b90e",
+    "stages/04-build/output/name-proposals.md": "a2ca50e0a67cee8f2f64977f58b7262c27d956f21e11e56bba33d893e4ab9c6b",
+    "stages/04-build/output/phase-1-report.md": "dadba42a066028eb7e38d5b6ed1cac2b06c43c931c851d00aa4af69726a6d284",
+    "stages/04-build/output/schema-design.md": "f4ff38f5c8a09596beafa74be46b9f6089e966de6856e1b46e8a3852455ea015"
+  }
+}
