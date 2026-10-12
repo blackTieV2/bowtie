@@ -1,0 +1,18 @@
+evidence_id: SPEC-021
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload (markdown conversion of owner-supplied manual)
+source_path_or_uri: owner-retained local file
+sha256: 84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d
+media_type: text/markdown
+size_bytes: 387513
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [01-intake, 03-design, 04-build]}
+relationships: [{type: supports, target: SPEC-013, qualifier: alternate-conversion}]
+notes: "Software User Manual Rev 31 for Ver 8.2 & Up — same BowTieXP 8.2 Rev 31 manual as SPEC-013, alternate conversion; this variant's TOC also covers AuditXP add-on (ch. 24) and IncidentXP/BowTieXP integration (ch. 29). Use for module-integration features."

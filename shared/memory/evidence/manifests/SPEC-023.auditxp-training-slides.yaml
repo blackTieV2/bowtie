@@ -1,0 +1,18 @@
+evidence_id: SPEC-023
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload (markdown conversion)
+source_path_or_uri: owner-retained local file
+sha256: 5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29
+media_type: text/markdown
+size_bytes: 6473
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [03-design, 04-build]}
+relationships: []
+notes: AuditXP Training Slides Rev D. Audit module workflows: prepare audit questions/surveys from bowties, conduct audits, review and report results. New source, no prior equivalent.
