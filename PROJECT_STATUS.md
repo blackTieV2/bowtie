@@ -13,8 +13,8 @@ timezone: unresolved
 recorded_at: 2026-10-12T00:00:00Z
 
 current_stage: 00-triage
-execution_hold: true
-build_approved: false
+execution_hold: false
+build_approved: true`
 qa_approved: false
 deployment_approved: false
 release_approved: false
