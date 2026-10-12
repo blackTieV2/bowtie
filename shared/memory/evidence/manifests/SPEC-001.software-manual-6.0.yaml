@@ -1,0 +1,17 @@
+evidence_id: SPEC-001
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload (Kimi session)
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: 5d2e7cf7497744b676e3b1dc3e15d8b7f0d552ba7ee10d884ba00b5c1e1170a3
+media_type: application/pdf
+size_bytes: 10434860
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [01-intake, 03-design, 04-build]}
+notes: BowTieXP Software Manual R6.0 (211 pp). Authoritative feature reference. Text extraction in stages/01-intake/references/spec/ (6 parts).

@@ -1,0 +1,17 @@
+evidence_id: SPEC-006
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: a0cc74349dbc6db25d6a35bc1f70715e4798b5f46dfbf43cb48bae1f6b19932b
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+media_type: application/pdf
+size_bytes: 2054897
+scope: {stages: [03-design]}
+notes: Management document (13 pp). Reporting/management features.

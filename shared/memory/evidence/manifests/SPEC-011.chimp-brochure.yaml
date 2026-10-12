@@ -1,0 +1,17 @@
+evidence_id: SPEC-011
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload
+source_path_or_uri: owner-retained local PDF (not committed)
+sha256: d0a93fa4c803dd3c622b1845b7b914a448b134edc1d79c0bd92ada3b2a5449a5
+media_type: application/pdf
+size_bytes: 2191753
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: []}
+notes: CHIMP brochure (9 pp). Out of scope v1.
