@@ -1,0 +1,39 @@
+# Retrieval policy — bowtie repository
+version: 1.0.0
+recorded_at: 2026-10-12T00:00:00Z
+
+backend_order:
+  - current_PROJECT_STATUS
+  - known_canonical_paths
+  - exact_identifiers
+  - filename_path_search
+  - full_text_lexical_search
+  - metadata_filtering
+  - temporal_filtering
+  - relationship_traversal
+  - recency
+
+deferred_until_proven_useful:
+  - semantic_embeddings
+  - vector_similarity
+  - hybrid_reranking
+
+initial_backend: filesystem + exact search + full-text search + metadata
+possible_evolution: SQLite FTS (local) → PostgreSQL + FTS (+ pgvector) only with evidence of need
+
+vector_rule: derived, disposable, rebuildable, non-authoritative. Canonical memory must survive full deletion of any index.
+
+session_start_recall:
+  enabled: false   # activate only after deterministic governed retrieval is tested
+  sequence:
+    - new_controlled_run
+    - read_current_profile
+    - verify_live_target
+    - retrieve_prior_experience
+    - filter_by_authority_trust_supersession_sensitivity
+    - compile_bounded_task_packet
+  disclaimer_required: "Historical experience only. Current verified target state controls execution."
+
+retrieval_feedback:
+  record: [query, record_retrieved, included_in_packet, used, ignored, corrected, stale, superseded, authority_conflict, caused_requery, reason_for_exclusion]
+  rule: collect evidence first; do not auto-adapt retrieval weights on tiny feedback

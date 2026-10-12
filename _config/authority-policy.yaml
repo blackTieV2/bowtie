@@ -1,0 +1,49 @@
+# Authority policy — bowtie repository
+version: 1.0.0
+recorded_at: 2026-10-12T00:00:00Z
+
+hierarchy:
+  - rank: 1
+    source: explicit_current_human_instruction
+  - rank: 2
+    source: verified_live_target_state
+  - rank: 3
+    source: PROJECT_STATUS.md
+  - rank: 4
+    source: canonical_governance_and_stage_contracts
+  - rank: 5
+    source: approved_human_decisions
+  - rank: 6
+    source: approved_designs_and_procedures
+  - rank: 7
+    source: approved_factual_knowledge
+  - rank: 8
+    source: current_approved_handoff
+  - rank: 9
+    source: historical_episodic_records
+  - rank: 10
+    source: agent_inference
+  - rank: 11
+    source: retrieval_similarity
+
+conflict_rule: >
+  A higher-authority source does not eliminate the need to surface conflict.
+  When two consequential sources conflict: identify both, show authority and
+  timestamps, determine what requires live verification, escalate. Never
+  silently reconcile.
+
+human_approval_required_for:
+  - merge_to_default_branch
+  - destructive_git_operations
+  - release_and_deployment
+  - execution_hold_exceptions
+  - canonical_governance_changes
+  - decision_and_procedure_memory_promotion
+
+never_authoritative:
+  - vector_indexes
+  - embedding_databases
+  - semantic_search_results
+  - previous_chat_history
+  - old_handoffs_against_live_state
+  - model_recollection

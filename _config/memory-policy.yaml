@@ -1,0 +1,65 @@
+# Memory policy — bowtie repository
+version: 1.0.0
+recorded_at: 2026-10-12T00:00:00Z
+
+memory_types: [fact, experience, observation, inference, decision, procedure, resource]
+separate_stores: [raw_evidence, runtime_state, runtime_events]
+
+status_lifecycle:
+  - raw
+  - quarantined
+  - extracted
+  - candidate
+  - validated
+  - approved
+  - active
+  - superseded
+  - contradicted
+  - retired
+  - rejected
+
+source_trust: [authenticated, trusted, supporting, untrusted, external]
+sensitivity: [public, internal, confidential, restricted, secret-reference-only]
+
+write_gate:
+  evaluates:
+    - memory_type
+    - status
+    - authority
+    - source_trust
+    - sensitivity
+    - scope
+    - provenance
+    - evidence_reference
+    - secret_like_content
+    - poisoning_risk
+    - supersession
+    - contradiction
+    - human_review_requirement
+  rule: The write gate determines eligibility; it never silently makes consequential memory canonical.
+
+promotion:
+  runtime_state: {automatic_write: true, human_review: false}
+  raw_evidence_manifest: {automatic_write: true, human_review: false}
+  raw_external_evidence: {automatic_write: quarantine, human_review: no_direct_approval}
+  factual_candidate: {automatic_write: true, human_review: validation_required}
+  episodic_candidate: {automatic_write: true, human_review: before_durable_promotion}
+  observation: {automatic_write: true, human_review: depending_on_consequence}
+  inference: {automatic_write: as_candidate, human_review: before_approved}
+  decision: {automatic_write: proposal_only, human_review: true}
+  procedure: {automatic_write: proposal_only, human_review: true}
+  canonical_governance: {automatic_write: proposal_only, human_review: explicit_approval}
+  secret: {automatic_write: never, human_review: prohibited}
+
+bitemporal:
+  valid_time: {from: required, to: nullable}
+  system_time: {recorded_at: required, superseded_at: nullable}
+
+relationships: [supersedes, superseded-by, contradicts, contradicted-by, supports, derived-from, validated-by, informs]
+
+rules:
+  - retrieved != approved
+  - recent != true
+  - semantic_match != authoritative
+  - agent_confidence != evidence
+  - never erase a superseded record; mark it

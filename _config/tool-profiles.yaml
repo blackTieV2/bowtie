@@ -1,0 +1,37 @@
+# Tool profiles — stage-restricted capabilities
+version: 1.0.0
+recorded_at: 2026-10-12T00:00:00Z
+
+profiles:
+  triage:
+    allow: [read, classify]
+    deny: [write_app_code, git_mutations, shell_installs]
+  intake:
+    allow: [read, write_stage_output]
+    deny: [write_app_code]
+  research:
+    allow: [read, search, evidence_capture]
+    deny: [write_app_code]
+  design:
+    allow: [read, write_design_artifacts]
+    deny: [write_app_code, build, deploy]
+  build:
+    allow: [scoped_modification, approved_validation]
+    require: [target_gate_pass, execution_hold_clear, human_approved_scope]
+  qa:
+    allow: [inspection, testing]
+    prefer: independent_context
+    deny: [silent_reimplementation]
+  handoff:
+    allow: [status_updates, evidence_updates, handoff_updates]
+
+global_deny_without_explicit_human_authority:
+  - git_reset_hard
+  - git_clean
+  - force_push
+  - branch_delete
+  - merge
+  - deploy
+  - release
+
+rule: Do not grant unrestricted shell/write/deploy capability merely because the tool exists.
