@@ -1,18 +1,28 @@
 evidence_id: SPEC-018
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
 origin: human upload (markdown conversion)
 source_path_or_uri: owner-retained local file
-sha256: 9178b68d10aef22016ccae44a952ec056f0b181e0b249a3a58cff5779d851bae
+sha256: f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f
 media_type: text/markdown
-size_bytes: 24963
+size_bytes: 20711
 source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [01-intake, 03-design]}
+scope:
+  stages:
+  - 01-intake
+  - 03-design
 relationships: []
-notes: RPS Training Slides Edition 2.3 (markdown conversion of same source as SPEC-008, cleaner).
+notes: RPS Training Slides Edition 2.3 (markdown conversion of same source as SPEC-008,
+  cleaner).; hash updated to owner-verified local bytes 2026-10-12; original conversion-pass
+  hashes superseded
+superseded_conversion_sha256: 9178b68d10aef22016ccae44a952ec056f0b181e0b249a3a58cff5779d851bae
+local_size_bytes: 21412
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/05 RPS Training Slides - Edition
+  2.3.md

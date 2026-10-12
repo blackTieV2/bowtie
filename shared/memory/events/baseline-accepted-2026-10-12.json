@@ -1,0 +1,182 @@
+{
+  "event_id": "baseline-accepted-2026-10-12",
+  "run_id": "002-build-phase1",
+  "project": "bowtie",
+  "timestamp": "2026-10-12T16:48:05.772150+00:00",
+  "actor": {
+    "type": "human",
+    "identity": "repository-owner",
+    "model": ""
+  },
+  "action": "baseline-accepted",
+  "target": "stages/01-intake/references/spec/",
+  "parent_event": null,
+  "cause_event": null,
+  "idempotency_key": "owner-local-spec-baseline-2026-10-12",
+  "source": {
+    "path": "current human message: CHECKSUM BASELINE ACCEPTED",
+    "hash": ""
+  },
+  "result": "accepted local bytes with LF-normalized SHA-256; original conversion hashes superseded; older PDF source hashes preserved",
+  "evidence_hash": "ce1afc25ddbb16cfb9e3a43c1e80ea8b8b3430f37bd1bd44243e5ab98ec67d51",
+  "accepted_effective_date": "2026-10-12",
+  "manifest_updates": [
+    {
+      "manifest": "SPEC-013",
+      "previous_sha256": "b957bd512deefcdd400c9e35fea6d2a9d83e4a4f525db5e141e83767f4998822",
+      "accepted_lf_sha256": "dacbc1c9b8ab17f0de1c4170a294418b1706a0299c24cffd3e7c80afc8523084"
+    },
+    {
+      "manifest": "SPEC-014",
+      "previous_sha256": "fec8b414a0534a1f1e00f802ff934c12571608a301b565eab70be1340b5340d9",
+      "accepted_lf_sha256": "2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9"
+    },
+    {
+      "manifest": "SPEC-015",
+      "previous_sha256": "770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808",
+      "accepted_lf_sha256": "770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808"
+    },
+    {
+      "manifest": "SPEC-016",
+      "previous_sha256": "61ddc82506f85fd808a118fd38542f8d8b3586de02c976eaf2060bacdf383775",
+      "accepted_lf_sha256": "1e7aee3c4fbcdc078a9b77b5d6c840dbaaab3d042a59489c835fdc1edebfd9f6"
+    },
+    {
+      "manifest": "SPEC-017",
+      "previous_sha256": "a6757860c83e434ecf603903cca202520487613c2c223546e4394461708ebd79",
+      "accepted_lf_sha256": "65fb08c1a80f9f36e819f938979f0ba3bfe309a06309c225a0571f1d217b7fd4"
+    },
+    {
+      "manifest": "SPEC-018",
+      "previous_sha256": "9178b68d10aef22016ccae44a952ec056f0b181e0b249a3a58cff5779d851bae",
+      "accepted_lf_sha256": "f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f"
+    },
+    {
+      "manifest": "SPEC-019",
+      "previous_sha256": "f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62",
+      "accepted_lf_sha256": "f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62"
+    },
+    {
+      "manifest": "SPEC-020",
+      "previous_sha256": "830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74",
+      "accepted_lf_sha256": "830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74"
+    },
+    {
+      "manifest": "SPEC-021",
+      "previous_sha256": "84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d",
+      "accepted_lf_sha256": "84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d"
+    },
+    {
+      "manifest": "SPEC-022",
+      "previous_sha256": "cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883",
+      "accepted_lf_sha256": "cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883"
+    },
+    {
+      "manifest": "SPEC-023",
+      "previous_sha256": "5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29",
+      "accepted_lf_sha256": "5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29"
+    }
+  ],
+  "files": {
+    "stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md": {
+      "lf_sha256": "f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62",
+      "local_byte_sha256": "9cfe3b38afa1a0974bb4892d9c9f2546dca65b03d26a2c1eb4a4cc9d78712f49"
+    },
+    "stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md": {
+      "lf_sha256": "770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808",
+      "local_byte_sha256": "582d7a46f9d183328b0758bb4c05eb43fa9ebc4ef4ffcecbf9608e912aa687fc"
+    },
+    "stages/01-intake/references/spec/04 All Product Brochures.md": {
+      "lf_sha256": "830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74",
+      "local_byte_sha256": "39ac1dca5db0a5c8aa1dcda6109c457550a6f607af673e9144f44ada76df7423"
+    },
+    "stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md": {
+      "lf_sha256": "f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f",
+      "local_byte_sha256": "565ee234a2850c2c0965f8d281c60cc6692738284a5f3348854dd0bb839c011a"
+    },
+    "stages/01-intake/references/spec/06 Methodology Manual V15.md": {
+      "lf_sha256": "1e7aee3c4fbcdc078a9b77b5d6c840dbaaab3d042a59489c835fdc1edebfd9f6",
+      "local_byte_sha256": "a7c6855e4e9a6dcd263cc26b2ada89745891714f0b29aeb4275c52d5357671da"
+    },
+    "stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md": {
+      "lf_sha256": "2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9",
+      "local_byte_sha256": "d4d95339284c4a8c25aabc9478cb29b5b0bad715f3141b4f12fe5e1027597cba"
+    },
+    "stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md": {
+      "lf_sha256": "dacbc1c9b8ab17f0de1c4170a294418b1706a0299c24cffd3e7c80afc8523084",
+      "local_byte_sha256": "7a6c7d237c7190c37ac547167afe948b5a68d38d0209e862668474a5bae83adc"
+    },
+    "stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md": {
+      "lf_sha256": "5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29",
+      "local_byte_sha256": "926ae3eeda9a8390811176b8a317ada4450660e784f40e4e4a8a3d169ed700f5"
+    },
+    "stages/01-intake/references/spec/BowTieXP_in_12_steps.md": {
+      "lf_sha256": "6575d4bbad1c47afa71f4d1385e5a8117e0e81e3b19142bedfe25b23880ff959",
+      "local_byte_sha256": "3114cae3fe762c0096188cec52de18c35785ccb81d220b8f632def3b76f34da1"
+    },
+    "stages/01-intake/references/spec/BowtieXP_Management_document.md": {
+      "lf_sha256": "9411e51c512de3aff28102267a3f0e670f4c0b2e2922e5b0b084f360e8abeadb",
+      "local_byte_sha256": "6e061959f1aa8cb584162493971eae9a517045e91d981a0615e706d51e586e3a"
+    },
+    "stages/01-intake/references/spec/IncidentXP Software Manual - For Release 8.2.md": {
+      "lf_sha256": "cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883",
+      "local_byte_sha256": "25d271d7395cf3eb7cdb615e29860943eb43b205257ac3a13f6c26034531ed20"
+    },
+    "stages/01-intake/references/spec/IncidentXP.md": {
+      "lf_sha256": "95f5c88e2a879e0609c04b62c3021701dbc558f0edd85da467a81d1b6b87663c",
+      "local_byte_sha256": "57c877f8f1df82fb7b9b318a4c841e6a667364950f6fe88d756c191a4d51b0b0"
+    },
+    "stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md": {
+      "lf_sha256": "949141efbfe0c95e7e98d48027ee57069db93b1e98ff3f21e4c5f4f52070bd18",
+      "local_byte_sha256": "f35dac69bd180f686f37b83cbe8ac4145833dc026cfbfea33aac2a6429cf802c"
+    },
+    "stages/01-intake/references/spec/provenance/05_RPS_Training_Slides_-_Edition_2.3.md": {
+      "lf_sha256": "cd547683c35de219335aa53510507fde2b0bc5c4a973f9731a3cbeffb1541df9",
+      "local_byte_sha256": "19dc45641b87ffdbaba0747c3a2609a965e0985f416f1f7b76d021d5779d89f3"
+    },
+    "stages/01-intake/references/spec/provenance/Audit_Tool_Brochure_EN.md": {
+      "lf_sha256": "878b5b335bd10b2a474dbf5f9bcb3f579195f38ed1b5960cfc0187fe061ca25d",
+      "local_byte_sha256": "17c1089a572e36cc502995ed83575d6540672086f9e3f680ea713a67978d0f87"
+    },
+    "stages/01-intake/references/spec/provenance/BowTieXP_3.6_and_up_Quick_Start_Manual.md": {
+      "lf_sha256": "4db4e63e59605198fa80ebe4aeb9fa10935a6a3b7c89a63ef76eb2a73a62c5ea",
+      "local_byte_sha256": "faae50a6b20cf32da5434ae335a9f3df2edfcf4ada9fae65b50fc4d4df98f2aa"
+    },
+    "stages/01-intake/references/spec/provenance/BowTieXP_Advanced_Brochure_[small].md": {
+      "lf_sha256": "77f76a3ee2dc98c8074eca2e6af0571af8bbe69ac9d87405073edad1ee36fc38",
+      "local_byte_sha256": "f2a6329a41ce70abe281ea70b97b3ccff84176a0afcbf594e9092fc7b2a708ab"
+    },
+    "stages/01-intake/references/spec/provenance/BowTieXP_Feature_Matrix_2012.md": {
+      "lf_sha256": "9c2c0d157062edda8bbf09f6a6507fc51cee7c6207a5ba6f36e5342434b9a5ba",
+      "local_byte_sha256": "e834df1a57243191d8ea602d7d7ae9544314f1d8ee9dd04e4cc4ed30d4d8712d"
+    },
+    "stages/01-intake/references/spec/provenance/BowTieXP_Software_Manual_-_For_Release_6.0.md": {
+      "lf_sha256": "4e2edb07c3c38adba199d09734155573959e22825c65951197b99b04df1543cd",
+      "local_byte_sha256": "2b6c01ec20d7a1975db740ef50d22d6b438b3fc373374a6f808e179c00f18310"
+    },
+    "stages/01-intake/references/spec/provenance/BowTieXP_WebViewer_Portal_2011_Brochure_[small].md": {
+      "lf_sha256": "512f42db3536edef355df6cfc2ecfd6e58bc35df0227a36f90319912408b9ef2",
+      "local_byte_sha256": "42af9ead92be0755aae89e28c378a048be8118217694e63b729371161407aeaa"
+    },
+    "stages/01-intake/references/spec/provenance/CHIMP_brochure.md": {
+      "lf_sha256": "03d1ee19c5965a8414525d2060395a4691eb96cba2722d0403fafc189e9cca1b",
+      "local_byte_sha256": "84a043fd719539cee41bd43bbd2b6ad66079f911937a10bfaffe6fd052ee4be2"
+    },
+    "stages/01-intake/references/spec/README.md": {
+      "lf_sha256": "e9e4743e220865f5df57f45f217a30d3cfbdfa263cf05f16209dec5ec7bac9ac",
+      "local_byte_sha256": "964f53fd9a691fe42431f319ffb1dfc6eebc12fd578f07e7c15904ee253a536d"
+    },
+    "stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md": {
+      "lf_sha256": "65fb08c1a80f9f36e819f938979f0ba3bfe309a06309c225a0571f1d217b7fd4",
+      "local_byte_sha256": "8c305dd6334d821207edf142150052951fdac4f139da1272f8a53f8fb949b763"
+    },
+    "stages/01-intake/references/spec/SHA256SUMS.txt": {
+      "lf_sha256": "420009eeddb4eb56e91ebd57b78251d22d3904a1d04ed29f281e246b04d11ca4",
+      "local_byte_sha256": "13348bce9bdd9c91612926d274723c0889915adbd1274f1257b453d8b1a7335c"
+    },
+    "stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2 & Up.md": {
+      "lf_sha256": "84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d",
+      "local_byte_sha256": "1fc110b80c0b9be66b7bf5ff27269ddbceba92fd77a6ba93d123a6583dedac6f"
+    }
+  }
+}

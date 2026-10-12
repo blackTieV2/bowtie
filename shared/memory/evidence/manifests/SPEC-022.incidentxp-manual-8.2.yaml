@@ -1,6 +1,6 @@
 evidence_id: SPEC-022
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
@@ -13,6 +13,19 @@ source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [04-build]}
-relationships: [{type: supports, target: SPEC-002}]
-notes: "IncidentXP Software Manual 8.2 (Rev 14, Oct 2016), clean markdown. SPEC-002 (IncidentXP 10.4, Rev 23, Sep 2021) remains the version-authoritative reference; use SPEC-022 for clean structure/tables and SPEC-002 for latest-version behavior."
+scope:
+  stages:
+  - 04-build
+relationships:
+- type: supports
+  target: SPEC-002
+notes: '"IncidentXP Software Manual 8.2 (Rev 14, Oct 2016), clean markdown. SPEC-002
+  (IncidentXP 10.4, Rev 23, Sep 2021) remains the version-authoritative reference;
+  use SPEC-022 for clean structure/tables and SPEC-002 for latest-version behavior.";
+  hash updated to owner-verified local bytes 2026-10-12; original conversion-pass
+  hashes superseded'
+superseded_conversion_sha256: cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883
+local_size_bytes: 110503
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/IncidentXP Software Manual - For
+  Release 8.2.md

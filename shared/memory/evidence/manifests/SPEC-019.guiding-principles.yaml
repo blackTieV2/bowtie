@@ -1,6 +1,6 @@
 evidence_id: SPEC-019
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
@@ -13,6 +13,15 @@ source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [01-intake]}
+scope:
+  stages:
+  - 01-intake
 relationships: []
-notes: Guiding Principles card (2017). Methodology quick reference. New source.
+notes: Guiding Principles card (2017). Methodology quick reference. New source.; hash
+  updated to owner-verified local bytes 2026-10-12; original conversion-pass hashes
+  superseded
+superseded_conversion_sha256: f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62
+local_size_bytes: 1981
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back)
+  2017.md
