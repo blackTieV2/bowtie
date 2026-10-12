@@ -6,4 +6,12 @@ Rule: never erase a superseded record; mark it and link the successor here.
 
 | Subject | Relationship | Object | Recorded |
 |---|---|---|---|
-| — | — | — | — |
+| SPEC-013 (Software Manual 8.2 md) | supersedes | SPEC-001 (Software Manual 6.0 pdf-extract) | 2026-10-12 |
+| SPEC-014 (Quick Start 8.0 md) | supersedes | SPEC-003 (Quick Start 3.6 pdf-extract) | 2026-10-12 |
+| SPEC-015 (Compare STD/ADV md) | supersedes | SPEC-005 (Feature Matrix 2012 pdf-extract) | 2026-10-12 |
+| SPEC-017 (RPS training 2017 md) | supersedes (partial) | SPEC-008 (RPS slides 2.3 pdf-extract) | 2026-10-12 |
+| SPEC-020 (All Product Brochures md) | supersedes (partial) | SPEC-007/009/010/011 (brochure pdf-extracts) | 2026-10-12 |
+| SPEC-018 (RPS slides 2.3 md) | derived-from | SPEC-008 (same source PDF, cleaner conversion) | 2026-10-12 |
+| SPEC-021 (User Manual 8.2 combined md) | supports (alternate conversion; adds AuditXP ch.24 + IncidentXP ch.29 coverage) | SPEC-013 | 2026-10-12 |
+| SPEC-022 (IncidentXP 8.2 md) | supports | SPEC-002 (IncidentXP 10.4 pdf-extract; 10.4 is version-authoritative) | 2026-10-12 |
+| SPEC-023 (AuditXP slides Rev D) | informs | audit module scope (Phase 6) | 2026-10-12 |
