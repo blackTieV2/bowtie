@@ -4,473 +4,6 @@ HSE and Risk Management
 
 
 
-
-                          rpsgroup.com.au
-This page intentionally left blank
-
-
-
-
-                                     rpsgroup.com.au
-PREPARED BY:
-RPS Energy Pty Ltd
-HSE and Risk Management
-ABN 440 725 042 99
-
-
-38 Station Street, Subiaco
-Western Australia 6008
-PO Box 465, Subiaco
-Western Australia 6904
-
-
-T:      +61 8 9211 1111
-F:      +61 8 9211 1122
-E:      hserm@rpsgroup.com.au
-W:      www.rpsgroup.com.au
-
-
-
-
-Partner:
-CGE Risk Management Solutions B.V.
-Vlietweg 17v
-NL-2266 KA Leidschendam
-The Netherlands
-T:      +31 (0)88 100 1350
-F:      +31 (0)88 100 1349
-E:      support@bowtiexp.com
-W:      www.cgerisk.com
-
-
-
-
-                                     rpsgroup.com.au
-Type of Accreditation
-Certificate of Participation only
-
-
-
-Organisation Registered Training Status
-RTO National Provider No. 52288
-
-
-
-
-Document Details and Issue Record
-
-Rev No.            Details                     Date        Author
-2.3                ISSUED                      Feb 2013    PM
-
-
-PM: Phil McKenzie - Principal Consultant - Safety & Risk
-
-
-Copyright
-The worldwide copyright of this training material belongs to RPS Energy and Governors B.V who are empowered
-to provide this training material for sale to registered users of the BowTieXP software. RPS acknowledges
-permissions granted by IP Bank B.V. (Ltd.) and Governors B.V. to use their software and documentation in the
-production of this presentation.
-This training material and/or any part thereof may not be published on a public download location, copied, resold
-or hired, and can only be used for training in the BowTieXP software tool and methodology, by clients of the RPS
-Energy.
-It may not be used for methodology-only training or training with respect to any other tool or methodology. This
-training material and/or any part of the training presentation must always be accompanied by these terms and
-conditions. Without them, any possession and/or use is illegal.
-This training material may only be provided by official Value Added Resellers (VARs) of the BowTieXP software
-tool to registered users of the BowTieXP software, none of whom may be a competitor of RPS, Governors and/or
-IP Bank.
-
-
-
-
-RPS Energy
-Copyright (January 13) - All Rights Reserved
-                                                                                             rpsgroup.com.au
-About RPS
-RPS is an international consultancy providing world-class local solutions in energy and resources,
-environment and urban growth.
-Globally, we employ more than 4500 people across the UK, Ireland, the Netherlands, the United
-States, Canada, Australia and Asia Pacific and undertake projects in many other parts of the world.
-Our strength is that we are uniquely placed to provide a fully integrated response to our clients’
-changing needs. We have extensive local knowledge supported by the international network of
-expertise and capabilities within our organisation.
-BowTieXP ®
-RPS is a licensed provider of BowTie software, training and consulting to clients around the globe.
-BowTie methodology is commonly preferred for the facilitation and recording of risk assessments
-                                                         ®
-relating to hazardous facilities. Bowties and BowTieXP provide a visual qualitative or semi-
-qualitative approach to assessing risks and their management.
-
-
-Whilst you are with us:
-                                                Smoke-free Environment
-RPS is a smoke-free environment.
-                                                 Fires and Evacuation
-Your trainer will indicate the appropriate exit for your room. RPS also provides Fire Wardens in the
-event of a fire and fire practice drills to ensure maximum safety for clients and staff.
-                                                      Accidents
-If you have an accident on our premises, you are asked to report it immediately to ensure prompt
-medical attention from RPS’s first aid officers.
-                                                 Parking and Transport
-There is no on-site parking available, however there is a car park (pay by the hour) located next to
-the RPS building. Subiaco Train station is located within walking distance (50 metres) from the RPS
-building.
-                                                 Special Dietary Needs
-Please inform your Trainer if you have a special need in relation to food. Morning and afternoon
-break and lunch are provided and we want to ensure that your needs are catered for.
-                                                     No Go Areas
-RPS offices are security locked and personnel require passes to enter and exit their respective
-areas. You will not require a security pass and the Trainer will indicate those areas in which you will
-be able to transit.
-                                                   If You are Absent
-If you are absent or need to leave the program for any reason, we ask you to advise the Trainer
-before leaving. If you are unable to return to complete the program we ask that, where possible, you
-phone us on (08) 9211 1111.
-                                               Other Housekeeping Points
-The Trainer will cover all other relevant housekeeping points relevant to the course. Any problems or
-questions, please don’t hesitate to discuss with your Trainer.
-
-
-
-
-RPS Energy
-Copyright (January 13) - All Rights Reserved
-                                                                                     rpsgroup.com.au
-                                               This page intentionally left blank
-
-
-
-
-RPS Energy
-Copyright (January 13) - All Rights Reserved
-                                                                                    rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-RPS Energy
-Copyright (January 13) - All Rights Reserved   rpsgroup.com.au
-Edition 2.3
-TMS-T-027 BowTie Analysis Study Guide.
-© Copyright 2013. All Rights Reserved.
-                                         www.rpsgroup.com.au
-                                                   COPYRIGHT & DISCLAIMER
-
-Copyright                                                                                                       Legal Disclaimer
-Ownership of copyright                                                                                          No Guarantee or Warranty
-Except where otherwise stated, the copyright of this material (including without limitation the text,           All information in this material is provided "as is", with no guarantee of completeness, accuracy or
-computer code, artwork, photographs, images, music, audio material, video material and audio‐visual             suitability, nor that the results obtained from the use of this material will be satisfactory or suitable for the
-material) is owned by RPS Energy Pty Ltd.                                                                       user. No warranty of any kind, express or implied, including, but not limited to warranties of performance
-                                                                                                                and fitness for a particular purpose, is offered.
-Copyright license
-RPS Energy Pty Ltd grants to you a worldwide non‐exclusive royalty‐free revocable license to view and use       Seek Professional Advice
-this material for your own personal instruction. RPS Energy Pty Ltd does not grant you any other rights in      All users are advised to seek professional advice before making any decisions. Nothing in this material
-relation to this material. In other words, all other rights are reserved. For the avoidance of doubt, you       constitutes, or is meant to constitute, advice of any kind and should not be used as a substitute for
-must not adapt, edit, change, transform, publish, republish, distribute, redistribute, broadcast, rebroadcast   consultation with professional safety, risk, legal or other competent advisors who are acquainted with local
-or show or play in public this material (in any form or media) without RPS Energy Pty Ltd’s prior written       laws and particular circumstances that apply.
-permission.
-                                                                                                                Limitations of liability
-Permissions                                                                                                     In no event will RPS Energy Pty Ltd, their related entities, joint venture partners, agents, distributors or
-You may request permission to use these copyright materials by writing to admin06@rpsgroup.com.au               employees thereof be liable to you, any organization or anyone else for any decision made or action taken
-                                                                                                                whilst relying on the information in this material, or for any consequential, special or similar damages, even
-Enforcement of copyright                                                                                        if advised of the possibility of such damage. RPS Energy Pty Ltd will not be liable to you (whether under the
-RPS Energy Pty Ltd takes the protection of its copyright very seriously. If RPS Energy Pty Ltd discovers that   law of contact, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in
-you have used its copyright materials in contravention of the license above, RPS Energy Pty Ltd may bring       connection with, this material, for any direct loss; for any indirect, special or consequential loss; or for any
-legal proceedings against you seeking monetary damages and an injunction to stop you using those                business losses, loss of revenue, income, profits or anticipated savings, loss of contracts or business
-materials. You could also be ordered to pay legal costs. If you become aware of any use of RPS Energy Pty       relationships, loss of reputation or goodwill, or loss or corruption of information or data.
-Ltd’s copyright materials that contravenes or may contravene the license above, please report this by email
-to admin06@rpsgroup.com.au                                                                                      Reasonableness
-                                                                                                                By using this material, you agree that the exclusions and limitations of liability set out in this disclaimer are
-Infringing material                                                                                             reasonable and acceptable to you. If you do not think they are reasonable and acceptable, you must not
-If you become aware of any material that you believe infringes your or any other person's copyright, please     use this material for any purpose.
-report this by email to admin06@rpsgroup.com.au
-Use of this product is conditional upon your prior understanding of and agreement to abide by the terms         Unenforceable provisions
-stated in this disclaimer. All information contained in this material is general in nature and scope and does   If any provision of this disclaimer is, or is found to be, unenforceable under applicable law, that will not
-not claim to address the needs or circumstances of specific organizations. Every effort has been made to        affect the enforceability of the other provisions of this disclaimer.
-ensure that to the best of our knowledge, all of the information presented is accurate.
-
-
-
-
 Card No. 2
 TMS-T-027 BowTie Analysis Study Guide.
 © Copyright 2013. All Rights Reserved.

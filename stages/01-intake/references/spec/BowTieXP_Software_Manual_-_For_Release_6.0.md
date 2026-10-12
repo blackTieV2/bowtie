@@ -7,44 +7,6 @@
 
 
 
-Please note that this documentation is preliminary and subject to change without notice. The latest version of this
-document can be obtained via CGE (e-mail support@bowtiexp.com) or via a BowTieXP Value Added Reseller.
-Copyright
-© IP Bank B.V. 2004-2013. BowTieXP is a registered trademark of IP Bank B.V. Subject to change without notice. All
-rights reserved.
-
-
-Terms and conditions for using this document
-The copyright of this software manual and training guide (the document) belongs to IP Bank B.V. who has
-empowered CGE Risk Management Solutions B.V. to provide this document to the market.
-
-This document and/or any part of the document may only be used for training in the BowTieXP software tool and
-methodology. It may not be used for methodology-only training or training with respect to any other tool or
-methodology.
-
-This document and/or any part of the document must always be accompanied by these terms and conditions.
-Without them, any possession and/or use of this material is illegal.
-
-This document may not be published on a public download location; Value Added Resellers (VARs) may provide this
-document in print and/or in PDF format only. Only VARs may distribute this document and only to their leads and
-customers, none of whom may be a competitor of CGE and/or IP Bank.
-
-This document may only be provided by official VARs of the BowTieXP software tool. Check the list of VARs on the
-www.bowtiexp.com website before using this document. If this document has not been provided to you by an
-official VAR, please report this to us immediately by e-mail on support@bowtiexp.com.
-
-This document may be edited and customized by VARs, provided that:
-        They leave terms & conditions, copyright notices and logos intact.
-        They inform CGE Risk Management Solutions B.V. and send CGE Risk Management Solutions B.V. a copy of
-         the changes.
-        They take sole responsibility for the changed content of the document and the impact the changed
-         content has or may have on the rest of the document.
-        They act in the best interests of CGE Risk Management Solutions B.V. and will do nothing to harm the
-         good name and reputation of CGE Risk Management Solutions B.V.
-        They in principle allow CGE Risk Management Solutions B.V. to use their content in the training guide
-         (with reference).
-
-
 
 
 Page 2 of 211
