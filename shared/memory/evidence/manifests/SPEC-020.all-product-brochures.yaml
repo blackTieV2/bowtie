@@ -1,0 +1,18 @@
+evidence_id: SPEC-020
+project: bowtie
+timestamp: 2026-10-12T00:00:00Z
+actor: bootstrap-agent
+model: kimi-k3
+source_type: uploaded-document
+origin: human upload (markdown conversion)
+source_path_or_uri: owner-retained local file
+sha256: 830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74
+media_type: text/markdown
+size_bytes: 40521
+source_trust: trusted
+sensitivity: internal
+classification: legacy-spec
+quarantine_state: extracted
+scope: {stages: [01-intake]}
+relationships: [{type: supersedes, target: SPEC-007, qualifier: partial}, {type: supersedes, target: SPEC-009, qualifier: partial}, {type: supersedes, target: SPEC-010, qualifier: partial}, {type: supersedes, target: SPEC-011, qualifier: partial}]
+notes: All Product Brochures compilation. UI layout, terminology, module overview.
