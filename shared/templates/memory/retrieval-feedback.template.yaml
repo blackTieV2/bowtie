@@ -1,0 +1,17 @@
+query: ""
+run_id: ""
+timestamp: ""
+records_retrieved: []
+records:
+  - id: ""
+    included_in_packet: false
+    used: false
+    ignored: false
+    corrected: false
+    stale: false
+    superseded: false
+    authority_conflict: false
+    caused_requery: false
+    reason_for_exclusion: ""
+notes: ""
+rule: Collect evidence first; do not auto-adapt retrieval weights on tiny feedback.

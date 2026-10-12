@@ -1,0 +1,17 @@
+evidence_id: ""
+project: bowtie
+timestamp: ""
+actor: ""
+model: ""
+source_type: ""        # uploaded-document | agent-report | terminal-output | tool-response | test-evidence | external-research | transcript
+origin: ""
+source_path_or_uri: "" # where safe
+sha256: ""
+media_type: ""
+size_bytes: null
+source_trust: supporting
+sensitivity: internal
+classification: ""     # e.g. legacy-spec | design-input | test-output
+quarantine_state: quarantined
+scope: {}
+notes: ""
