@@ -1,6 +1,6 @@
-# Spec traceability — Phase 1 architecture gate
+# Spec traceability — Phase 1 runtime
 
-Run `002-build-phase1`. Original schema/scaffold only. “Schema tested” means direct SQLite fixture validation, not GUI behavior, native execution, independent QA, approval, or deployment. Source filenames expand in `stages/04-build/output/feature-inventory.md`.
+Run `002-build-phase1`. The human approved schema/scaffold and AR01–AR33 and authorized runtime case IPC/tree work under the selected name Barrier Atlas. Schema checks, runtime service tests and Windows built-app smoke are distinct evidence; none establishes independent QA or deployment. Source filenames expand in `stages/04-build/output/feature-inventory.md`.
 
 | Artifact / represented behavior | Exact spec locator | Status / evidence |
 |---|---|---|
@@ -12,10 +12,12 @@ Run `002-build-phase1`. Original schema/scaffold only. “Schema tested” means
 | One-off improvement actions | SPEC-013 §3.12; SPEC-004 step 12; SPEC-016 §§6.2.4–6.2.5 | action properties/rationale fixture; no ALARP calculation |
 | Risk axes/cells/categories and inherent/residual assessment | SPEC-013 §7.12; SPEC-015 GENERAL Risk Matrices | composite keys, eight limit, typed targets; schema tests |
 | Configurable lookups and custom metadata | SPEC-013 §§7.3, 7.4.1, 15.2 | lookup/property schema; no runtime editor |
-| Tree structure and sibling order | SPEC-013 §§7.2, 7.9 | SQL case_tree projection; empty expandable frontend categories |
-| Local case data persistence | SPEC-013 §6.4; master SQLite storage target | temporary SQLite save/reopen fixture; shell has no persistence commands |
+| Tree structure and sibling order | SPEC-013 §§7.2, 7.9 | SQL case_tree through Tauri IPC; expandable/selectable React explorer; native smoke verifies saved/reopened hierarchy |
+| Local case data persistence | SPEC-013 §§6.4.1, 6.4.3; master SQLite storage target | rusqlite-backed create/open/save/save-as/close; memory working copy, validated atomic Save; native round-trip tests |
+| Unsaved-change prompts and dirty marker | SPEC-013 §§6.2.2, 6.4.3 | Native file controls/window close guard; smoke tests dirty Close case prompt and Cancel |
+| Opaque IDs, foreign keys, transactional diagram/top-event creation | Human continuation constraints; SPEC-014 §§3.4–3.5 | UUID v4; configured connections; transaction failure-injection and connection tests |
 | Future audit target associations/survey subset | SPEC-021 §§24.3, 24.5–24.8; SPEC-023 audit preparation workflow | reference-contract tables/negative tests only; Phase 6 not implemented |
 | Future incident/barrier association | SPEC-021 §29.2; SPEC-002 §10.2; SPEC-022 linking chapter | separate incident identity/join tables; Phase 7 not implemented |
-| Offline Tauri/React/Konva shell and original placeholder icons | Fixed stack/standing offline and clean-room rules; SPEC-013 §6.6 for workspace context | frontend builds; restricted capability/CSP; native build failed for missing Cargo |
+| Offline Barrier Atlas Tauri/React shell and original icons | Fixed stack/standing offline and clean-room rules; human product-name decision; SPEC-013 §6.6 | Windows native build and IPC smoke passed; local dialogs/case commands only; Konva declared but no canvas code |
 
-Full feature inventory and proposed sequencing are separate. No feature is approved merely because this mapping exists. Runtime persistence/tree workflows and native validation must follow review; Phase 2 has not started.
+Full inventory and later sequencing are separate. Eight Rust runtime tests and the native Windows smoke cover this continuation; the twelve-step script remains schema-level coverage for later entities. Native file-dialog chooser UX, full twelve-step GUI authoring, independent QA and macOS/Linux builds/runs remain pending. Phase 2 has not started.

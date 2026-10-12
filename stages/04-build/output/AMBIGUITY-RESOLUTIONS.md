@@ -39,3 +39,15 @@ Run `002-build-phase1`. D-006/current human instruction authorizes choosing the 
 | AR33 | Future completeness | Reserve basic module-reference contracts. Future scoring/timeline/history tables may evolve; core barrier IDs need not be redefined for linking. | Promise zero future migrations; implement modules now | Master shared model; SPEC-021 ch.24/29; SPEC-002 ch.3/10 |
 
 No Phase 2 work started. No legacy binary, decompiler, vendor assets/code/file format, or network application service was used. Review can revise proposals before application feature code; producer checks are not independent QA.
+
+## Human boundary approval and continuation
+
+The owner explicitly approved schema-design.md, initial SQL, AR01–AR33 and name proposals, selected **Barrier Atlas**, and authorized the remaining Phase 1 case IPC/SQLite tree runtime. AR28's temporary-name status and AR31's first-boundary stop are therefore satisfied/superseded by that current human instruction. The original interpretations above remain the reviewed historical decisions; no Phase 2 approval is inferred. The continuation requires native build failure to stop work without workaround.
+
+## Runtime implementation interpretations — review candidates
+
+| ID | Choice | Alternatives | Evidence / reason |
+|---|---|---|---|
+| AR34 | Keep editable cases in an in-memory SQLite working copy; replace the saved file only on explicit Save. | Write through immediately; maintain disk journals as the editable session | SPEC-013 §6.4.3 permits discarding unsaved work; immediate writes would violate that behavior |
+| AR35 | Save through a validated, synchronized same-directory temporary SQLite backup and replacement. Reject unrelated database targets; preserve dirty session/path on failure. | Overwrite the destination directly; accept arbitrary SQLite schemas | Original SQLite format requirement, SPEC-013 §6.4.1 case identity and §6.4.3 save semantics; avoids partial saves and silent data loss |
+| AR36 | Validate original format metadata, version, schema objects (CRLF normalized), references, connected hierarchy and one top event per diagram. No generic/legacy SQLite import. | Accept any SQLite file; compare raw schema line endings | Approved schema + original file-format scope; supports cross-platform line-ending differences without accepting a different schema |

@@ -18,3 +18,7 @@ Correctness and preservation critical; reversibility/maintainability high; speed
 ## Dissent check
 
 Schema overreach is tested against primary relationships and negative integrity cases. Rule 5/D-006 makes the first Phase 1 deliverable an architecture gate, so runnable empty shell and validated schema do not imply a complete editor or persisted GUI workflow. Safest reversible option: additive schema/scaffold on isolated branch, no application features before review.
+
+## Continuation authorized by human after architecture review
+
+Schema/scaffold, schema-design, initial SQL, AR01–AR33 and name proposals APPROVED. Product name selected: Barrier Atlas. Remaining Phase 1 scope: Tauri IPC case create/open/save with rusqlite, SQLite-backed case tree, opaque unique runtime IDs, transactional diagram plus top-event creation, foreign_keys=ON on every connection. Native build must be re-run; any native failure is an immediate stop, without workaround. No Phase 2 canvas work. Commit on feature/phase-1-data-model and update run state/report. Starting continuation: clean branch at 2379bef. TARGET GATE: PASS. Earlier rule-5 stop is satisfied by this explicit approval.

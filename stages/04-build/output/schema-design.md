@@ -17,3 +17,7 @@ Audit tables reserve hierarchy, survey subsets and barrier/activity/document tar
 `scripts/check_phase1_schema.py` maps twelve steps to original fixture data, saves/reopens a temporary file and exercises negative integrity cases. GUI acceptance and independent validation remain pending.
 
 Technical references: [SQLite foreign keys](https://www.sqlite.org/foreignkeys.html), [Tauri capabilities](https://v2.tauri.app/security/capabilities/), [Tauri Vite setup](https://v2.tauri.app/start/frontend/vite/), [rusqlite 0.37](https://docs.rs/rusqlite/0.37.0/rusqlite/). Behavioral citations and decisions appear in the inventory and ambiguity log.
+
+## Approved runtime continuation
+
+The owner approved this design and authorized remaining Phase 1 runtime work. The approved initial SQL is unchanged. `src/case.rs` enables foreign keys on every connection; opaque UUID v4 IDs populate the entity tree. Cases stay in memory until explicit Save. Open validates version, exact schema objects, application format metadata, integrity and references before replacing the session. Save writes through the SQLite backup API to a same-directory temporary file, validates/synchronizes it, closes the destination connection, then replaces the selected `.sqlite` file. Unrelated SQLite databases cannot be overwritten. Diagram/top-event insertion is transactional. The earlier empty-shell paragraphs describe the first approved gate; the runtime service now supersedes that implementation status, not the schema design. Canvas work remains Phase 2 and has not started.

@@ -109,3 +109,22 @@ input_hashes:
   stages/01-intake/references/spec/provenance/BowTieXP_3.6_and_up_Quick_Start_Manual.md: 4db4e63e59605198fa80ebe4aeb9fa10935a6a3b7c89a63ef76eb2a73a62c5ea
 review_depth: Role/contents scans and relevant model, feature, walkthrough and shared-reference
   passages; not line-by-line certification of deferred runtime modules.
+runtime_continuation:
+  recorded_at: '2026-10-12T17:46:42.364824+00:00'
+  starting_head: 2379bef
+  human_approved:
+  - schema-design.md
+  - 001-initial.sql
+  - AR01–AR33
+  - schema/scaffold boundary
+  product_name: Barrier Atlas
+  scope: Phase 1 case IPC and SQLite tree; no Phase 2
+  sources:
+  - SPEC-013 §§6.2.2, 6.4.1–6.4.3, 7.2
+  - approved initial SQL and schema-design
+  technical_sources:
+  - https://v2.tauri.app/develop/calling-rust/
+  - https://v2.tauri.app/plugin/dialog/
+  - rusqlite 0.37 local backup API
+  - https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/remote-debugging-desktop
+  stop_on_native_failure: true

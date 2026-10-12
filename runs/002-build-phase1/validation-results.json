@@ -54,5 +54,7 @@
     "offline CSP/capabilities"
   ],
   "gui_acceptance": false,
-  "phase2_started": false
+  "phase2_started": false,
+  "record_scope": "Historical architecture checks; missing-Cargo failure superseded by runtime continuation",
+  "current_runtime_evidence": "runtime-validation-results.json"
 }

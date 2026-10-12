@@ -1,0 +1,54 @@
+{
+  "actor": "producer",
+  "product_name": "Barrier Atlas",
+  "starting_head": "2379bef4fca31170d8f01c035ec1c2f73b4b609f",
+  "target_gate": "PASS",
+  "architecture_boundary": "approved by current human",
+  "native_build": {
+    "command": "npm run tauri build -- --no-bundle",
+    "result": "PASS",
+    "exit_code": 0,
+    "platform": "Windows x64",
+    "final_seconds": 49.7,
+    "rustc": "1.99.0",
+    "cargo": "1.99.0",
+    "executable": "app/src-tauri/target/release/barrier-atlas.exe"
+  },
+  "runtime_tests": {
+    "command": "cargo test --lib --release",
+    "result": "PASS",
+    "passed": 8,
+    "failed": 0
+  },
+  "native_smoke": {
+    "command": "node scripts/check_phase1_native.mjs with owned built app and local diagnostic port",
+    "result": "PASS",
+    "entities": 5,
+    "native_ipc": true,
+    "sqlite_tree_rendered": true,
+    "save_reopen": true,
+    "unsaved_close_prompt_and_cancel": true
+  },
+  "schema_checks": {
+    "command": "python scripts/check_phase1_schema.py",
+    "result": "PASS",
+    "steps": 12,
+    "entities": 16,
+    "negative_cases": 18
+  },
+  "frontend": {
+    "command": "npm run build",
+    "result": "PASS",
+    "main_js_kb": 242.4,
+    "gzip_kb": 74.61
+  },
+  "limits": [
+    "macOS/Linux native builds/runs not tested",
+    "Native file-dialog chooser UX not automated",
+    "Full twelve-step GUI authoring not implemented",
+    "Independent QA not performed"
+  ],
+  "phase2_started": false,
+  "native_failure_workaround": false,
+  "recorded_at": "2026-10-12T17:46:42.364824+00:00"
+}

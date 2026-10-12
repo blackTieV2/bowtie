@@ -4,4 +4,4 @@
 - **Risk Weave** — relationships among scenarios, controls, tasks, audits and incidents.
 - **Control Grove** — connected controls maintained over time.
 
-The scaffold uses the temporary label **Risk Case Workspace**. Final naming remains for review. These creative proposals do not establish registered-name availability.
+The owner selected **Barrier Atlas** at the approved Phase 1 schema/scaffold boundary. Application labels and package identifiers now use that name. The other proposals remain historical alternatives; this record does not establish registered-name availability.

@@ -100,4 +100,8 @@ The file contains 51 Standard-marked rows. The screen-layout row embeds extra-in
 
 Advanced-only rows with an open circle in SPEC-015 are not Standard features. The approved master prompt separately schedules case comparison/find-replace in Phase 5; these are owner-scheduled extensions requiring later phase review, not newly interpreted Standard rows. No such functionality is implemented here. Web/SharePoint/server collaboration services, proprietary legacy file formats, activation, network updates and copied branding are excluded. Secondary references remain preserved; they cannot override primary text.
 
-The manuals do not enumerate every report/quality check, and extracted images are absent. Full parity is not proven by row coverage. AR01–AR33 in `AMBIGUITY-RESOLUTIONS.md` states the chosen interpretations and alternatives. The architecture gate requires review of missing catalog details before the corresponding later phase.
+The manuals do not enumerate every report/quality check, and extracted images are absent. Full parity is not proven by row coverage. AR01–AR33 were approved at the architecture boundary; AR34–AR36 record runtime choices for review. Missing catalog details remain later-phase work.
+
+## Approved Phase 1 runtime continuation
+
+After architecture approval, Barrier Atlas implements local case create/open/save/save-as/close via Tauri/rusqlite, unsaved-change prompts, an expandable SQLite-backed tree, group creation and transactional hazard/diagram/top-event creation. F01/F02/F21 and M01/M04/M10 are therefore partially implemented in Phase 1; full diagram authoring and other rows remain later work. Root SPEC-TRACEABILITY.md distinguishes current tests from earlier schema-only proposals. No diagram-canvas work has started.
