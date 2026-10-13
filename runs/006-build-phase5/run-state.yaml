@@ -1,0 +1,18 @@
+run_id: 006-build-phase5
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: blocked
+current_stage: 04-build
+current_step: edition-scope-stop
+completed_steps: [target-gate, edition-references, branch-and-packet, AR63-blocker-report]
+pending_steps: [human-scope-correction, implementation, validation, completion-push]
+approval_required: true
+approval_status: Explicit edition stop; human scope decision required
+actor: codex
+model: model-neutral-record
+started_at: 2026-10-13
+updated_at: 2026-10-13
+input_hashes: {manifest: runs/006-build-phase5/input-hashes.json}
+output_hashes: {manifest: runs/006-build-phase5/output-hashes.json}
+rollback_reference: 72e9a1c138b55aedd5e7979c18c4d473a5357b4a
+resume_instruction: STOP pending human scope correction; no Phase 6.

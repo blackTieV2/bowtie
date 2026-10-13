@@ -1,0 +1,17 @@
+{
+  "algorithm": "SHA-256",
+  "bytes": "local raw bytes",
+  "exclusions": [
+    "This manifest (self-reference)"
+  ],
+  "files": {
+    "runs/006-build-phase5/context-manifest.yaml": "bb532767d3b447df60d78a30085c7ea35d77f133cf7e26164f02379f10c986f4",
+    "runs/006-build-phase5/input-hashes.json": "375015a7f842b953b60383afd8504bac544c17fb44e809871833ed0d3392ea57",
+    "runs/006-build-phase5/memory-promotion-review.md": "755295e2281dd21887971c2cb0b8a55b7737bc0bb38415363196c025378b77f5",
+    "runs/006-build-phase5/retrieval-feedback.yaml": "24c389a3e7a7b64c05fabb64055e92d96fe049eec7a8b84147711edbb0e73382",
+    "runs/006-build-phase5/run-state.yaml": "4f45beba92f8bc9c42650b04b1ed1f020e9e1facd7c791affe9c33cdd9cf7675",
+    "runs/006-build-phase5/task-packet.md": "35cd9249bb8330f49795d2a9a18a529fd6f8523c151fb4e2d115f28da95a97e6",
+    "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md": "3fffba922e60b49600f8a5d7b64929507c2f961e596b41a28661902cb0f01cee",
+    "stages/04-build/output/phase-5-report.md": "169adc6dffbfa5433797e2dc86112c30dbde74527f8e9375b508bed279581d9f"
+  }
+}
