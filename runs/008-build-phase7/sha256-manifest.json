@@ -276,8 +276,8 @@
     },
     {
       "path": "runs/008-build-phase7/run-state.yaml",
-      "git_blob_sha256": "34ddf34105a570976260ded852aee6979d6cf822cfb8d24d600dcb7327a3d8ff",
-      "working_file_sha256": "c1b14285e7c5dadb105bd593580edcd2cb6938fa02fc89942941b5b98ebf5859"
+      "git_blob_sha256": "fad56764ec33f24fd011fbc89447a521289fbc8203dc8aab6876293f63715892",
+      "working_file_sha256": "75b67149860e6cbf7a875e5515c56e2844a5b13e4a7873d9d5e76737d19c5f3c"
     },
     {
       "path": "runs/008-build-phase7/schema-guard-evidence.json",
