@@ -190,8 +190,16 @@ fn parse(text: &str) -> (Vec<Record>, Vec<ImportIssue>) {
                 message: "Record identity is required".into(),
             });
         }
-        if !["case", "entity", "lookup", "link", "matrix", "assessment"]
-            .contains(&cells[0].as_str())
+        if ![
+            "case",
+            "entity",
+            "lookup",
+            "link",
+            "matrix",
+            "assessment",
+            "audit",
+        ]
+        .contains(&cells[0].as_str())
         {
             errors.push(ImportIssue {
                 line,
@@ -254,10 +262,12 @@ fn parse(text: &str) -> (Vec<Record>, Vec<ImportIssue>) {
                 errors.push(issue("Malformed or unsupported case header payload"));
             }
         }
-        if ["case", "lookup", "matrix"].contains(&cells[0].as_str()) && !cells[2].is_empty() {
+        if ["case", "lookup", "matrix", "audit"].contains(&cells[0].as_str())
+            && !cells[2].is_empty()
+        {
             errors.push(issue("This record type has no parent column"));
         }
-        if ["case", "link", "matrix", "assessment"].contains(&cells[0].as_str())
+        if ["case", "link", "matrix", "assessment", "audit"].contains(&cells[0].as_str())
             && (!cells[5].is_empty() || cells[6] != "0")
         {
             errors.push(issue("Reserved description/order columns must be empty/0"));
@@ -658,6 +668,24 @@ fn apply_records(tx: &Transaction<'_>, records: &[Record]) -> std::result::Resul
         }
         tx.execute("INSERT INTO risk_assessment(target_id,matrix_id,phase,likelihood_position,severity_position) VALUES(?,?,?,?,?)",params![a.target_id,a.matrix_id,a.phase,a.likelihood_position,a.severity_position]).map_err(|e|fail(r,err(e)))?;
     }
+    for r in records.iter().filter(|r| r.typ() == "audit") {
+        let a: crate::audit::Audit =
+            serde_json::from_value(r.payload.clone()).map_err(|e| fail(r, err(e)))?;
+        if a.id != r.id() || a.title != r.cells[4] || !r.kind().is_empty() {
+            return Err(fail(r, "Audit columns and payload disagree".into()));
+        }
+        let exists: bool = tx
+            .query_row(
+                "SELECT EXISTS(SELECT 1 FROM audit WHERE id=?)",
+                [r.id()],
+                |v| v.get(0),
+            )
+            .map_err(|e| fail(r, err(e)))?;
+        if exists {
+            return Err(fail(r, "Duplicate existing audit identity".into()));
+        }
+        crate::audit::write_bundle(tx, &a).map_err(|e| fail(r, e))?;
+    }
     validate(tx).map_err(|e| ImportIssue {
         line: 1,
         message: e,
@@ -746,6 +774,18 @@ impl CaseStore {
                 a.target_id.clone(),
                 a.phase.clone(),
                 "".into(),
+                "".into(),
+                "0".into(),
+                serde_json::to_string(a).map_err(err)?,
+            ]);
+        }
+        for a in &s.audits {
+            rows.push(vec![
+                "audit".into(),
+                a.id.clone(),
+                "".into(),
+                "".into(),
+                a.title.clone(),
                 "".into(),
                 "0".into(),
                 serde_json::to_string(a).map_err(err)?,

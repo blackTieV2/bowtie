@@ -8,7 +8,7 @@ export type Matrix = {id:string;title:string;coordinateOrder:"xy"|"yx";likelihoo
 export type Assessment = {targetId:string;matrixId:string;phase:"inherent"|"residual";likelihoodPosition:number;severityPosition:number};
 export type Lookup = {id:string;tableKey:string;title:string;code:string;color:string;sortOrder:number;metadata:Record<string,unknown>};
 export type ActionRow = {id:string;parentId:string;parentTitle:string;title:string;description:string;properties:Record<string,unknown>;responsible:string[]};
-export type CaseSnapshot = { title: string; path: string | null; dirty: boolean; tree: TreeRow[]; links: LinkRow[]; matrices:Matrix[];assessments:Assessment[];lookups:Lookup[];actions:ActionRow[];customFields:Record<string,Record<string,string>> };
+export type CaseSnapshot = { title: string; path: string | null; dirty: boolean; tree: TreeRow[]; links: LinkRow[]; matrices:Matrix[];assessments:Assessment[];lookups:Lookup[];actions:ActionRow[];customFields:Record<string,Record<string,string>>;audits:import("./auditModel").Audit[];auditResults:Record<string,import("./auditModel").AuditResult[]> };
 export const label = (kind: string) => kind.replaceAll("_", " ");
 export const box = { width: 170, height: 78 };
 export function diagramFor(rows: TreeRow[], selected?: TreeRow): TreeRow | undefined {

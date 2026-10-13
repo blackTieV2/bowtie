@@ -1,0 +1,148 @@
+{
+  "893f32cc-4faa-4005-99ef-2d813bb1802d": [
+    {
+      "questionId": "caa58b27-9ef5-497a-a92e-21d5249c10a3",
+      "title": "Check inspection work",
+      "choices": [
+        {
+          "label": "Missing",
+          "tendency": "negative"
+        },
+        {
+          "label": "Ready",
+          "tendency": "neutral"
+        },
+        {
+          "label": "Verified",
+          "tendency": "positive"
+        }
+      ],
+      "counts": [
+        2,
+        0,
+        0
+      ],
+      "unanswered": 0,
+      "worstChoice": 0,
+      "mostNegative": false,
+      "details": [
+        {
+          "choice": 0,
+          "completed": true,
+          "contextId": null,
+          "date": "2026-10-13",
+          "filloutId": "df7dfa18-6856-491e-81d2-11bc364faecc",
+          "remark": "Observed during transfer; checklist reference recorded",
+          "respondent": "Local reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Operations"
+        },
+        {
+          "choice": 0,
+          "completed": true,
+          "contextId": null,
+          "date": "2026-10-14",
+          "filloutId": "b13aad93-6b05-4fd5-99e2-d2f9c99ee960",
+          "remark": "Independent Excel-like response evidence",
+          "respondent": "External reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Night shift"
+        }
+      ]
+    },
+    {
+      "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+      "title": "Check safeguard implementation",
+      "choices": [
+        {
+          "label": "Verified",
+          "tendency": "positive"
+        },
+        {
+          "label": "Needs review",
+          "tendency": "neutral"
+        },
+        {
+          "label": "Absent",
+          "tendency": "negative"
+        }
+      ],
+      "counts": [
+        3,
+        0,
+        1
+      ],
+      "unanswered": 0,
+      "worstChoice": 2,
+      "mostNegative": true,
+      "details": [
+        {
+          "choice": 2,
+          "completed": true,
+          "contextId": "6deeeb79-b517-4c65-bafe-612060882250",
+          "date": "2026-10-13",
+          "filloutId": "df7dfa18-6856-491e-81d2-11bc364faecc",
+          "remark": "Observed during transfer; checklist reference recorded",
+          "respondent": "Local reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Operations"
+        },
+        {
+          "choice": 0,
+          "completed": true,
+          "contextId": "e755c62d-1383-4302-be77-b9c95503a6de",
+          "date": "2026-10-13",
+          "filloutId": "df7dfa18-6856-491e-81d2-11bc364faecc",
+          "remark": "Observed during transfer; checklist reference recorded",
+          "respondent": "Local reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Operations"
+        },
+        {
+          "choice": 0,
+          "completed": true,
+          "contextId": "6deeeb79-b517-4c65-bafe-612060882250",
+          "date": "2026-10-14",
+          "filloutId": "b13aad93-6b05-4fd5-99e2-d2f9c99ee960",
+          "remark": "Independent Excel-like response evidence",
+          "respondent": "External reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Night shift"
+        },
+        {
+          "choice": 0,
+          "completed": true,
+          "contextId": "e755c62d-1383-4302-be77-b9c95503a6de",
+          "date": "2026-10-14",
+          "filloutId": "b13aad93-6b05-4fd5-99e2-d2f9c99ee960",
+          "remark": "Independent Excel-like response evidence",
+          "respondent": "External reviewer",
+          "surveyId": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+          "unit": "Night shift"
+        }
+      ]
+    },
+    {
+      "questionId": "055d3d62-9061-498b-a2c3-fbf92629617e",
+      "title": "Review framework",
+      "choices": [
+        {
+          "label": "Established",
+          "tendency": "positive"
+        },
+        {
+          "label": "Needs attention",
+          "tendency": "negative"
+        }
+      ],
+      "counts": [
+        0,
+        0
+      ],
+      "unanswered": 0,
+      "worstChoice": null,
+      "mostNegative": false,
+      "details": []
+    }
+  ]
+}

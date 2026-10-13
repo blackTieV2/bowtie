@@ -245,6 +245,10 @@ pub(crate) fn insert_entity(
 }
 fn deletion_references(db: &Connection, id: &str) -> Result<Vec<String>> {
     let mut blockers = vec![];
+    let audit_filters = crate::audit::entity_filter_references(db, id)?;
+    if audit_filters > 0 {
+        blockers.push(format!("saved audit filters: {audit_filters} reference(s)"));
+    }
     let mut equivalents = db.prepare("SELECT e.title FROM entity_property p JOIN entity e ON e.id=p.entity_id WHERE p.property_key='equivalent_top_event' AND json_extract(p.value_json,'$')=?").map_err(err)?;
     for row in equivalents
         .query_map([id], |r| r.get::<_, String>(0))

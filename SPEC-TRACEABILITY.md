@@ -88,3 +88,22 @@ This is the requested consolidated core case report, not a claim to replicate ev
 | Whole-operation session undo for replacement/import | SPEC-013 §§9.4.1,12.3 | Validated bounded in-memory tool checkpoint in `case_tools.rs` | Replace undo equality; stale guard and save/open/new/close invalidation; no schema additions |
 
 Comparison uses the application's original schema and stored primary-key identities. Semantic JSON comparison avoids whitespace/key-order false differences. Report export revalidates both case contents against the preview signature. No comparison merge/copy/apply path exists. AR64–AR69 document the bounded interpretations for human phase review. All Phase 5 examples and results are in `runs/006-build-phase5/`.
+
+## Phase 6 audit module — run 007-build-phase6
+
+| Feature | Spec authority | Implementation and verification |
+|---|---|---|
+| Multiple normal audits, question hierarchy, criteria and ordered choices | SPEC-021 §§24.3–24.6.1; SPEC-023 Preparation: Define questions | audit.rs/AuditPanel; hierarchy/cycle tests and native preparation |
+| Positive/negative keying, midpoint and explicit @ center | SPEC-021 §24.6.1; SPEC-023 Preparation: Define questions | Ordinal tests: eight positive, eight neutral, balanced four/four; no numerical score |
+| Most-negative and contextual/shared responses | SPEC-021 §24.6.2 | Typed modes/exact slots; Rust/native worst-choice checks |
+| Barrier/activity/document links and question labels beneath barriers | SPEC-021 §§24.3,24.7; SPEC-023 Preparation: Link questions; approved target trigger | Relational writer, AuditDiagram/scene; target-kind tests and canvas |
+| Flat survey subset, code/name/description, combined target/role/property criteria | SPEC-021 §24.8; SPEC-023 Preparation: Create surveys | AuditPanel/ordered membership; survey CRUD/native subset |
+| Respondent/date/unit, answers/remarks, drafts/completion/edit/delete and persistence | SPEC-021 §§24.4,24.9; SPEC-023 Conduct the audit | Typed audit-owned metadata, transactional checks/full reopen equality |
+| Original XLSX dropdown forms and validated multi-form import | SPEC-021 §24.9.1; SPEC-023 Conduct the audit: Export/import surveys | auditWorkbook; styled Excel-date fixture, invalid-choice rollback and ZIP/XML checks |
+| Qualitative counts/details and survey/unit/date/fillout/negative filters | SPEC-021 §§24.10–24.10.2; SPEC-023 Review the audit: Analyse results | Rust count/filter tests, editor/target review; no invented weighted/risk formula |
+| Diagram filter, supporting context and graph-click answer dialog | SPEC-021 §24.10; SPEC-023 Review the audit: Display results | AuditDiagram/DiagramCanvas; native details screenshot |
+| Saved review/diagram profiles | SPEC-023 Review the audit: Display results (save filter settings) | Validated audit-owned profiles, deletion/reference guards, native/Rust reopen |
+| Audit-only and integrated case DOCX review | SPEC-023 Review the audit: Review & Report; SPEC-021 §24.10; Phase 4 report authority | Existing caseReport/signed atomic exports, native artifact/parser checks |
+| Full audit preservation in original core exchange | SPEC-021 §24.4 all audit data in case; standing exchange consistency | exchange audit bundle; Rust/native export/import/export equality |
+
+Storage contract: app/AUDIT-DATA-DESIGN.md. Approved schema/trigger files remain unchanged. AR70 onward records boundary interpretations; run 007 separates producer/validator evidence. Server-only surveys and incident audits remain outside Phase 6.

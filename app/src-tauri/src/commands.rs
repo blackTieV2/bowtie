@@ -5,6 +5,30 @@ use tauri::State;
 
 type Store<'a> = State<'a, Mutex<CaseStore>>;
 #[tauri::command]
+pub fn case_save_audit(
+    state: Store<'_>,
+    audit: crate::audit::Audit,
+    expected: Option<crate::audit::Audit>,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.save_audit(&audit, expected.as_ref()))
+}
+#[tauri::command]
+pub fn case_delete_audit(
+    state: Store<'_>,
+    id: String,
+    expected: crate::audit::Audit,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.delete_audit(&id, &expected))
+}
+#[tauri::command]
+pub fn case_audit_results(
+    state: Store<'_>,
+    id: String,
+    filter: crate::audit::ResultFilter,
+) -> Result<Vec<crate::audit::ResultRow>, String> {
+    with_store(state, |s| s.audit_results(&id, &filter))
+}
+#[tauri::command]
 pub fn case_reorder_lookup(
     state: Store<'_>,
     id: String,

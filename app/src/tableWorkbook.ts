@@ -22,20 +22,20 @@ function xml(text: string): string {
   return text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;").replaceAll("\r", "&#13;");
 }
 const ns = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
-export function toWorkbook(text: string): Uint8Array {
+export function toWorkbook(text: string, sheetName="Case data"): Uint8Array {
   const rows = csvRows(text);
   if (rows.some(row => row.some(cell => cell.length > 32767))) throw Error("A spreadsheet cell exceeds 32,767 characters; export this case as CSV.");
   const sheet = `<?xml version="1.0" encoding="UTF-8"?><worksheet xmlns="${ns}"><sheetData>${rows.map((row, r) => `<row r="${r + 1}">${row.map((cell, c) => `<c r="${String.fromCharCode(65 + c)}${r + 1}" t="inlineStr"><is><t xml:space="preserve">${xml(cell)}</t></is></c>`).join("")}</row>`).join("")}</sheetData></worksheet>`;
   const parts = {
     "[Content_Types].xml": '<?xml version="1.0"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>',
     "_rels/.rels": '<?xml version="1.0"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>',
-    "xl/workbook.xml": `<?xml version="1.0"?><workbook xmlns="${ns}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Case data" sheetId="1" r:id="rId1"/></sheets></workbook>`,
+    "xl/workbook.xml": `<?xml version="1.0"?><workbook xmlns="${ns}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="${xml(sheetName)}" sheetId="1" r:id="rId1"/></sheets></workbook>`,
     "xl/_rels/workbook.xml.rels": '<?xml version="1.0"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>',
     "xl/worksheets/sheet1.xml": sheet,
   };
   return zipSync(Object.fromEntries(Object.entries(parts).map(([name, value]) => [name, strToU8(value)])), { level: 6, mtime: new Date(1980, 0, 1) });
 }
-export function fromWorkbook(bytes: Uint8Array): { name: string; text: string }[] {
+export function fromWorkbook(bytes: Uint8Array, columnCount=8, onlyFirst=false): { name: string; text: string }[] {
   let total = 0;
   const parts = unzipSync(bytes, { filter: file => { total += file.originalSize; if (total > MAX || file.originalSize > MAX) throw Error("Expanded spreadsheet exceeds 20 MiB"); return file.name.endsWith(".xml") || file.name.endsWith(".rels"); } });
   function document(name: string): Document {
@@ -47,7 +47,7 @@ export function fromWorkbook(bytes: Uint8Array): { name: string; text: string }[
   const textOf = (e: Element, name: string) => elements(e, name).map(t => t.textContent ?? "").join("");
   const shared = parts["xl/sharedStrings.xml"] ? elements(document("xl/sharedStrings.xml"), "si").map(e => textOf(e, "t")) : [];
   const relationships = elements(document("xl/_rels/workbook.xml.rels"), "Relationship");
-  return elements(document("xl/workbook.xml"), "sheet").map(sheet => {
+  return elements(document("xl/workbook.xml"), "sheet").slice(0,onlyFirst?1:undefined).map(sheet => {
     const id = sheet.getAttributeNS("http://schemas.openxmlformats.org/officeDocument/2006/relationships", "id");
     const relation = relationships.find(r => r.getAttribute("Id") === id);
     const target = relation?.getAttribute("Target");
@@ -57,12 +57,12 @@ export function fromWorkbook(bytes: Uint8Array): { name: string; text: string }[
     for (const row of elements(document(name), "row")) {
       const number = Number(row.getAttribute("r") ?? expectedRow);
       if (!Number.isInteger(number) || number < expectedRow || number > 100_000) throw Error("Invalid spreadsheet row number");
-      while (expectedRow < number) { rows.push(Array(8).fill("")); expectedRow++; }
-      const cells: string[] = Array(8).fill(""); const seen = new Set<number>();
+      while (expectedRow < number) { rows.push(Array(columnCount).fill("")); expectedRow++; }
+      const cells: string[] = Array(columnCount).fill(""); const seen = new Set<number>();
       for (const cell of elements(row, "c")) {
         const reference = cell.getAttribute("r") ?? "";
-        const match = /^([A-H])([1-9]\d*)$/.exec(reference);
-        if (!match || Number(match[2]) !== number || seen.has(match[1].charCodeAt(0))) throw Error(`Row ${number}: expected unique cells in columns A–H`);
+        const match = /^([A-Z])([1-9]\d*)$/.exec(reference);
+        if (!match || match[1].charCodeAt(0)-65>=columnCount || Number(match[2]) !== number || seen.has(match[1].charCodeAt(0))) throw Error(`Row ${number}: expected unique cells in the declared columns`);
         if (elements(cell, "f").length) throw Error(`Row ${number}: formulas are unsupported; paste values first`);
         seen.add(match[1].charCodeAt(0));
         const type = cell.getAttribute("t"), value = textOf(cell, "v");
