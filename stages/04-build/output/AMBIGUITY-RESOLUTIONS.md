@@ -136,3 +136,16 @@ Phase 5 and AR64–AR69 were accepted by the human. These interpretations follow
 | AR74 | Freeze scale/keying/contextual mode after responses exist and require exact slot consistency when editing question/survey membership. Reject stale whole-audit writes. | Silently reinterpret responses; partial orphan deletion | SPEC-021 single-response/context semantics and standing data-integrity/atomicity rules. Explicit deletion of fillouts permits later redefinition. |
 | AR75 | One original audit DOCX review reuses Phase 4 report machinery; general case reports include audits. Canvas review shows one selected question per barrier with clickable details; image exports retain core Phase 4 scenes. | Copy legacy report variants; infer multi-question aggregate score | SPEC-023 Review & Report and SPEC-021 §24.10 support review/report; no aggregate scoring model or audit image export contract is documented. |
 | AR76 | Saved filters reside with each audit and persist survey/unit/date/fillout/target/negative/question/display settings. Normal local audits only; server long-format/incident types stay assigned to other scopes. | Local-only transient settings; server coupling | SPEC-023 saved filter workflow; SPEC-021 §24.11 explicitly server-only; current Phase 6/offline scope. |
+
+## Phase 7 specification/schema gate — unresolved human stop
+
+Phase 6 and AR70–AR76 are human-approved. Phase 7 was authorized subject to its explicit schema guard. No Phase 7 app implementation has begun.
+
+| ID | Finding / proposal | Alternatives | Authority / disposition |
+|---|---|---|---|
+| AR77 | Version difference: RCA event-to-bow-tie-barrier linkage is unavailable in SPEC-022, but explicitly introduced from version 9.2 and present in SPEC-002 10.4. Follow 10.4, including categorized RCA linkage. | Retain 8.2 exclusion | SPEC-022 §7.1.1/ch.9 introductory note; SPEC-002 §§7.1.1,8.1.2,10.2. Human version-authority rule resolves the version choice, but exposes AR78. |
+| AR78 | STOP: approved incident_barrier_link insert/update triggers require incident_node.kind=barrier; 10.4 requires RCA event nodes to link to case barriers. Immutable kind forbids conversion. Proposed migration extends allowed source semantics only for documented RCA event sources, preserving barrier-only targets, FKs and identity immutability. | Omit required behavior; synthetic barrier proxies; metadata-only joins; globally permit all events | All alternatives evade required behavior/approved relationship semantics. Independent validator STOP/FAIL plus memory-clone trigger reproduction. No migration performed. Human approval of migration or explicit scope exception required. See runs/008-build-phase7/migration-proposal.md. |
+
+### AR78 human resolution
+
+AR78 is RESOLVED BY AUTHORIZED CONSTRAINED MIGRATION. The human confirmed SPEC-002 ch.10 and required method-conditional event sources for the RCA family. Only the two approved link triggers change in a new v2 migration file; no other schema objects change. The previous broader proposal is retained as historical stop evidence, superseded by verbatim authorization in run008. Deletion diagnostics retain their existing incident association count. Migration checks and fresh validation are recorded separately.

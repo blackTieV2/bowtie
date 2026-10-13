@@ -1,0 +1,10 @@
+run_id: 008-build-phase7
+current_stage: 04-build
+status: active
+current_step: incident-implementation
+branch: feature/phase-7-incident-module
+base: 4167043354510b5a817574d488f1cafc29f4ba95
+completed_steps: [target-gate, branch-and-packet, schema-stop-record, AR78-human-authorization, migration, producer-migration-tests]
+pending_steps: [migration-validator-record, implementation, producer-tests, fresh-validation, three-platform-CI, final-report, final-feature-push, human-phase-gate]
+approval_required: true
+resume_instruction: Phase 7 only. Apply only exact authorized migration. Preserve prior stop record. Stop at final human boundary; no merge.

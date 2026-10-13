@@ -1,0 +1,15 @@
+{
+  "scope": "Read-only source-case clone into disposable memory; no schema changes or source writes",
+  "source_bytes_unchanged": true,
+  "checks": {
+    "event_barrier_link": {
+      "rejected": true,
+      "message": "Links require two barriers"
+    },
+    "kind_conversion": {
+      "rejected": true,
+      "message": "Incident node identity, kind and incident are immutable"
+    },
+    "barrier_barrier_positive_control": true
+  }
+}

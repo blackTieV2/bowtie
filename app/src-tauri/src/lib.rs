@@ -13,6 +13,9 @@ mod phase6_tests;
 mod properties;
 mod risk;
 pub const INITIAL_SCHEMA: &str = include_str!("../schema/001-initial.sql");
+pub const RCA_LINK_MIGRATION: &str = include_str!("../schema/002-rca-event-links.sql");
+#[cfg(test)]
+mod migration_tests;
 pub fn run() {
     tauri::Builder::default()
         .manage(std::sync::Mutex::new(case::CaseStore::default()))

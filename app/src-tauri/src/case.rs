@@ -67,13 +67,18 @@ pub(crate) fn validate(db: &Connection) -> CaseResult<()> {
     let version: i64 = db
         .query_row("PRAGMA user_version", [], |r| r.get(0))
         .map_err(error_text)?;
-    if version != 1 {
+    if !matches!(version, 1 | 2) {
         return Err("Unsupported Barrier Atlas case version".into());
     }
     let expected = memory()?;
     expected
         .execute_batch(crate::INITIAL_SCHEMA)
         .map_err(error_text)?;
+    if version == 2 {
+        expected
+            .execute_batch(crate::RCA_LINK_MIGRATION)
+            .map_err(error_text)?;
+    }
     if schema_objects(db)? != schema_objects(&expected)? {
         return Err("This file does not have the supported Barrier Atlas case schema".into());
     }
@@ -271,6 +276,16 @@ impl CaseStore {
         validate(&source)?;
         let mut db = memory()?;
         copy_database(&source, &mut db)?;
+        let version: i64 = db
+            .query_row("PRAGMA user_version", [], |r| r.get(0))
+            .map_err(error_text)?;
+        if version == 1 {
+            let tx = db.transaction().map_err(error_text)?;
+            tx.execute_batch(crate::RCA_LINK_MIGRATION)
+                .map_err(error_text)?;
+            validate(&tx)?;
+            tx.commit().map_err(error_text)?;
+        }
         validate(&db)?;
         self.active = Some(ActiveCase {
             db,

@@ -107,3 +107,7 @@ Comparison uses the application's original schema and stored primary-key identit
 | Full audit preservation in original core exchange | SPEC-021 §24.4 all audit data in case; standing exchange consistency | exchange audit bundle; Rust/native export/import/export equality |
 
 Storage contract: app/AUDIT-DATA-DESIGN.md. Approved schema/trigger files remain unchanged. AR70 onward records boundary interpretations; run 007 separates producer/validator evidence. Server-only surveys and incident audits remain outside Phase 6.
+
+## Phase 7 constrained migration — AR78 resolved by human authorization
+
+SPEC-002 §§7.1.1,8.1.2,ch.10 requires ordinary/categorized RCA events to link to case barriers. schema/002-rca-event-links.sql replaces ONLY the two link triggers and sets user_version=2. Source is a barrier of any method or an event whose owning incident method_key is rca/categorized_rca; target remains a case barrier. Identity/FKs unchanged. case.rs accepts exact v1/v2 signatures, migrates the working-copy backup transactionally on open, and persists on explicit atomic Save. migration_tests covers v1 file roundtrip, all source kinds/methods, insert/update and schema-change scope; original 43 tests unchanged.
