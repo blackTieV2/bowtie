@@ -66,14 +66,15 @@ export default function DiagramCanvas({snapshot, diagram, selected, busy, select
             const p=positions[node.id]; if(!p)return null;
             const links=snapshot.links.filter(l=>l.sourceId===node.id);
             const actions=snapshot.tree.filter(n=>n.kind==="action" && n.parentId===node.id);
+            const effectiveness=snapshot.lookups.find(l=>l.id===node.effectivenessId);
             return <Group key={node.id} id={node.id} x={p.x} y={p.y} draggable={!busy} onClick={()=>select(node.id)} onTap={()=>select(node.id)} onDblClick={()=>edit(node)} onDblTap={()=>edit(node)}
               onDragStart={e=>{e.cancelBubble=true;select(node.id);}}
               onDragMove={e=>{e.cancelBubble=true;setMoving(m=>({...m,[node.id]:e.target.position()}));}}
               onDragEnd={e=>{e.cancelBubble=true;const target=e.target;const next=target.position();void persist([{id:node.id,...next}]).then(ok=>{if(!ok){target.position(savedPositions(nodes)[node.id]);setMoving({});}});}}>
-              {node.kind==="top_event" ? <Ellipse x={box.width/2} y={box.height/2} radiusX={box.width/2} radiusY={box.height/2} fill={color[node.kind]} stroke={selected===node.id?"#245b47":"#9bab9f"} strokeWidth={selected===node.id?3:1}/> : <Rect width={box.width} height={box.height} cornerRadius={node.kind==="barrier"?3:10} fill={color[node.kind]} stroke={selected===node.id?"#245b47":"#9bab9f"} strokeWidth={selected===node.id?3:1}/>}
+              {node.kind==="top_event" ? <Ellipse x={box.width/2} y={box.height/2} radiusX={box.width/2} radiusY={box.height/2} fill={color[node.kind]} stroke={selected===node.id?"#245b47":"#9bab9f"} strokeWidth={selected===node.id?3:1}/> : <Rect width={box.width} height={box.height} cornerRadius={node.kind==="barrier"?3:10} fill={effectiveness?.color??color[node.kind]} stroke={selected===node.id?"#245b47":"#9bab9f"} strokeWidth={selected===node.id?3:1}/>}
               <Text x={10} y={9} width={box.width-20} text={node.kind.replaceAll("_"," ").toUpperCase()} fontSize={9} fill="#587066" listening={false}/>
               <Text x={12} y={26} width={box.width-24} height={43} text={node.title} fontSize={13} fill="#223d31" ellipsis listening={false}/>
-              {(links.length>0 || actions.length>0) && <Text x={8} y={box.height+5} width={box.width} text={[...links.map(l=>snapshot.tree.find(n=>n.id===l.targetId)?.title??""),...actions.map(n=>`Action: ${n.title}`)].join(" · ")} fontSize={10} height={36} ellipsis fill="#566d60" listening={false}/>}
+              {(effectiveness || links.length>0 || actions.length>0) && <Text x={8} y={box.height+5} width={box.width} text={[...(effectiveness?[`Effectiveness: ${effectiveness.title}`]:[]),...links.map(l=>snapshot.tree.find(n=>n.id===l.targetId)?.title??""),...actions.map(n=>`Action: ${n.properties.code||n.title}`)].join(" · ")} fontSize={10} height={42} ellipsis fill="#566d60" listening={false}/>}
             </Group>;
           })}
         </Layer>

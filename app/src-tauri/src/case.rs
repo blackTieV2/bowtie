@@ -142,6 +142,7 @@ pub struct TreeRow {
     pub depth: i64,
     pub description: String,
     pub properties: serde_json::Value,
+    pub effectiveness_id: Option<String>,
 }
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -158,6 +159,11 @@ pub struct CaseSnapshot {
     pub dirty: bool,
     pub tree: Vec<TreeRow>,
     pub links: Vec<LinkRow>,
+    pub matrices: Vec<crate::risk::Matrix>,
+    pub assessments: Vec<crate::risk::Assessment>,
+    pub lookups: Vec<crate::risk::Lookup>,
+    pub actions: Vec<crate::risk::ActionRow>,
+    pub custom_fields: serde_json::Value,
 }
 pub(crate) struct ActiveCase {
     pub(crate) db: Connection,
@@ -178,7 +184,7 @@ impl CaseStore {
             .db
             .query_row("SELECT title FROM case_info WHERE id=1", [], |r| r.get(0))
             .map_err(error_text)?;
-        let mut query = case.db.prepare("SELECT t.id,t.parent_id,t.kind,t.title,t.sort_order,t.depth,e.description,coalesce((SELECT json_group_object(property_key,json(value_json)) FROM entity_property WHERE entity_id=t.id),'{}') FROM case_tree t JOIN entity e ON e.id=t.id ORDER BY t.depth,t.sort_order,t.id").map_err(error_text)?;
+        let mut query = case.db.prepare("SELECT t.id,t.parent_id,t.kind,t.title,t.sort_order,t.depth,e.description,coalesce((SELECT json_group_object(property_key,json(value_json)) FROM entity_property WHERE entity_id=t.id),'{}'),e.effectiveness_id FROM case_tree t JOIN entity e ON e.id=t.id ORDER BY t.depth,t.sort_order,t.id").map_err(error_text)?;
         let tree = query
             .query_map([], |r| {
                 Ok(TreeRow {
@@ -196,6 +202,7 @@ impl CaseStore {
                             Box::new(e),
                         )
                     })?,
+                    effectiveness_id: r.get(8)?,
                 })
             })
             .map_err(error_text)?
@@ -219,6 +226,11 @@ impl CaseStore {
             dirty: case.dirty,
             tree,
             links,
+            matrices: crate::risk::matrices(&case.db)?,
+            assessments: crate::risk::assessments(&case.db)?,
+            lookups: crate::risk::lookups(&case.db)?,
+            actions: crate::risk::action_register(&case.db)?,
+            custom_fields: crate::properties::definitions(&case.db)?,
         }))
     }
     pub fn create(&mut self, title: &str, organization: &str) -> CaseResult<CaseSnapshot> {

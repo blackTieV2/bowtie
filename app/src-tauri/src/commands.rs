@@ -106,3 +106,50 @@ pub fn case_link(
 ) -> Result<CaseSnapshot, String> {
     with_store(state, |s| s.link(&source_id, &target_id, &relation, remove))
 }
+#[tauri::command]
+pub fn case_save_matrix(
+    state: Store<'_>,
+    matrix: crate::risk::Matrix,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.save_matrix(&matrix))
+}
+#[tauri::command]
+pub fn case_delete_matrix(state: Store<'_>, id: String) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.delete_matrix(&id))
+}
+#[tauri::command]
+pub fn case_set_assessment(
+    state: Store<'_>,
+    assessment: crate::risk::Assessment,
+    remove: bool,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.set_assessment(&assessment, remove))
+}
+#[tauri::command]
+pub fn case_clear_assessments(state: Store<'_>) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.clear_assessments())
+}
+#[tauri::command]
+pub fn case_save_lookup(
+    state: Store<'_>,
+    lookup: crate::risk::Lookup,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.save_lookup(&lookup))
+}
+#[tauri::command]
+pub fn case_delete_lookup(state: Store<'_>, id: String) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.delete_lookup(&id))
+}
+#[tauri::command]
+pub fn case_custom_field(
+    state: Store<'_>,
+    kind: String,
+    name: String,
+    field_type: String,
+    old_name: Option<String>,
+    remove: bool,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| {
+        s.custom_field(&kind, &name, &field_type, old_name.as_deref(), remove)
+    })
+}

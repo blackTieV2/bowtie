@@ -5,6 +5,10 @@ import { open as openDialog, save as saveDialog } from "@tauri-apps/plugin-dialo
 import { diagramFor, label, type CaseSnapshot, type TreeRow } from "./model";
 import DiagramCanvas from "./DiagramCanvas";
 import EntityEditor, { LinkEditor, type EditRequest } from "./EntityEditor";
+import { MatrixManager, RiskPanel } from "./RiskPanels";
+import LookupManager from "./LookupManager";
+import ActionRegister from "./ActionRegister";
+import { fieldsFor } from "./PropertyFields";
 
 type FormKind = "new" | "group" | "diagram";
 type Navigation = "new" | "open" | "close" | "quit";
@@ -24,6 +28,7 @@ export default function App() {
   const [editRequest,setEditRequest] = useState<EditRequest | null>(null);
   const [deleteRequest,setDeleteRequest] = useState<TreeRow | null>(null);
   const [lastDiagram,setLastDiagram] = useState<string | null>(null);
+  const [view,setView] = useState('diagram');
   const current = active?.tree.find(row => row.id === selected);
   const diagram = active ? diagramFor(active.tree,current) ?? active.tree.find(n=>n.id===lastDiagram && n.kind==='diagram') : undefined;
   useEffect(()=>{if(diagram)setLastDiagram(diagram.id);},[diagram?.id]);
@@ -118,7 +123,11 @@ export default function App() {
     <aside aria-label="Case explorer"><h2>Case explorer</h2>{active ? <ul className="tree">{tree(null)}</ul> : <p className="muted">Create or open a local case.</p>}</aside>
     <main>
       {error && <p className="error" role="alert">{error}</p>}{!desktop && <p className="notice">Use the desktop app to create and open local case files.</p>}
-      {active ? <><section className="case-summary"><p className="eyebrow">{label(current?.kind ?? "case")}</p><h1>{current?.title ?? active.title}</h1>
+      {active&&<div className="workspace-tabs" aria-label="Workspace views">{[['diagram','Diagram'],['matrices','Risk matrices'],['choices','Property choices'],['actions','Action register']].map(([key,title])=><button key={key} disabled={busy} aria-pressed={view===key} onClick={()=>setView(key)}>{title}</button>)}</div>}
+      {active&&view==='matrices'&&<MatrixManager snapshot={active} busy={busy} error={error} mutate={mutate}/>}
+      {active&&view==='choices'&&<LookupManager snapshot={active} busy={busy} error={error} mutate={mutate}/>}
+      {active&&view==='actions'&&<ActionRegister snapshot={active} busy={busy} error={error} mutate={mutate}/>}
+      {active && view==='diagram' ? <><section className="case-summary"><p className="eyebrow">{label(current?.kind ?? "case")}</p><h1>{current?.title ?? active.title}</h1>
         <div className="actions"><button disabled={busy || !current || !["organization", "group"].includes(current.kind)} onClick={() => { setTitle(""); setForm("group"); }}>Add group</button>
         <button disabled={busy || !current || !["group", "hazard"].includes(current.kind)} onClick={() => { setHazard(current?.kind === "hazard" ? current.title : ""); setTopEvent(""); setForm("diagram"); }}>Add diagram</button></div>
         {current && <div className="actions entity-tools" aria-label="Diagram editing controls">
@@ -127,15 +136,16 @@ export default function App() {
           {current.kind==='barrier' && <button disabled={busy} onClick={()=>addEntity('escalation_factor')}>Add escalation factor</button>}
           {['hazard','top_event','threat','consequence','barrier','escalation_factor','activity'].includes(current.kind) && <button disabled={busy} onClick={()=>addEntity('action')}>Add action</button>}
           <button disabled={busy} onClick={()=>editEntity(current)}>Edit</button><button disabled={busy} onClick={()=>{setError('');setDeleteRequest(current);}}>Delete</button>
+          {current.kind==='top_event'&&<button disabled={busy} onClick={()=>{const d=active.tree.find(n=>n.id===current.parentId);const h=active.tree.find(n=>n.id===d?.parentId);if(h)editEntity(h);}}>Edit hazard details</button>}
         </div>}
       </section>
       {diagram && <DiagramCanvas snapshot={active} diagram={diagram} selected={selected} busy={busy} select={setSelected} edit={editEntity} persist={positions=>mutate(()=>invoke<CaseSnapshot>('case_set_positions',{diagramId:diagram.id,positions}))}/>}
       <section className="support-panel"><div className="support-tools"><h3>Supporting items</h3>{['activity','document','job_title','product','system','competency'].map(kind=><button key={kind} disabled={busy} onClick={()=>addEntity(kind,kind===current?.kind && ['activity','document','system'].includes(kind)?current.id:active.tree.find(n=>n.kind==='organization')?.id)}>New {label(kind)}</button>)}</div>
-      {current && <><p className="muted">{current.description}</p>{Object.entries(current.properties).filter(([k])=>k!=='canvas.position').map(([k,v])=><p key={k}><strong>{label(k)}:</strong> {String(v)}</p>)}<LinkEditor key={current.id} node={current} snapshot={active} busy={busy} mutate={mutate}/></>}</section>
-      </> : <section className="empty"><h1>A place to understand risk</h1><p>Hazards, barriers, and the work that keeps them effective.</p></section>}
+      {current && <><p className="muted">{current.description}</p>{Object.entries(current.properties).filter(([k,v])=>!['canvas.position','custom_definitions','user_data'].includes(k)&&v!==''&&v!==null).map(([k,v])=><p key={k}><strong>{fieldsFor(current.kind).find(f=>f.key===k)?.label??label(k)}:</strong> {active.lookups.find(l=>l.id===v)?.title??active.tree.find(n=>n.id===v)?.title??String(v)}</p>)}<RiskPanel key={`risk/${current.id}`} node={current} snapshot={active} busy={busy} mutate={mutate}/><LinkEditor key={current.id} node={current} snapshot={active} busy={busy} mutate={mutate}/></>}</section>
+      </> : !active&&<section className="empty"><h1>A place to understand risk</h1><p>Hazards, barriers, and the work that keeps them effective.</p></section>}
     </main>
     <footer>{busy ? "Working…" : "Offline · No account required"}</footer>
-    {editRequest && <EntityEditor request={editRequest} busy={busy} error={error} close={()=>{setEditRequest(null);setError('');}} mutate={mutate}/>}
+    {editRequest && active && <EntityEditor key={editRequest.node?.id??editRequest.kind} snapshot={active} request={editRequest} busy={busy} error={error} close={()=>{setEditRequest(null);setError('');}} mutate={mutate}/>}
     {deleteRequest && <div className="overlay"><section className="modal" role="dialog" aria-modal="true" aria-labelledby="delete-title"><h2 id="delete-title">Delete {deleteRequest.title}?</h2><p>Children and assigned references must be removed first. Shared items are preserved.</p>{error && <p className="error" role="alert">{error}</p>}<div className="actions"><button disabled={busy} onClick={()=>{setDeleteRequest(null);setError('');}}>Cancel</button><button disabled={busy} onClick={()=>void mutate(()=>invoke<CaseSnapshot>('case_delete_entity',{id:deleteRequest.id})).then(ok=>{if(ok)setDeleteRequest(null);})}>Delete item</button></div></section></div>}
     {form && <div className="overlay"><section role="dialog" aria-modal="true" aria-labelledby="form-title" className="modal"><h2 id="form-title">{form === "new" ? "New case" : form === "group" ? "New group" : "New diagram"}</h2>
       <form onSubmit={event => { event.preventDefault(); void submit(); }}>

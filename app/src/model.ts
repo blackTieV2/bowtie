@@ -1,7 +1,14 @@
 export type Point = { x: number; y: number };
-export type TreeRow = { id: string; parentId: string | null; kind: string; title: string; sortOrder: number; depth: number; description: string; properties: Record<string, unknown> };
+export type TreeRow = { id: string; parentId: string | null; kind: string; title: string; sortOrder: number; depth: number; description: string; properties: Record<string, unknown>; effectivenessId: string | null };
 export type LinkRow = { sourceId: string; targetId: string; relation: string };
-export type CaseSnapshot = { title: string; path: string | null; dirty: boolean; tree: TreeRow[]; links: LinkRow[] };
+export type Axis = {code:string;title:string};
+export type Category = {id:string;title:string;color:string;rank:number};
+export type Cell = {likelihoodPosition:number;severityPosition:number;categoryId:string;label:string};
+export type Matrix = {id:string;title:string;coordinateOrder:"xy"|"yx";likelihood:Axis[];severity:Axis[];categories:Category[];cells:Cell[]};
+export type Assessment = {targetId:string;matrixId:string;phase:"inherent"|"residual";likelihoodPosition:number;severityPosition:number};
+export type Lookup = {id:string;tableKey:string;title:string;code:string;color:string;sortOrder:number;metadata:Record<string,unknown>};
+export type ActionRow = {id:string;parentId:string;parentTitle:string;title:string;description:string;properties:Record<string,unknown>;responsible:string[]};
+export type CaseSnapshot = { title: string; path: string | null; dirty: boolean; tree: TreeRow[]; links: LinkRow[]; matrices:Matrix[];assessments:Assessment[];lookups:Lookup[];actions:ActionRow[];customFields:Record<string,Record<string,string>> };
 export const label = (kind: string) => kind.replaceAll("_", " ");
 export const box = { width: 170, height: 78 };
 export function diagramFor(rows: TreeRow[], selected?: TreeRow): TreeRow | undefined {

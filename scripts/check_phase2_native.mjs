@@ -51,7 +51,7 @@ async function drag(from,to) {
   for(let i=1;i<=8;i++){await mouse("mouseMoved",from.x+(to.x-from.x)*i/8,from.y+(to.y-from.y)*i/8,{button:"left",buttons:1});await sleep(25);}
   await mouse("mouseReleased",to.x,to.y,{button:"left",clickCount:1});await sleep(200);
 }
-const folder=resolve(".runtime/phase2-walkthrough");await mkdir(folder,{recursive:true});
+const folder=resolve(process.env.BARRIER_ATLAS_SMOKE_OUTPUT??".runtime/phase2-walkthrough");await mkdir(folder,{recursive:true});
 const steps=[];
 try {
   await send("Runtime.enable");await waitFor("!!window.__TAURI_INTERNALS__ && document.body.innerText.includes('Barrier Atlas')");
@@ -111,5 +111,5 @@ try {
   await send("Page.reload");await waitFor("document.body.innerText.includes('Transfer safety review')");await select("Pre-transfer hose inspection");await waitFor("!!document.querySelector('canvas')");
   const image=await send("Page.captureScreenshot",{format:"png"});await writeFile(resolve(folder,"canvas.png"),Buffer.from(image.data,"base64"));
   const result={result:"PASS",scope:"Windows built-app GUI authoring and pointer interactions",steps,counts,links:5,classicGeometry:true,canvasDragPersisted:true,zoomPan:true,ctrlWheelZoom:true,wheelPan:true,restrictDiagnostics:true,editDelete:true,saveReopenStructure:true,manual:["Native Save As/Open file chooser path selection (test supplies its own path by IPC)","Human methodology/ALARP judgment","macOS/Linux native execution","Independent QA"]};
-  await writeFile(resolve("runs/003-build-phase2/validation-results.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result,null,2));await invoke("case_close");
+  await writeFile(resolve(process.env.BARRIER_ATLAS_RESULT_PATH??"runs/003-build-phase2/validation-results.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result,null,2));await invoke("case_close");
 } finally {socket.close();}

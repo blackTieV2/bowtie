@@ -1,0 +1,90 @@
+{
+  "common": [
+    {"key":"code","label":"Code","type":"text","spec":"SPEC-013 §§3.11.2, 15.2"}
+  ],
+  "organization": [],
+  "diagram": [],
+  "group": [
+    {"key":"criteria_threat","label":"Threat acceptance criteria","type":"textarea","spec":"SPEC-013 §7.13"},
+    {"key":"criteria_barrier","label":"General barrier acceptance criteria","type":"textarea","spec":"SPEC-013 §7.13"},
+    {"key":"criteria_threat_barrier","label":"Threat barrier acceptance criteria","type":"textarea","spec":"SPEC-013 §7.13"},
+    {"key":"criteria_consequence_barrier","label":"Consequence barrier acceptance criteria","type":"textarea","spec":"SPEC-013 §7.13"},
+    {"key":"criteria_escalation_barrier","label":"Escalation barrier acceptance criteria","type":"textarea","spec":"SPEC-013 §7.13"},
+    {"key":"organizational_units","label":"Organizational units","type":"textarea","spec":"SPEC-013 §15.3"},
+    {"key":"attachments","label":"Local attachment references","type":"textarea","spec":"SPEC-013 §§15.3, 10.3"}
+  ],
+  "hazard": [
+    {"key":"affects","label":"Affects / hazard category","type":"lookup","table":"hazard_category","spec":"SPEC-013 §15.4"},
+    {"key":"sign_off_date","label":"Sign-off date","type":"date","spec":"SPEC-013 §15.4"},
+    {"key":"sign_off_comment","label":"Sign-off comment","type":"textarea","spec":"SPEC-013 §15.4"},
+    {"key":"revision","label":"Revision","type":"text","spec":"SPEC-013 §§7.16, 15.4"},
+    {"key":"revision_date","label":"Revision date","type":"date","spec":"SPEC-013 §§7.16, 15.4"},
+    {"key":"revision_notes","label":"Revision notes","type":"textarea","spec":"SPEC-013 §§7.16, 15.4"},
+    {"key":"revision_alignment","label":"Revision box alignment","type":"select","options":["hidden","left","center","right"],"spec":"SPEC-013 §7.16"},
+    {"key":"other","label":"Other modules / processes","type":"textarea","spec":"SPEC-013 §15.4"},
+    {"key":"operations","label":"Operations reference notes","type":"textarea","spec":"SPEC-013 §15.4 (metadata only)"},
+    {"key":"alarp_rationale","label":"Improvement / ALARP rationale","type":"textarea","spec":"SPEC-004 step 12; AR20"}
+  ],
+  "top_event": [
+    {"key":"affects","label":"Affects / category","type":"lookup","table":"hazard_category","spec":"SPEC-013 §15.4"},
+    {"key":"other","label":"Other modules / processes","type":"textarea","spec":"SPEC-013 §15.4"},
+    {"key":"alarp_rationale","label":"Improvement / ALARP rationale","type":"textarea","spec":"SPEC-004 step 12; AR20"}
+  ],
+  "threat": [
+    {"key":"category","label":"Category","type":"lookup","table":"threat_category","spec":"SPEC-013 Fields on Threats after §15.4"},
+    {"key":"type","label":"Type","type":"lookup","table":"threat_type","spec":"SPEC-013 Fields on Threats"},
+    {"key":"frequency","label":"Frequency","type":"lookup","table":"frequency","spec":"SPEC-013 Fields on Threats"},
+    {"key":"equivalent_top_event","label":"Equivalent top event","type":"entity","kind":"top_event","spec":"SPEC-013 §11.1; Fields on Threats"},
+    {"key":"operations","label":"Operations reference notes","type":"textarea","spec":"SPEC-013 Fields on Threats (metadata only)"},
+    {"key":"criteria_met","label":"Acceptance criteria met (manual)","type":"checkbox","spec":"SPEC-013 §7.13"}
+  ],
+  "consequence": [
+    {"key":"category","label":"Category","type":"lookup","table":"consequence_category","spec":"SPEC-013 §15.5"},
+    {"key":"type","label":"Type","type":"lookup","table":"consequence_type","spec":"SPEC-013 §15.5"},
+    {"key":"equivalent_top_event","label":"Equivalent top event","type":"entity","kind":"top_event","spec":"SPEC-013 §§11.1, 15.5"},
+    {"key":"operations","label":"Operations reference notes","type":"textarea","spec":"SPEC-013 §15.5 (metadata only)"},
+    {"key":"criteria_met","label":"Acceptance criteria met (manual)","type":"checkbox","spec":"SPEC-013 §7.13"}
+  ],
+  "barrier": [
+    {"key":"family","label":"Family (metadata)","type":"text","spec":"SPEC-013 §15.6; no Advanced bundling"},
+    {"key":"category","label":"Barrier category","type":"lookup","table":"barrier_category","spec":"SPEC-013 §15.6"},
+    {"key":"type","label":"Barrier type","type":"lookup","table":"barrier_type","spec":"SPEC-013 §15.6"},
+    {"key":"effectiveness_id","label":"Effectiveness","type":"lookup","table":"effectiveness","spec":"SPEC-013 §§3.11.2, 15.6"},
+    {"key":"brf_code","label":"BRF code","type":"lookup","table":"brf_code","spec":"SPEC-013 §15.6"},
+    {"key":"criticality","label":"Criticality","type":"lookup","table":"criticality","spec":"SPEC-013 §15.6"},
+    {"key":"equivalent_top_event","label":"Equivalent top event","type":"entity","kind":"top_event","spec":"SPEC-013 §§11.3, 15.6"},
+    {"key":"performance","label":"Performance by organizational unit (notes)","type":"textarea","spec":"SPEC-013 §15.6 (local metadata)"},
+    {"key":"user_systems","label":"User-system reference notes","type":"textarea","spec":"SPEC-013 §15.6 (metadata; no Advanced modeling)"},
+    {"key":"criteria_met","label":"Acceptance criteria met (manual)","type":"checkbox","spec":"SPEC-013 §7.13"}
+  ],
+  "escalation_factor": [
+    {"key":"category","label":"Category","type":"lookup","table":"escalation_category","spec":"SPEC-013 §15.7"},
+    {"key":"type","label":"Type","type":"lookup","table":"escalation_type","spec":"SPEC-013 §15.7"}
+  ],
+  "activity": [
+    {"key":"category","label":"Activity category","type":"lookup","table":"activity_category","spec":"SPEC-013 §3.11.2"},
+    {"key":"frequency","label":"Frequency","type":"lookup","table":"frequency","spec":"SPEC-013 §3.11.2"},
+    {"key":"objectives","label":"Objectives","type":"textarea","spec":"SPEC-013 §7.2"},
+    {"key":"performance_indicators","label":"Performance indicators","type":"textarea","spec":"SPEC-013 §7.2"},
+    {"key":"timing","label":"Timing / frequency notes","type":"textarea","spec":"SPEC-004 step 10"},
+    {"key":"instructions","label":"Instructions","type":"textarea","spec":"SPEC-004 step 10"},
+    {"key":"verification","label":"Verification method","type":"textarea","spec":"SPEC-004 step 11"},
+    {"key":"sign_off_date","label":"Sign-off date","type":"date","spec":"SPEC-013 §3.11.2"},
+    {"key":"sign_off_comment","label":"Sign-off comment","type":"textarea","spec":"SPEC-013 §3.11.2"}
+  ],
+  "document": [{"key":"reference","label":"Local document reference","type":"text","spec":"SPEC-013 §§10.1-10.3"}],
+  "product": [{"key":"reference","label":"Local evidence reference","type":"text","spec":"SPEC-013 §7.2; SPEC-004 step 11"}],
+  "system": [{"key":"off_threshold","label":"Underlying systems off before this system is off","type":"integer","spec":"SPEC-013 §3.11.2 (configuration only)"}],
+  "competency": [],
+  "job_title": [],
+  "action": [
+    {"key":"category","label":"Category","type":"lookup","table":"action_category","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"external_reference","label":"External reference","type":"text","spec":"SPEC-013 §3.12.4.1 (stored only)"},
+    {"key":"target_date","label":"Target date","type":"date","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"priority","label":"Priority","type":"lookup","table":"priority","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"completed","label":"Completed","type":"checkbox","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"sign_off_date","label":"Sign-off date","type":"date","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"sign_off_comment","label":"Sign-off comment","type":"textarea","spec":"SPEC-013 §3.12.4.1"},
+    {"key":"alarp_rationale","label":"Improvement / ALARP rationale","type":"textarea","spec":"SPEC-004 step 12; AR20"}
+  ]
+}

@@ -1,6 +1,10 @@
 mod case;
 mod commands;
 mod editing;
+#[cfg(test)]
+mod phase3_tests;
+mod properties;
+mod risk;
 pub const INITIAL_SCHEMA: &str = include_str!("../schema/001-initial.sql");
 pub fn run() {
     tauri::Builder::default()
@@ -19,6 +23,13 @@ pub fn run() {
             commands::case_delete_entity,
             commands::case_set_positions,
             commands::case_link,
+            commands::case_save_matrix,
+            commands::case_delete_matrix,
+            commands::case_set_assessment,
+            commands::case_clear_assessments,
+            commands::case_save_lookup,
+            commands::case_delete_lookup,
+            commands::case_custom_field,
         ])
         .run(tauri::generate_context!())
         .expect("Unable to start Barrier Atlas");

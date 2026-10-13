@@ -23,29 +23,13 @@ const CANVAS: &[&str] = &[
     "escalation_factor",
 ];
 fn properties(tx: &Transaction<'_>, id: &str, values: &Value) -> Result<()> {
-    let object = values.as_object().ok_or("Properties must be an object")?;
-    for (key, value) in object {
-        if ![
-            "timing",
-            "instructions",
-            "verification",
-            "alarp_rationale",
-            "reference",
-        ]
-        .contains(&key.as_str())
-            || !value.is_string()
-        {
-            return Err("Unsupported Phase 2 property or non-text value".into());
-        }
-        tx.execute("INSERT INTO entity_property(entity_id,property_key,value_json) VALUES(?,?,?) ON CONFLICT(entity_id,property_key) DO UPDATE SET value_json=excluded.value_json", params![id, key, value.to_string()]).map_err(err)?;
-    }
-    Ok(())
+    crate::properties::write(tx, id, values)
 }
 fn belongs(db: &Connection, id: &str, diagram: &str) -> Result<bool> {
     db.query_row("WITH RECURSIVE a(id,parent_id) AS (SELECT id,parent_id FROM entity WHERE id=? UNION SELECT e.id,e.parent_id FROM entity e JOIN a ON e.id=a.parent_id) SELECT EXISTS(SELECT 1 FROM a WHERE id=?)", params![id, diagram], |r| r.get(0)).map_err(err)
 }
 impl CaseStore {
-    fn edited(&mut self) -> Result<CaseSnapshot> {
+    pub(crate) fn edited(&mut self) -> Result<CaseSnapshot> {
         self.active.as_mut().ok_or("No case is open")?.dirty = true;
         self.snapshot()?.ok_or_else(|| "No case is open".into())
     }
@@ -238,6 +222,16 @@ impl CaseStore {
 }
 fn deletion_references(db: &Connection, id: &str) -> Result<Vec<String>> {
     let mut blockers = vec![];
+    let mut equivalents = db.prepare("SELECT e.title FROM entity_property p JOIN entity e ON e.id=p.entity_id WHERE p.property_key='equivalent_top_event' AND json_extract(p.value_json,'$')=?").map_err(err)?;
+    for row in equivalents
+        .query_map([id], |r| r.get::<_, String>(0))
+        .map_err(err)?
+    {
+        blockers.push(format!(
+            "equivalent top-event reference: {}",
+            row.map_err(err)?
+        ));
+    }
     let mut children = db
         .prepare("SELECT kind,title FROM entity WHERE parent_id=? ORDER BY kind,sort_order,id")
         .map_err(err)?;
