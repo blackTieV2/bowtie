@@ -1,18 +1,30 @@
 evidence_id: SPEC-014
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
 origin: human upload (markdown conversion)
 source_path_or_uri: owner-retained local file
-sha256: fec8b414a0534a1f1e00f802ff934c12571608a301b565eab70be1340b5340d9
+sha256: 2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9
 media_type: text/markdown
-size_bytes: 47582
+size_bytes: 45496
 source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [01-intake, 04-build, 05-qa]}
-relationships: [{type: supersedes, target: SPEC-003}]
-notes: BowTieXP 8.0+ Quick Start Manual. Acceptance workflows.
+scope:
+  stages:
+  - 01-intake
+  - 04-build
+  - 05-qa
+relationships:
+- type: supersedes
+  target: SPEC-003
+notes: BowTieXP 8.0+ Quick Start Manual. Acceptance workflows.; hash updated to owner-verified
+  local bytes 2026-10-12; original conversion-pass hashes superseded
+superseded_conversion_sha256: fec8b414a0534a1f1e00f802ff934c12571608a301b565eab70be1340b5340d9
+local_size_bytes: 46324
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start
+  Manual.md

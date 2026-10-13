@@ -1,0 +1,49 @@
+{
+  "result": "PASS",
+  "scope": "Windows built-app GUI authoring and pointer interactions",
+  "steps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "counts": {
+    "organization": 1,
+    "job_title": 1,
+    "activity": 1,
+    "product": 1,
+    "document": 1,
+    "group": 1,
+    "hazard": 1,
+    "diagram": 1,
+    "top_event": 1,
+    "consequence": 2,
+    "threat": 2,
+    "barrier": 5,
+    "action": 1,
+    "escalation_factor": 1
+  },
+  "links": 5,
+  "classicGeometry": true,
+  "canvasDragPersisted": true,
+  "zoomPan": true,
+  "ctrlWheelZoom": true,
+  "wheelPan": true,
+  "restrictDiagnostics": true,
+  "editDelete": true,
+  "saveReopenStructure": true,
+  "manual": [
+    "Native Save As/Open file chooser path selection (test supplies its own path by IPC)",
+    "Human methodology/ALARP judgment",
+    "macOS/Linux native execution",
+    "Independent QA"
+  ]
+}

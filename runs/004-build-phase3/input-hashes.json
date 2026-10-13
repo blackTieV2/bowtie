@@ -1,0 +1,17 @@
+{
+  "normalization": "actual local bytes",
+  "starting_head": "1fc5d75a91d25ac031cc47e644b1c9b4766461d7",
+  "hashes": {
+    "AGENTS.md": "11873b4a617879106977f3a85df44929c93a84efb063e6db53df626acad3e341",
+    "PROJECT_STATUS.md": "2368dd90890cb1d234a48848ad08f90c142f8053d3ee2721fee12353e343348e",
+    "CONTEXT.md": "04309ffedd1fcd8065272d415b7b13f2c9209f908b02866151655231e388a891",
+    "stages/04-build/CONTEXT.md": "492ac6bbcf2a32bda04db2ee98591e787e295598044a283a568ce9e95d3d88d6",
+    "stages/04-build/references/REBUILD-MASTER-PROMPT.md": "4b5efe13bef8fdef4f6c59983584209d0bb3f6cc4175a86b4c5e0b8a0ebaa1bb",
+    "stages/01-intake/references/spec/README.md": "964f53fd9a691fe42431f319ffb1dfc6eebc12fd578f07e7c15904ee253a536d",
+    "stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md": "7a6c7d237c7190c37ac547167afe948b5a68d38d0209e862668474a5bae83adc",
+    "app/src-tauri/schema/001-initial.sql": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+    "app/src-tauri/src/case.rs": "40979cb67c289c9b632f1e6a3d297477c0315703ab9907ff8af0e1baed8658b8"
+  },
+  "continuation_starting_head": "7e8e2d1992726502dd4709a95bdaf8223ea4f025",
+  "resolution": "Human AR45 correction; unchanged schema; renewed target gate PASS"
+}

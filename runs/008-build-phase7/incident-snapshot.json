@@ -1,0 +1,817 @@
+[
+  {
+    "id": "a91f4948-113c-424b-a762-5bbf0a932f42",
+    "title": "Agent and object follow-up",
+    "methodKey": "trio",
+    "metadata": {
+      "version": 1,
+      "code": "",
+      "description": "",
+      "whatHappened": "",
+      "date": "",
+      "timeZone": "",
+      "incidentType": "",
+      "category": "",
+      "tier": "",
+      "unit": "",
+      "diagrams": [
+        {
+          "id": "3b203a97-9c28-4bbb-9a3b-ae0297fac7eb",
+          "title": "Event–agent–object analysis",
+          "timeline": false,
+          "completed": false,
+          "layout": "free",
+          "columns": [],
+          "hideUnusedActors": false,
+          "zones": []
+        }
+      ],
+      "taxonomy": [],
+      "recommendations": []
+    },
+    "nodes": [
+      {
+        "id": "833012c4-7a27-4134-b388-2bfae7840ff1",
+        "kind": "actor",
+        "title": "Object",
+        "metadata": {
+          "version": 1,
+          "diagramId": "3b203a97-9c28-4bbb-9a3b-ae0297fac7eb",
+          "description": "",
+          "appearance": "object",
+          "x": -180,
+          "y": 170,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "9fb1d80d-2513-488a-afd2-8dcc0883cb75",
+        "kind": "event",
+        "title": "New event",
+        "metadata": {
+          "version": 1,
+          "diagramId": "3b203a97-9c28-4bbb-9a3b-ae0297fac7eb",
+          "description": "",
+          "appearance": "event",
+          "x": 50,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "ae324051-303e-4a99-857c-46c19ad9735b",
+        "kind": "actor",
+        "title": "Agent",
+        "metadata": {
+          "version": 1,
+          "diagramId": "3b203a97-9c28-4bbb-9a3b-ae0297fac7eb",
+          "description": "",
+          "appearance": "agent",
+          "x": -180,
+          "y": -70,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      }
+    ],
+    "edges": [
+      {
+        "sourceId": "833012c4-7a27-4134-b388-2bfae7840ff1",
+        "targetId": "9fb1d80d-2513-488a-afd2-8dcc0883cb75"
+      },
+      {
+        "sourceId": "ae324051-303e-4a99-857c-46c19ad9735b",
+        "targetId": "9fb1d80d-2513-488a-afd2-8dcc0883cb75"
+      }
+    ]
+  },
+  {
+    "id": "e003440f-dd23-4339-a120-faa2e742a27a",
+    "title": "Barrier failure follow-up",
+    "methodKey": "bfa",
+    "metadata": {
+      "version": 1,
+      "code": "",
+      "description": "",
+      "whatHappened": "",
+      "date": "",
+      "timeZone": "",
+      "incidentType": "",
+      "category": "",
+      "tier": "",
+      "unit": "",
+      "diagrams": [
+        {
+          "id": "e210dd9a-2793-4c2e-8ecb-9040a4ae2fa7",
+          "title": "Barrier failure analysis",
+          "timeline": false,
+          "completed": false,
+          "layout": "grid",
+          "columns": [],
+          "hideUnusedActors": false,
+          "zones": []
+        }
+      ],
+      "taxonomy": [],
+      "recommendations": []
+    },
+    "nodes": [
+      {
+        "id": "cfda334b-e6f1-4c89-ab19-af2f97cd4a56",
+        "kind": "event",
+        "title": "New event",
+        "metadata": {
+          "version": 1,
+          "diagramId": "e210dd9a-2793-4c2e-8ecb-9040a4ae2fa7",
+          "description": "",
+          "appearance": "event",
+          "x": 50,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "e7482eaa-37f7-4f19-88fd-ddaed15143cc",
+        "kind": "barrier",
+        "title": "Failed transfer safeguard",
+        "metadata": {
+          "version": 1,
+          "diagramId": "e210dd9a-2793-4c2e-8ecb-9040a4ae2fa7",
+          "description": "",
+          "appearance": "event",
+          "x": 280,
+          "y": 50,
+          "color": "#d9e9d9",
+          "state": "failed",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [
+            {
+              "id": "653e49db-051d-467d-8074-7a88a24ea15b",
+              "texts": [
+                "Primary local finding",
+                "Secondary local finding",
+                "Tertiary local finding"
+              ],
+              "categories": [
+                [],
+                [],
+                []
+              ],
+              "inadequacy": "",
+              "riskFactor": ""
+            }
+          ],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": [
+          "15d91deb-3a4c-4640-b35c-9ca4474bd249"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceId": "cfda334b-e6f1-4c89-ab19-af2f97cd4a56",
+        "targetId": "e7482eaa-37f7-4f19-88fd-ddaed15143cc"
+      }
+    ]
+  },
+  {
+    "id": "16ca7e1d-80ff-4194-863a-dd2b8fdff51f",
+    "title": "Categorized follow-up",
+    "methodKey": "categorized_rca",
+    "metadata": {
+      "version": 1,
+      "code": "",
+      "description": "",
+      "whatHappened": "",
+      "date": "",
+      "timeZone": "",
+      "incidentType": "",
+      "category": "",
+      "tier": "",
+      "unit": "",
+      "diagrams": [
+        {
+          "id": "c3c49e81-6564-454f-8ba0-cc6e37a89537",
+          "title": "Categorized root cause analysis",
+          "timeline": false,
+          "completed": false,
+          "layout": "free",
+          "columns": [],
+          "hideUnusedActors": false,
+          "zones": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        }
+      ],
+      "taxonomy": [],
+      "recommendations": []
+    },
+    "nodes": [
+      {
+        "id": "46d9be9a-44b7-4324-ac3f-663234c5738e",
+        "kind": "event",
+        "title": "New event",
+        "metadata": {
+          "version": 1,
+          "diagramId": "c3c49e81-6564-454f-8ba0-cc6e37a89537",
+          "description": "",
+          "appearance": "event",
+          "x": 50,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      }
+    ],
+    "edges": []
+  },
+  {
+    "id": "c710b7b8-6974-4d43-9b03-f5601ae62a4e",
+    "title": "Root-cause follow-up",
+    "methodKey": "rca",
+    "metadata": {
+      "version": 1,
+      "code": "",
+      "description": "",
+      "whatHappened": "",
+      "date": "",
+      "timeZone": "",
+      "incidentType": "",
+      "category": "",
+      "tier": "",
+      "unit": "",
+      "diagrams": [
+        {
+          "id": "5a8fc807-41e7-4bf9-a300-e50848fd594b",
+          "title": "Root cause analysis",
+          "timeline": false,
+          "completed": false,
+          "layout": "free",
+          "columns": [],
+          "hideUnusedActors": false,
+          "zones": []
+        }
+      ],
+      "taxonomy": [],
+      "recommendations": []
+    },
+    "nodes": [
+      {
+        "id": "4f3590d4-6cf8-4b51-895d-0b55dc2b24d4",
+        "kind": "event",
+        "title": "Loss of containment",
+        "metadata": {
+          "version": 1,
+          "diagramId": "5a8fc807-41e7-4bf9-a300-e50848fd594b",
+          "description": "",
+          "appearance": "event",
+          "x": 300,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [
+            "7586f907-cee0-4bde-b8bf-1f3597c35e36"
+          ],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "6c98fcdd-a414-4acb-8c49-0cda2f2be272",
+        "kind": "event",
+        "title": "Inspection failure finding",
+        "metadata": {
+          "version": 1,
+          "diagramId": "5a8fc807-41e7-4bf9-a300-e50848fd594b",
+          "description": "",
+          "appearance": "event",
+          "x": 50,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "Local cause category",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [
+            "7586f907-cee0-4bde-b8bf-1f3597c35e36"
+          ],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": [
+          "15d91deb-3a4c-4640-b35c-9ca4474bd249"
+        ]
+      }
+    ],
+    "edges": []
+  },
+  {
+    "id": "9c9a693b-ec10-4a97-97fa-fdd769064953",
+    "title": "Transfer leak investigation",
+    "methodKey": "systemic",
+    "metadata": {
+      "version": 1,
+      "code": "I-07",
+      "description": "",
+      "whatHappened": "Transfer hose failed during a supervised transfer",
+      "date": "2026-10-13T09:00",
+      "timeZone": "",
+      "incidentType": "",
+      "category": "",
+      "tier": "",
+      "unit": "",
+      "diagrams": [
+        {
+          "id": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "title": "Barrier-based systemic cause analysis",
+          "timeline": false,
+          "completed": true,
+          "layout": "grid",
+          "columns": [],
+          "hideUnusedActors": false,
+          "zones": []
+        },
+        {
+          "id": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "title": "Transfer investigation timeline",
+          "timeline": true,
+          "completed": false,
+          "layout": "grid",
+          "columns": [
+            {
+              "id": "6aceaa88-ebf6-4f55-b2f5-dba5a3c320fc",
+              "timestamp": "2026-10-13T09:00",
+              "format": "date_time",
+              "qualitative": "",
+              "color": "#edf2ed"
+            },
+            {
+              "id": "7fd61389-03e0-44b2-a7ff-0604f48d7905",
+              "timestamp": "2026-10-13T10:00",
+              "format": "qualitative",
+              "qualitative": "First deviation",
+              "color": "#edf2ed"
+            }
+          ],
+          "hideUnusedActors": true,
+          "zones": []
+        }
+      ],
+      "taxonomy": [],
+      "recommendations": [
+        {
+          "id": "81569a5d-f43b-4525-9c30-f2e0c2305c3a",
+          "nodeId": "dd0ecb99-e41d-4e1b-8bc2-b58f5bec5ccd",
+          "diagramId": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "title": "Improve hose inspection conditions",
+          "description": "Review the documented inspection finding",
+          "party": "",
+          "priority": "",
+          "targetDate": "2026-11-01",
+          "completed": false,
+          "completionDate": "",
+          "comment": ""
+        }
+      ]
+    },
+    "nodes": [
+      {
+        "id": "12ad552e-0d87-410a-9178-31065a223506",
+        "kind": "event",
+        "title": "Hose release",
+        "metadata": {
+          "version": 1,
+          "diagramId": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "description": "",
+          "appearance": "event",
+          "x": 470,
+          "y": 50,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "1dad5c59-c97f-4d62-9c37-e63c6ef796e3",
+        "kind": "evidence",
+        "title": "Inspection checklist evidence",
+        "metadata": {
+          "version": 1,
+          "diagramId": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "description": "",
+          "appearance": "event",
+          "x": 399.6354166666667,
+          "y": 140.00000000000003,
+          "color": "#eee4ce",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": "85cfb221-1a22-4df3-ae99-53e1bf05cc2a",
+          "columnId": "7fd61389-03e0-44b2-a7ff-0604f48d7905",
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [
+            "2b7acfe0-c5e8-425f-b24d-bcc5657a8dba"
+          ],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "4e1128db-a582-4951-9854-5bdad3182f2e",
+        "kind": "event",
+        "title": "Release observed",
+        "metadata": {
+          "version": 1,
+          "diagramId": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "description": "",
+          "appearance": "event",
+          "x": 920,
+          "y": 190,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": "85cfb221-1a22-4df3-ae99-53e1bf05cc2a",
+          "columnId": "6aceaa88-ebf6-4f55-b2f5-dba5a3c320fc",
+          "location": "Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record ",
+          "category": "",
+          "confidence": "Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes ",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "7bd2e3e3-16f1-4699-b545-4d4871394046",
+        "kind": "event",
+        "title": "Hose inspection recorded",
+        "metadata": {
+          "version": 1,
+          "diagramId": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "description": "",
+          "appearance": "event",
+          "x": 690,
+          "y": 190,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": "85cfb221-1a22-4df3-ae99-53e1bf05cc2a",
+          "columnId": "6aceaa88-ebf6-4f55-b2f5-dba5a3c320fc",
+          "location": "Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record Transfer station evidence record ",
+          "category": "",
+          "confidence": "Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes Witness confirmation and inspection notes ",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "85cfb221-1a22-4df3-ae99-53e1bf05cc2a",
+        "kind": "actor",
+        "title": "Transfer operator",
+        "metadata": {
+          "version": 1,
+          "diagramId": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "description": "",
+          "appearance": "event",
+          "x": 460,
+          "y": 190,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "8f790299-04bb-4189-b0aa-b26b397f9b46",
+        "kind": "actor",
+        "title": "Unused observer",
+        "metadata": {
+          "version": 1,
+          "diagramId": "9fafb879-52b9-46f0-8809-d118f670f905",
+          "description": "",
+          "appearance": "event",
+          "x": 230,
+          "y": 40,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "90ade40b-670d-475b-b268-043746ebe3dd",
+        "kind": "barrier",
+        "title": "Hose inspection at station",
+        "metadata": {
+          "version": 1,
+          "diagramId": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "description": "",
+          "appearance": "event",
+          "x": 260,
+          "y": 50,
+          "color": "#d9e9d9",
+          "state": "failed",
+          "barrierType": "",
+          "failureShort": "Inspection did not reveal damage",
+          "failureDetail": "Documented physical inspection finding",
+          "challenge": "",
+          "response": "",
+          "causes": [
+            {
+              "id": "058fb333-5b8a-4287-9625-76e1f73ef937",
+              "texts": [
+                "Damaged hose remained in use",
+                "Inspection conditions reduced visibility",
+                "Inspection planning needs review"
+              ],
+              "categories": [
+                [],
+                [],
+                []
+              ],
+              "inadequacy": "",
+              "riskFactor": ""
+            }
+          ],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [
+            "2b7acfe0-c5e8-425f-b24d-bcc5657a8dba"
+          ],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": [
+          "15d91deb-3a4c-4640-b35c-9ca4474bd249"
+        ]
+      },
+      {
+        "id": "dd0ecb99-e41d-4e1b-8bc2-b58f5bec5ccd",
+        "kind": "event",
+        "title": "Transfer starts",
+        "metadata": {
+          "version": 1,
+          "diagramId": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "description": "",
+          "appearance": "event",
+          "x": 0,
+          "y": 100,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      },
+      {
+        "id": "eaaf3cf6-9410-4c39-b133-fbec01857a30",
+        "kind": "event",
+        "title": "Possible ignition",
+        "metadata": {
+          "version": 1,
+          "diagramId": "822a6dac-fd87-4b50-95d6-a683c487b357",
+          "description": "",
+          "appearance": "potential",
+          "x": 490,
+          "y": 200,
+          "color": "#d8e8ee",
+          "state": "",
+          "barrierType": "",
+          "failureShort": "",
+          "failureDetail": "",
+          "challenge": "",
+          "response": "",
+          "causes": [],
+          "actorId": null,
+          "columnId": null,
+          "location": "",
+          "category": "",
+          "confidence": "",
+          "documents": [],
+          "caseEventIds": [],
+          "equivalentDiagramId": null,
+          "userData": {}
+        },
+        "barrierIds": []
+      }
+    ],
+    "edges": [
+      {
+        "sourceId": "90ade40b-670d-475b-b268-043746ebe3dd",
+        "targetId": "12ad552e-0d87-410a-9178-31065a223506"
+      },
+      {
+        "sourceId": "90ade40b-670d-475b-b268-043746ebe3dd",
+        "targetId": "eaaf3cf6-9410-4c39-b133-fbec01857a30"
+      },
+      {
+        "sourceId": "dd0ecb99-e41d-4e1b-8bc2-b58f5bec5ccd",
+        "targetId": "90ade40b-670d-475b-b268-043746ebe3dd"
+      }
+    ]
+  }
+]

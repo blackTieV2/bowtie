@@ -1,0 +1,130 @@
+run_id: 002-build-phase1
+compiled_at: '2026-10-12T17:06:03.403969+00:00'
+loaded:
+  canonical_doctrine:
+  - AGENTS.md
+  - PROJECT_STATUS.md
+  - CONTEXT.md
+  stage_contract: stages/04-build/CONTEXT.md
+  references:
+  - path: stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for
+      Ver 8.2.md
+    role: core-authority
+    lf_sha256: dacbc1c9b8ab17f0de1c4170a294418b1706a0299c24cffd3e7c80afc8523084
+  - path: stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md
+    role: acceptance
+    lf_sha256: 2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9
+  - path: stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md
+    role: edition-scope
+    lf_sha256: 770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808
+  - path: stages/01-intake/references/spec/06 Methodology Manual V15.md
+    role: methodology
+    lf_sha256: 1e7aee3c4fbcdc078a9b77b5d6c840dbaaab3d042a59489c835fdc1edebfd9f6
+  - path: stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md
+    role: worked-examples
+    lf_sha256: 65fb08c1a80f9f36e819f938979f0ba3bfe309a06309c225a0571f1d217b7fd4
+  - path: stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md
+    role: ui-methodology-support
+    lf_sha256: f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f
+  - path: stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md
+    role: methodology-reference
+    lf_sha256: f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62
+  - path: stages/01-intake/references/spec/04 All Product Brochures.md
+    role: module-overview
+    lf_sha256: 830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74
+  - path: stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2
+      & Up.md
+    role: audit-incident-integration
+    lf_sha256: 84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d
+  - path: stages/01-intake/references/spec/IncidentXP Software Manual - For Release
+      8.2.md
+    role: incident-structure
+    lf_sha256: cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883
+  - path: stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md
+    role: audit-workflows
+    lf_sha256: 5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29
+  - path: stages/01-intake/references/spec/BowTieXP_in_12_steps.md
+    role: acceptance-full-text
+    lf_sha256: 6575d4bbad1c47afa71f4d1385e5a8117e0e81e3b19142bedfe25b23880ff959
+  - path: stages/01-intake/references/spec/BowtieXP_Management_document.md
+    role: management-support
+    lf_sha256: 9411e51c512de3aff28102267a3f0e670f4c0b2e2922e5b0b084f360e8abeadb
+  - path: stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md
+    role: incident-version-authority
+    lf_sha256: 949141efbfe0c95e7e98d48027ee57069db93b1e98ff3f21e4c5f4f52070bd18
+  - path: stages/01-intake/references/spec/IncidentXP.md
+    role: incident-overview
+    lf_sha256: 95f5c88e2a879e0609c04b62c3021701dbc558f0edd85da467a81d1b6b87663c
+  - path: stages/01-intake/references/spec/provenance/BowTieXP_3.6_and_up_Quick_Start_Manual.md
+    role: secondary input-output explanation only
+    lf_sha256: 4db4e63e59605198fa80ebe4aeb9fa10935a6a3b7c89a63ef76eb2a73a62c5ea
+  configurations:
+  - _config/tool-profiles.yaml
+  - _config/memory-policy.yaml
+  packet: runs/002-build-phase1/task-packet.md
+  prior_experience:
+  - 'Run 001 intake questions/inventory: Historical experience only. Current verified
+    target state controls execution.'
+  technical_sources:
+  - https://v2.tauri.app/start/frontend/vite/
+  - https://v2.tauri.app/security/capabilities/
+  - https://www.sqlite.org/foreignkeys.html
+  - https://docs.rs/rusqlite/0.37.0/rusqlite/
+tool_profile: build
+live_target_state:
+  root: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+  branch: feature/phase-1-data-model
+  base_main: cdfd005
+  starting_head: f641af0
+  starting_tree: clean
+  stage: 04-build
+  execution_hold: false
+  build_approved: true
+input_hash_normalization: CRLF-to-LF
+input_hashes:
+  AGENTS.md: a6f6f630bd6ab875fb45980446d34bf8deed9ae68aa2e17aeaaad1ee967f7451
+  PROJECT_STATUS.md: 2476bd03932fb5886c298152dbc0a68cc68ed0454126568954724d321052b01e
+  CONTEXT.md: 3f2273273309fc7d51c2e606d9b5ec8a911ca463d58b948ef682331bfe4dfed8
+  stages/04-build/CONTEXT.md: 3a8f6de4d1a1f2c4ca67e815495409095f94c4a5629c560a2449c22078579b80
+  stages/04-build/references/REBUILD-MASTER-PROMPT.md: 6fed0ab54568578cceb413bad44cf425dcfde9b535cc483d0a7668753ecd33e4
+  stages/01-intake/references/spec/README.md: e9e4743e220865f5df57f45f217a30d3cfbdfa263cf05f16209dec5ec7bac9ac
+  stages/01-intake/references/spec/SHA256SUMS.txt: 420009eeddb4eb56e91ebd57b78251d22d3904a1d04ed29f281e246b04d11ca4
+  _config/tool-profiles.yaml: 8ec09a12da59d8c46dfcaa77b0f2d8b0470ae5a625d9ab65cf88888619036ed0
+  _config/memory-policy.yaml: 28a14870ade2f3421fb17792122f0558ee7334a1ffbcf80c4d54840660478def
+  stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md: dacbc1c9b8ab17f0de1c4170a294418b1706a0299c24cffd3e7c80afc8523084
+  stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md: 2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9
+  stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md: 770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808
+  stages/01-intake/references/spec/06 Methodology Manual V15.md: 1e7aee3c4fbcdc078a9b77b5d6c840dbaaab3d042a59489c835fdc1edebfd9f6
+  stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md: 65fb08c1a80f9f36e819f938979f0ba3bfe309a06309c225a0571f1d217b7fd4
+  stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md: f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f
+  stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md: f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62
+  stages/01-intake/references/spec/04 All Product Brochures.md: 830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74
+  stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2 & Up.md: 84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d
+  stages/01-intake/references/spec/IncidentXP Software Manual - For Release 8.2.md: cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883
+  stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md: 5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29
+  stages/01-intake/references/spec/BowTieXP_in_12_steps.md: 6575d4bbad1c47afa71f4d1385e5a8117e0e81e3b19142bedfe25b23880ff959
+  stages/01-intake/references/spec/BowtieXP_Management_document.md: 9411e51c512de3aff28102267a3f0e670f4c0b2e2922e5b0b084f360e8abeadb
+  stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md: 949141efbfe0c95e7e98d48027ee57069db93b1e98ff3f21e4c5f4f52070bd18
+  stages/01-intake/references/spec/IncidentXP.md: 95f5c88e2a879e0609c04b62c3021701dbc558f0edd85da467a81d1b6b87663c
+  stages/01-intake/references/spec/provenance/BowTieXP_3.6_and_up_Quick_Start_Manual.md: 4db4e63e59605198fa80ebe4aeb9fa10935a6a3b7c89a63ef76eb2a73a62c5ea
+review_depth: Role/contents scans and relevant model, feature, walkthrough and shared-reference
+  passages; not line-by-line certification of deferred runtime modules.
+runtime_continuation:
+  recorded_at: '2026-10-12T17:46:42.364824+00:00'
+  starting_head: 2379bef
+  human_approved:
+  - schema-design.md
+  - 001-initial.sql
+  - AR01–AR33
+  - schema/scaffold boundary
+  product_name: Barrier Atlas
+  scope: Phase 1 case IPC and SQLite tree; no Phase 2
+  sources:
+  - SPEC-013 §§6.2.2, 6.4.1–6.4.3, 7.2
+  - approved initial SQL and schema-design
+  technical_sources:
+  - https://v2.tauri.app/develop/calling-rust/
+  - https://v2.tauri.app/plugin/dialog/
+  - rusqlite 0.37 local backup API
+  - https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/remote-debugging-desktop
+  stop_on_native_failure: true

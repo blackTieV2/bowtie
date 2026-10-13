@@ -1,0 +1,80 @@
+run_id: 001-intake
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: awaiting-review
+current_stage: 01-intake
+current_step: intake-draft-complete-stop
+completed_steps:
+- Required entrypoint reads in order
+- Read-only target recon and stage/hold report before modifications
+- Role-based corpus review and extract checks
+- Three intake draft outputs written
+- Template copied and packet filled
+- Producer structural checks and scoped diff passed; evidence captured
+pending_steps:
+- "Human provenance/version/scope/acceptance dispositions A01\u2013A30"
+- Independent requirements/source validation before acceptance or promotion
+approval_required: true
+approval_status: Draft requirements awaiting human review; no execution exception
+  requested
+actor: intake-agent
+model: not-recorded
+started_at: '2026-10-12T16:08:54Z'
+timestamp_note: started_at records packet creation, not the earlier first read
+updated_at: '2026-10-12T16:10:50Z'
+input_hashes:
+  AGENTS.md: 11873b4a617879106977f3a85df44929c93a84efb063e6db53df626acad3e341
+  PROJECT_STATUS.md: c51223217d370ee83f41b4c72089a30c5f34f8b3bdc53175283d3b7d16701802
+  CONTEXT.md: 04309ffedd1fcd8065272d415b7b13f2c9209f908b02866151655231e388a891
+  stages/01-intake/CONTEXT.md: 550d1ff8267f1856c63bda5af9fe24be84ea1a3f34cd5dda40026cb890833ca7
+  stages/01-intake/references/spec/README.md: 6d86cfa6f406a742c4a3db12af6eb02784d9d9df31258424bcd94f99d16622e2
+  stages/01-intake/references/spec/BowTieXP_Software_Manual_-_For_Release_6.0.md: 2b6c01ec20d7a1975db740ef50d22d6b438b3fc373374a6f808e179c00f18310
+  stages/01-intake/references/spec/BowTieXP_Feature_Matrix_2012.md: e834df1a57243191d8ea602d7d7ae9544314f1d8ee9dd04e4cc4ed30d4d8712d
+  stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md: 582d7a46f9d183328b0758bb4c05eb43fa9ebc4ef4ffcecbf9608e912aa687fc
+  stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md: 7a6c7d237c7190c37ac547167afe948b5a68d38d0209e862668474a5bae83adc
+  stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2 & Up.md: 1fc110b80c0b9be66b7bf5ff27269ddbceba92fd77a6ba93d123a6583dedac6f
+  stages/01-intake/references/spec/BowTieXP_in_12_steps.md: 3114cae3fe762c0096188cec52de18c35785ccb81d220b8f632def3b76f34da1
+  stages/01-intake/references/spec/BowTieXP_3.6_and_up_Quick_Start_Manual.md: faae50a6b20cf32da5434ae335a9f3df2edfcf4ada9fae65b50fc4d4df98f2aa
+  stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md: d4d95339284c4a8c25aabc9478cb29b5b0bad715f3141b4f12fe5e1027597cba
+  stages/01-intake/references/spec/BowtieXP_Management_document.md: 6e061959f1aa8cb584162493971eae9a517045e91d981a0615e706d51e586e3a
+  stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md: 9cfe3b38afa1a0974bb4892d9c9f2546dca65b03d26a2c1eb4a4cc9d78712f49
+  stages/01-intake/references/spec/06 Methodology Manual V15.md: a7c6855e4e9a6dcd263cc26b2ada89745891714f0b29aeb4275c52d5357671da
+  stages/01-intake/references/spec/05_RPS_Training_Slides_-_Edition_2.3.md: 19dc45641b87ffdbaba0747c3a2609a965e0985f416f1f7b76d021d5779d89f3
+  stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md: 565ee234a2850c2c0965f8d281c60cc6692738284a5f3348854dd0bb839c011a
+  stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md: 8c305dd6334d821207edf142150052951fdac4f139da1272f8a53f8fb949b763
+  stages/01-intake/references/spec/BowTieXP_Advanced_Brochure_[small].md: f2a6329a41ce70abe281ea70b97b3ccff84176a0afcbf594e9092fc7b2a708ab
+  stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md: f35dac69bd180f686f37b83cbe8ac4145833dc026cfbfea33aac2a6429cf802c
+  stages/01-intake/references/spec/IncidentXP Software Manual - For Release 8.2.md: 25d271d7395cf3eb7cdb615e29860943eb43b205257ac3a13f6c26034531ed20
+  stages/01-intake/references/spec/IncidentXP.md: 57c877f8f1df82fb7b9b318a4c841e6a667364950f6fe88d756c191a4d51b0b0
+  stages/01-intake/references/spec/BowTieXP_WebViewer_Portal_2011_Brochure_[small].md: 42af9ead92be0755aae89e28c378a048be8118217694e63b729371161407aeaa
+  stages/01-intake/references/spec/Audit_Tool_Brochure_EN.md: 17c1089a572e36cc502995ed83575d6540672086f9e3f680ea713a67978d0f87
+  stages/01-intake/references/spec/CHIMP_brochure.md: 84a043fd719539cee41bd43bbd2b6ad66079f911937a10bfaffe6fd052ee4be2
+  stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md: 926ae3eeda9a8390811176b8a317ada4450660e784f40e4e4a8a3d169ed700f5
+  stages/01-intake/references/spec/04 All Product Brochures.md: 39ac1dca5db0a5c8aa1dcda6109c457550a6f607af673e9144f44ada76df7423
+  stages/01-intake/references/spec/SHA256SUMS.txt: 6ca593370df094e9564742f63a4d76e3c912eef6970834a92a7beec1f0b2e51b
+  _config/tool-profiles.yaml: 528e5d84891e33153ebb8e906daf5fd6cc9233092b3fdf85efa107a14456f7ae
+  _config/memory-policy.yaml: 0ccaa67d2311f6742ce1fef949d25487535312b445d9c1a2b16765f84e6512eb
+  shared/memory/evidence/manifests/SPEC-001.software-manual-6.0.yaml: f2a99081d6bdc105fa519f1baa590f4ab8b123916b30f011017d2b8f157d314e
+  shared/memory/evidence/manifests/SPEC-003.quick-start.yaml: 0a340d93f93b0244bff1b4e59ddb15b731ba088dc7eba605ff9b79f1489aac0c
+  shared/memory/evidence/manifests/SPEC-008.rps-training-slides.yaml: 65ef7940792454ce3b3f70e492831ced483a96a41b63464e08618f2e15261321
+  runs/_template/context-manifest.yaml: c23728355098cc4c7be017106b009999617112455572e1e7f6a30b60e7744fe8
+  runs/_template/memory-promotion-review.md: 43d42fe5e844dafb4d276f93e9ac0ecefb0d748315e64c523473760ec1a2cdde
+  runs/_template/retrieval-feedback.yaml: 851e89e905470dcb3ed056e82ea45a2035c3f0e59f2f8aa8184da519c2815fc0
+  runs/_template/run-state.yaml: 11614f9316bee090cfd5dd5604b69114e975feabd2406f41534684cda7382577
+  runs/_template/task-packet.md: a3f1a99e4c9c45ccc03e54b3aa653083549dd2f1c3f3802a6e9329cfb7093f38
+  stages/01-intake/output/intake-brief.md@starting-HEAD-LF: eb60616f0f0da5979789f045e025f892e8e544f4e77a2a8e3e35f728f50be1f3
+output_hashes:
+  runs/001-intake/context-manifest.yaml: f071f12aebc39ac77b52fdd457130f4553e2567abec4f5f2cb59879e3a094075
+  runs/001-intake/evidence.md: 0e1785770b49ab451022009c3d9378ff705a41e494b6ad8f9d2dd766751f3934
+  runs/001-intake/memory-promotion-review.md: ba0c5c23b74b0d6fcdb5aa4251fbf380b00f18171db69dc8d2e2ea083c69ed6b
+  runs/001-intake/retrieval-feedback.yaml: e18fdf7f6854b333f3f92b61f28031d28189db1cc363563e1e6ee97c762e728d
+  runs/001-intake/task-packet.md: 660849726820cc0e523a127e5b4845a9cc40bbab926d67f5c99788f685178f68
+  stages/01-intake/output/feature-inventory.md: db5d3741832a679e4e365e44b21d8617afce614418afb1176d35ebc643d671ce
+  stages/01-intake/output/intake-brief.md: 5402f7769250def88fbf1b53b0f38dcc09a278998356cbe4175c7db24e4d3624
+  stages/01-intake/output/spec-ambiguities.md: 2793f5a697008b68eba418de66320ffd40a44264886037b8f9bfb76d99e8e0f8
+rollback_reference: "Starting HEAD f4295ebb87868fc5517eecf090e945ad7a72ca2e; restore\
+  \ only the earlier intake draft and remove only this run\u2019s new artifacts if\
+  \ explicitly requested; no destructive git action performed."
+resume_instruction: "Review draft outputs and A01\u2013A30; explicitly authorize a\
+  \ new bounded run. Do not advance stage automatically."
+output_hash_note: Actual bytes; run-state.yaml excluded from its own hash set.

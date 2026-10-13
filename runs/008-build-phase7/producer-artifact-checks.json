@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "docx_pages": 6,
+  "docx_embedded_images": 2,
+  "diagram_pdf_pages": 1,
+  "methods_in_csv": 5,
+  "zip_xml_csv_json": "PASS",
+  "technical_UUID_labels_absent": true,
+  "hashes": {
+    "incident-case.csv": "2060bd247a50e0e74b474c4526c8275d43b45825f212faeabb4a1a9aec180d62",
+    "incident-diagram.pdf": "99e953bdb101b3caf0a2b3c44b529dc1cb067b1eca715ff6932b27e302c6364b",
+    "incident-diagram.png": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c",
+    "incident-diagram.svg": "41175860685b955e993e1f5df59a918238363d0420a4ef34057b8dbbda535d37",
+    "incident-methods-case.csv": "d29835d01fd828b55bbeb4e977e4a63b56a3c20bcf57ec8a00df2428eca6ec6c",
+    "incident-review.docx": "b574a145297a35d9abd76e162755935ef165eda5b1423d19a24632ac00cadc0a"
+  }
+}

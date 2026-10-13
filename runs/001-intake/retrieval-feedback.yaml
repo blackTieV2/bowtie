@@ -1,0 +1,9 @@
+query: Standard-edition scope and acceptance from the local spec corpus by role
+run_id: 001-intake
+records: []
+method: Exact local paths, role/section scans and direct reads; no semantic retrieval
+  or external browsing.
+findings:
+- "Version/edition conflicts retained as candidates; A01\u2013A30."
+- Extract hashes do not establish original PDF integrity.
+- No retrieved statement promoted to approved memory.

@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "scope": "Windows built-app SPEC002 investigation preparation, event flow, barrier/causation/link, timeline, recommendations, review and methods",
+  "diagramPointerMove": true,
+  "timelineHiddenActorDrop": true,
+  "longSameCellAnnotations": true,
+  "chronologyWarning": true,
+  "rcaEventBarrierLinks": true,
+  "categorizedFiveRegions": true,
+  "trioAgentObjectPair": true,
+  "allIncidentSaveReopen": true,
+  "csvRoundtrip": true,
+  "outputs": [
+    "docx",
+    "png",
+    "svg",
+    "pdf"
+  ],
+  "hashes": {
+    "incident-review.docx": "18e5f009cb0e3c46d7edb07dd04b3d38a95fe2453a71c6b6925914c31a5ebe24",
+    "incident-diagram.png": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c",
+    "incident-diagram.svg": "3aeaca72a679c9763a27a4a3a20aadd93f0e37f32981e8836a50272e91143287",
+    "incident-diagram.pdf": "c7c7efc1ca0de574fc0df5c162b1f355b25fcf49dcc481b7b2b39e620b8c6a2e",
+    "incident-case.csv": "b8a4f7aecca357d3fb3287fd0bfb2ee74d9d04926684c1e19975bcfebe3cc0c5",
+    "incident-methods-case.csv": "f6d976e970ee7023c350444d413058bbbf7a76baca69139b92b3e45a66910cf9"
+  },
+  "manual": [
+    "Native file chooser",
+    "macOS/Linux GUI walkthrough",
+    "Large investigations",
+    "Company DOCX template content controls"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "recorded_at": "2026-10-12T17:06:00.794892+00:00",
+  "actor": "producer",
+  "independent_qa": false,
+  "schema_acceptance": {
+    "result": "PASS",
+    "scope": "schema-only",
+    "sqlite_version": "3.49.1",
+    "walkthrough_steps": 12,
+    "persisted_entities": 16,
+    "negative_integrity_checks": [
+      "orphan parent",
+      "invalid parent type",
+      "hierarchy cycle",
+      "empty required title",
+      "invalid metadata",
+      "entity kind mutation",
+      "duplicate top event",
+      "used entity deletion",
+      "wrong link endpoints",
+      "risk on wrong entity",
+      "missing matrix cell",
+      "wrong audit target",
+      "question hierarchy cycle",
+      "wrong incident target",
+      "linked incident kind mutation",
+      "wrong effectiveness taxonomy",
+      "ninth matrix",
+      "cross-audit survey question"
+    ],
+    "gui_workflow_tested": false
+  },
+  "frontend": {
+    "result": "PASS",
+    "commands": [
+      "npm ci --offline --ignore-scripts --no-audit --no-fund",
+      "npm run build"
+    ],
+    "warning": "548 kB main JS chunk"
+  },
+  "native": {
+    "command": "npm run tauri build -- --no-bundle",
+    "result": "FAILED",
+    "reason": "Cargo not installed",
+    "windows_runtime": "not tested",
+    "macos": "not tested",
+    "linux": "not tested"
+  },
+  "static_checks": [
+    "LF manifest hashes",
+    "51 Standard rows",
+    "33 decisions",
+    "branding",
+    "offline CSP/capabilities"
+  ],
+  "gui_acceptance": false,
+  "phase2_started": false,
+  "record_scope": "Historical architecture checks; missing-Cargo failure superseded by runtime continuation",
+  "current_runtime_evidence": "runtime-validation-results.json"
+}

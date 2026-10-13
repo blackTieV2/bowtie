@@ -1,0 +1,157 @@
+[
+  {
+    "id": "893f32cc-4faa-4005-99ef-2d813bb1802d",
+    "title": "Transfer assurance",
+    "questions": [
+      {
+        "id": "caa58b27-9ef5-497a-a92e-21d5249c10a3",
+        "parentId": null,
+        "title": "Check inspection work",
+        "criteria": "Review the transfer checklist and observation record",
+        "answers": [
+          "Missing",
+          "@Ready",
+          "Verified"
+        ],
+        "positiveFirst": false,
+        "mostNegative": false,
+        "contextual": false,
+        "targets": [
+          "2f432a86-864e-4e3e-b4e6-9dc105fba998"
+        ]
+      },
+      {
+        "id": "63e45c15-3543-4f83-bee7-5e942c55a867",
+        "parentId": "055d3d62-9061-498b-a2c3-fbf92629617e",
+        "title": "Check safeguard implementation",
+        "criteria": "Review the transfer checklist and observation record",
+        "answers": [
+          "Verified",
+          "Needs review",
+          "Absent"
+        ],
+        "positiveFirst": true,
+        "mostNegative": true,
+        "contextual": true,
+        "targets": [
+          "6deeeb79-b517-4c65-bafe-612060882250",
+          "e755c62d-1383-4302-be77-b9c95503a6de"
+        ]
+      },
+      {
+        "id": "055d3d62-9061-498b-a2c3-fbf92629617e",
+        "parentId": null,
+        "title": "Review framework",
+        "criteria": "Review the transfer checklist and observation record",
+        "answers": [
+          "Established",
+          "Needs attention"
+        ],
+        "positiveFirst": true,
+        "mostNegative": false,
+        "contextual": false,
+        "targets": []
+      }
+    ],
+    "surveys": [
+      {
+        "id": "50a48092-b853-4f55-b648-0e0f13f3c71f",
+        "title": "Liquid-transfer checks",
+        "code": "TR-01",
+        "description": "Barrier implementation and supporting work",
+        "questionIds": [
+          "caa58b27-9ef5-497a-a92e-21d5249c10a3",
+          "63e45c15-3543-4f83-bee7-5e942c55a867"
+        ],
+        "fillouts": [
+          {
+            "id": "df7dfa18-6856-491e-81d2-11bc364faecc",
+            "date": "2026-10-13",
+            "respondent": "Local reviewer",
+            "unit": "Operations",
+            "completed": true,
+            "answers": [
+              {
+                "questionId": "caa58b27-9ef5-497a-a92e-21d5249c10a3",
+                "contextId": null,
+                "choice": 0,
+                "remark": "Observed during transfer; checklist reference recorded"
+              },
+              {
+                "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+                "contextId": "6deeeb79-b517-4c65-bafe-612060882250",
+                "choice": 2,
+                "remark": "Observed during transfer; checklist reference recorded"
+              },
+              {
+                "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+                "contextId": "e755c62d-1383-4302-be77-b9c95503a6de",
+                "choice": 0,
+                "remark": "Observed during transfer; checklist reference recorded"
+              }
+            ]
+          },
+          {
+            "id": "b13aad93-6b05-4fd5-99e2-d2f9c99ee960",
+            "date": "2026-10-14",
+            "respondent": "External reviewer",
+            "unit": "Night shift",
+            "completed": true,
+            "answers": [
+              {
+                "questionId": "caa58b27-9ef5-497a-a92e-21d5249c10a3",
+                "contextId": null,
+                "choice": 0,
+                "remark": "Independent Excel-like response evidence"
+              },
+              {
+                "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+                "contextId": "6deeeb79-b517-4c65-bafe-612060882250",
+                "choice": 0,
+                "remark": "Independent Excel-like response evidence"
+              },
+              {
+                "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+                "contextId": "e755c62d-1383-4302-be77-b9c95503a6de",
+                "choice": 0,
+                "remark": "Independent Excel-like response evidence"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "savedFilters": [
+      {
+        "id": "25e7eeb1-c1a0-474e-9750-c7704b505564",
+        "name": "Operations review",
+        "filter": {
+          "surveyId": null,
+          "unit": "Operations",
+          "from": null,
+          "to": null,
+          "filloutId": null,
+          "targetId": null,
+          "negativeOnly": false
+        },
+        "questionId": null,
+        "showQuestions": false
+      },
+      {
+        "id": "5f60f305-8ee5-4d41-8965-b592a1984447",
+        "name": "Safeguard diagram",
+        "filter": {
+          "surveyId": null,
+          "unit": null,
+          "from": null,
+          "to": null,
+          "filloutId": null,
+          "targetId": null,
+          "negativeOnly": false
+        },
+        "questionId": "63e45c15-3543-4f83-bee7-5e942c55a867",
+        "showQuestions": true
+      }
+    ]
+  }
+]

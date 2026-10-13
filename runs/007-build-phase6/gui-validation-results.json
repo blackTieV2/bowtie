@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "scope": "Windows native SPEC023 prepare/link/subset/conduct/review workflow against liquid transfer case",
+  "questionHierarchy": true,
+  "barrierAndManagementTargets": true,
+  "contextualAndSharedAnswers": true,
+  "completionAndRemarks": true,
+  "ordinalCounts": [
+    3,
+    0,
+    1
+  ],
+  "mostNegativeChoice": 2,
+  "excelLikeDateSerialImport": true,
+  "reviewReport": true,
+  "savedFilterReopen": true,
+  "linkedQuestionsOnShapes": true,
+  "graphClickDetailsDialog": true,
+  "allAuditSaveReopenEquality": true,
+  "rejectedWorkbookByteEquality": true,
+  "fullCaseTableAuditRoundTrip": true,
+  "hashes": {
+    "audit-form.xlsx": "f5ecc17fdc17dd27ddb5c30c6f68b917fdae8658aa3cb21029d9c1891d7ad985",
+    "audit-filled.xlsx": "08dc42fb4ce4562757b9da3601d43d5361d47b6a01f813a7cf77e833596e7646",
+    "audit-review.docx": "66b490d551c9de24efc5dcf50f15c11e08ca1f847b5f8dd786e862a164b5af6a",
+    "audited-case.csv": "a5be60035ff6544d61eb06897d824e8bda74f77011a349ce9634e1b9ad754df9"
+  },
+  "manual": [
+    "Native chooser",
+    "Microsoft Excel actual application interoperability",
+    "macOS/Linux native execution"
+  ]
+}

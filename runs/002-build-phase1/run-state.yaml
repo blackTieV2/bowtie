@@ -1,0 +1,104 @@
+run_id: 002-build-phase1
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: awaiting-review
+current_stage: 04-build
+current_step: phase-1-runtime-review-boundary-stop
+completed_steps:
+- Authorized provenance and checksum commits
+- Packet, branch and target gate
+- Primary model/edition review
+- 51-row inventory, schema and scaffold
+- 33 dispositions and 3 names
+- Schema 12-step fixture/save/reopen and 18 negative cases passed
+- TypeScript/Vite and cached offline install passed
+- 'Native build attempted: failed missing Cargo'
+- Review report; no Phase 2 work
+- Human approved schema/scaffold and selected Barrier Atlas
+- Case IPC and SQLite-backed tree implemented
+- Opaque UUIDs, all-connection foreign keys and transactional diagram creation tested
+- 8 Rust tests/schema suite/final Windows native build passed
+- Built Windows app IPC/tree/unsaved-close smoke passed
+pending_steps:
+- Human Phase 1 runtime review
+- Independent QA and native chooser UX review
+- macOS/Linux native build/run verification
+- Explicit authorization before any Phase 2 canvas work
+approval_required: true
+approval_status: Architecture/AR01–AR33 approved; runtime and AR34–AR36 await review;
+  Phase 2 not authorized
+actor: build-agent
+model: not-recorded
+started_at: '2026-10-12T16:48:35.271380+00:00'
+updated_at: '2026-10-12T17:47:58.985491+00:00'
+input_hashes:
+  AGENTS.md: a6f6f630bd6ab875fb45980446d34bf8deed9ae68aa2e17aeaaad1ee967f7451
+  PROJECT_STATUS.md: 2476bd03932fb5886c298152dbc0a68cc68ed0454126568954724d321052b01e
+  CONTEXT.md: 3f2273273309fc7d51c2e606d9b5ec8a911ca463d58b948ef682331bfe4dfed8
+  stages/04-build/CONTEXT.md: 3a8f6de4d1a1f2c4ca67e815495409095f94c4a5629c560a2449c22078579b80
+  stages/04-build/references/REBUILD-MASTER-PROMPT.md: 6fed0ab54568578cceb413bad44cf425dcfde9b535cc483d0a7668753ecd33e4
+  stages/01-intake/references/spec/README.md: e9e4743e220865f5df57f45f217a30d3cfbdfa263cf05f16209dec5ec7bac9ac
+  stages/01-intake/references/spec/SHA256SUMS.txt: 420009eeddb4eb56e91ebd57b78251d22d3904a1d04ed29f281e246b04d11ca4
+  _config/tool-profiles.yaml: 8ec09a12da59d8c46dfcaa77b0f2d8b0470ae5a625d9ab65cf88888619036ed0
+  _config/memory-policy.yaml: 28a14870ade2f3421fb17792122f0558ee7334a1ffbcf80c4d54840660478def
+  stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md: dacbc1c9b8ab17f0de1c4170a294418b1706a0299c24cffd3e7c80afc8523084
+  stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md: 2913f8d25bbcbb429785ab690fed6e5a8e40eefa149cb59a136cc21f61933cd9
+  stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md: 770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808
+  stages/01-intake/references/spec/06 Methodology Manual V15.md: 1e7aee3c4fbcdc078a9b77b5d6c840dbaaab3d042a59489c835fdc1edebfd9f6
+  stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md: 65fb08c1a80f9f36e819f938979f0ba3bfe309a06309c225a0571f1d217b7fd4
+  stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md: f5e3286ca667efe1f0a414efc52005eaa6199c59b90ebc2dbcdb8af275edb94f
+  stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md: f35dbc626b610c32f8bdb4f1e966d2235c4e57d023302bfbd217583c259a2e62
+  stages/01-intake/references/spec/04 All Product Brochures.md: 830e175ebd1192e0ed0687ae2956fea6e8eedde58d901fbad55e9529997add74
+  stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2 & Up.md: 84061565a3ea808158b48eb4c16f9e0f966b571a2836e509b0ddb83305c59a1d
+  stages/01-intake/references/spec/IncidentXP Software Manual - For Release 8.2.md: cbeadb3e478d7d95f0ab730a1c9e68845fafc18a488022181c2087d2a738c883
+  stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md: 5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29
+  stages/01-intake/references/spec/BowTieXP_in_12_steps.md: 6575d4bbad1c47afa71f4d1385e5a8117e0e81e3b19142bedfe25b23880ff959
+  stages/01-intake/references/spec/BowtieXP_Management_document.md: 9411e51c512de3aff28102267a3f0e670f4c0b2e2922e5b0b084f360e8abeadb
+  stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md: 949141efbfe0c95e7e98d48027ee57069db93b1e98ff3f21e4c5f4f52070bd18
+  stages/01-intake/references/spec/IncidentXP.md: 95f5c88e2a879e0609c04b62c3021701dbc558f0edd85da467a81d1b6b87663c
+  stages/01-intake/references/spec/provenance/BowTieXP_3.6_and_up_Quick_Start_Manual.md: 4db4e63e59605198fa80ebe4aeb9fa10935a6a3b7c89a63ef76eb2a73a62c5ea
+output_hashes:
+  SPEC-TRACEABILITY.md: b4c7dde2c0156fd35c1b27c2241f10cd9dfad45749fdf6b8cdc12298f889de42
+  app/README.md: 57e3947d91c625cd5000bfa7d564ba305a890ec4d6271736e11dec5f31110dbb
+  app/assets/window-mark.svg: cc32ca875028bf239c99ee8c286611dae97f62cf65ea20ad7ed9b14a6a410ed5
+  app/index.html: 59f64c8ba519b7b5a086ab41d044c270528b6890a0f68b4c67b6afdd22f88bd0
+  app/package-lock.json: 9b68c908fa6e570dec766df3e991e68c72a9a3559391696d1a9a73df54562bb2
+  app/package.json: 496893badad233ec53b53902235a1f22c127fd640ef12ab114f6ee04d6fa1e64
+  app/src-tauri/.gitignore: 6a446f84f24f410f34c590fe454dc65c39ce01c936b9bf1c0183fc156f451553
+  app/src-tauri/Cargo.lock: c09d8b5dc258e9c020848db4e449fae230dbec2dbf6a34845beca796e72645aa
+  app/src-tauri/Cargo.toml: 55402e5b5cea60bff491890819e6797eea726d6562377c6621bed9fd68e0efa0
+  app/src-tauri/build.rs: 487059eaf8a947b80f20a9aacac038a5047b2ad69d2401b827376c67d6fe847f
+  app/src-tauri/capabilities/default.json: b529e1c127ed609409fcb7fb65e20bc22a2017da056085cd24567b2160856297
+  app/src-tauri/icons/icon.icns: a4286a39526fc0c70161b4580dd7b15298150a134c4f601b075036d327eb76f1
+  app/src-tauri/icons/icon.ico: 49da866b1404ccba4c94893da91a9fe416e7c8f119655c647072f5d93d35fab8
+  app/src-tauri/icons/icon.png: e5d36fe6e544dc96f675953309bd4961a6796ba2dfb067613d28a1d161dfcd4b
+  app/src-tauri/schema/001-initial.sql: b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6
+  app/src-tauri/src/case.rs: 342e644d45b115f5ff65eaaab2b32deae9bd2a0710d0b6283bcd277159dbbada
+  app/src-tauri/src/commands.rs: d3ed23ed989c31135eee77007e020ce9f6da4df4bcb9cb9144e29fc693e4b78a
+  app/src-tauri/src/lib.rs: 646560aad3575c676a4807bc5c44ef7f3c583f84da494455c6858061c4b8dadd
+  app/src-tauri/src/main.rs: 2a29b14edc4256c72076f0dae51caf8b046a1fb352b577d00fc5d033614fe870
+  app/src-tauri/tauri.conf.json: 74011e4536fdf3bc146c8e63e51eb806a5c5a5e32601a75395a5dfcb131d3ce2
+  app/src/App.tsx: 80beac7c476deb8e17ce2c99d6a947a7a8f990ef2ea36caa97bd2dd933d2b37a
+  app/src/main.tsx: 50b07eb2bf03d1c95ca72f0217cee2e45e5438e832988308f967b47f8a77570a
+  app/src/style.css: ec3917bd05e5ac444b6068d7af9d9777cb54d3e36e9b174cf7ff5fc8a15ae7c0
+  app/tsconfig.json: 9f1367d280d130d59b8d753d6df97dc5e76259a03cc5839bdd1b434e68a30432
+  app/vite.config.ts: 3a3240a63ca7683f0e9116e9d6296d2da8a211e6caa5d86fccd20fe1a27ff3d9
+  runs/002-build-phase1/context-manifest.yaml: a3bf6000aeb7fab4b38efeade992dc5af0138876c31f631e4aee6ffe306c2914
+  runs/002-build-phase1/memory-promotion-review.md: d526a379e6164778151f74222fc3f8f269ccf0831acfc8148f21f1e595d91e88
+  runs/002-build-phase1/retrieval-feedback.yaml: da90651d4f91bb3014933e287505fdc0df84d7f9b08ffe2e9133836eeed9f7b8
+  runs/002-build-phase1/runtime-validation-results.json: 75d255bb925c36cd22c35455be03c8309b79ce4205924455df45b67c62d63233
+  runs/002-build-phase1/task-packet.md: 997c0ea939fd4024ac4a215d4ba5591e39a964bb99953c2fe0d4ce5a7d86dd27
+  runs/002-build-phase1/validation-results.json: 9a6e737589844b81f1c064e0fcc5ac3dcd5fb188f9cdac45a78498f8ab1d354a
+  scripts/check_phase1_native.mjs: 1271faf8a8ef5b7342d517f80f22a61fad6bb433ddb875b4f1b623f7d0a24a68
+  scripts/check_phase1_schema.py: db379d2a50cee601228c5834fd66684b8547caff984df36cb14ee8576761a469
+  stages/04-build/output/AMBIGUITY-RESOLUTIONS.md: eb3bbcd48b4bcb886cdc6fa2466f3c853d56580bea7c9541aeb8c76d4e6419e0
+  stages/04-build/output/feature-inventory.md: a8f21f7594237f03d9043548e2b8e4b15915c3766412e5554d4fd8e0089ad065
+  stages/04-build/output/name-proposals.md: 9c8adaeb446283ca3e5f1d50152634d5ce5e153c14d1fac4d43fc199eb25f6d3
+  stages/04-build/output/phase-1-report.md: 4270159d1179de5e8926841fafe3c783b2038273c753827f9cdc85583b4c345d
+  stages/04-build/output/schema-design.md: 4b034e75733d39a40f9cd16497edd9e0cb147ea9fc9eab7584fc0ce718e73c0f
+rollback_reference: main cdfd005; additive feature branch
+resume_instruction: Stop for review. No Phase 2 or feature-branch merge without explicit
+  human approval.
+current_validation: runs/002-build-phase1/runtime-validation-results.json
+runtime_starting_head: 2379bef4fca31170d8f01c035ec1c2f73b4b609f
+product_name: Barrier Atlas

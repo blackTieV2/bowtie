@@ -1,0 +1,453 @@
+{
+  "algorithm": "SHA-256",
+  "base": "4167043354510b5a817574d488f1cafc29f4ba95",
+  "application_validated_commit": "b27f2ef5545b0b8cf210dcd26b63ebe16bc37842",
+  "note": "Git blob hashes verify committed content; working_file hashes record pre-normalization bytes. Manifest excludes itself and subsequent push evidence.",
+  "files": [
+    {
+      "path": ".github/workflows/desktop-platforms.yml",
+      "git_blob_sha256": "472f50628027285a9734553f5387ea7ad7c52503ce6449cd4fe112fa1d3e0cee",
+      "working_file_sha256": "538b06479416284cbe486c626624e757e3f2871e150cbde0644ba9059001ed79"
+    },
+    {
+      "path": "SPEC-TRACEABILITY.md",
+      "git_blob_sha256": "d4123d3c4260e2b5eca2947d6d20871540ad469e623b229233656fddbdb5f3eb",
+      "working_file_sha256": "775e2fbbfda14836bee1d35e3ff5ffb27dc2a374a862342ac41c97f830f2c71a"
+    },
+    {
+      "path": "app/AUDIT-DATA-DESIGN.md",
+      "git_blob_sha256": "12328e56900b70fa7c6f1eb2405f54de82eef4d81a976261363b3e0eede8b5dd",
+      "working_file_sha256": "10d807fac0c4816c71b255bc5106e6e3ffdc73d6fc60013b12aa7e511f4223bd"
+    },
+    {
+      "path": "app/CASE-TABLE-FORMAT.md",
+      "git_blob_sha256": "93f04eff5cdcbd2a0fdb926214556c0ebb685c909ff11b682fff83b63ec7ef65",
+      "working_file_sha256": "f75b580364bab8914ba31dfad2fa6bb23125204a5dd90cff71bf60daf190b07b"
+    },
+    {
+      "path": "app/INCIDENT-DATA-DESIGN.md",
+      "git_blob_sha256": "f77b07b06a5c796328c7905396849bf35be8395de8ed95645434e972ed42e7ee",
+      "working_file_sha256": "e309a0a092d5b24d6f8a36608c2ff4bf62ffbaae6412eb94839ec0507129b7da"
+    },
+    {
+      "path": "app/src-tauri/schema/002-rca-event-links.sql",
+      "git_blob_sha256": "e5172d7c45047daa6831cb979d546f450d513329eb2b49bcefd5a5c4e92428f8",
+      "working_file_sha256": "0cbfb511cdfc6ad2435ceab1ae3950f261acf2c152251fe00eb6f1d405d52625"
+    },
+    {
+      "path": "app/src-tauri/src/case.rs",
+      "git_blob_sha256": "e9c49a6038bd90a115e3213f2ebcd7c9369b3ed9e07d5e7a628ef499090d6a70",
+      "working_file_sha256": "e9c49a6038bd90a115e3213f2ebcd7c9369b3ed9e07d5e7a628ef499090d6a70"
+    },
+    {
+      "path": "app/src-tauri/src/commands.rs",
+      "git_blob_sha256": "c4022b89492174fd30e92951fa1d05b8edfe816abf0ffc3cdbfc80d45fce3069",
+      "working_file_sha256": "c4022b89492174fd30e92951fa1d05b8edfe816abf0ffc3cdbfc80d45fce3069"
+    },
+    {
+      "path": "app/src-tauri/src/editing.rs",
+      "git_blob_sha256": "2bf6f671fa5323c3788291ff04e4901a8e1c1655c60aa543a7a5f432a5e733f8",
+      "working_file_sha256": "2bf6f671fa5323c3788291ff04e4901a8e1c1655c60aa543a7a5f432a5e733f8"
+    },
+    {
+      "path": "app/src-tauri/src/exchange.rs",
+      "git_blob_sha256": "089b398c29ec4be0e4d510ff23a7894a252c8c33a3aa4191a90216bf3d92e6d6",
+      "working_file_sha256": "089b398c29ec4be0e4d510ff23a7894a252c8c33a3aa4191a90216bf3d92e6d6"
+    },
+    {
+      "path": "app/src-tauri/src/incident.rs",
+      "git_blob_sha256": "5285c82847d5fb345234e0fb3688583ed97ee13dbf0d567da20e4c0768822e15",
+      "working_file_sha256": "697ffbc4b6d42721f1047ca6815179e3cf4173803139a9f8c0e1228d0bdd365d"
+    },
+    {
+      "path": "app/src-tauri/src/lib.rs",
+      "git_blob_sha256": "53c69e29f507a7b2db9b8bbe99fd03aa35747e8ea6bebb0a10e6155b0046c628",
+      "working_file_sha256": "53c69e29f507a7b2db9b8bbe99fd03aa35747e8ea6bebb0a10e6155b0046c628"
+    },
+    {
+      "path": "app/src-tauri/src/migration_tests.rs",
+      "git_blob_sha256": "28b54d787e5785f7d32609fe2da8b5868429b07d06315fa3ecd420c67efa2861",
+      "working_file_sha256": "28b54d787e5785f7d32609fe2da8b5868429b07d06315fa3ecd420c67efa2861"
+    },
+    {
+      "path": "app/src-tauri/src/phase7_tests.rs",
+      "git_blob_sha256": "dfaa52769558fc83f9dd858b678dc30115583351869564e85d0bdc671e020253",
+      "working_file_sha256": "dfaa52769558fc83f9dd858b678dc30115583351869564e85d0bdc671e020253"
+    },
+    {
+      "path": "app/src/App.tsx",
+      "git_blob_sha256": "76aacfab37f21c32da207871a23224f735bf51af6b80fe0abb7b7d886d35dc64",
+      "working_file_sha256": "9471b249e4ec14fc473bfee9875e81402c3aaed4e6507cd6ab60bff402983862"
+    },
+    {
+      "path": "app/src/DiagramCanvas.tsx",
+      "git_blob_sha256": "5ca2834e2fefa28f7180386069760d20419c37691773cf6b50a53c7cb75dbf35",
+      "working_file_sha256": "ecb76ee2220e212fff877d141900466367065f69869adb6bd684c2aeb2a08432"
+    },
+    {
+      "path": "app/src/IncidentCanvas.tsx",
+      "git_blob_sha256": "33bd76df507ef6f07fc2ba225e3d00944fb6afb43ee7cce01a949833b9ba9f23",
+      "working_file_sha256": "c30f7e9e3724864f139337feec4a4cb7ce7ec661087fc44b87774b5f68cc7c9a"
+    },
+    {
+      "path": "app/src/IncidentPanel.tsx",
+      "git_blob_sha256": "dea1ca9fdbbabac74b23f5397ecdf1433c9d1717a2af5cec3d20636015129d2d",
+      "working_file_sha256": "3273407fe154022c3d31fa8c5b0d17b87e6f2e7773c273e52a4bfce371e5e625"
+    },
+    {
+      "path": "app/src/caseReport.ts",
+      "git_blob_sha256": "271f1bf0751151797bd119d939b2ff9a8783efb1b36ec3f659552dc02bb00efe",
+      "working_file_sha256": "658b06cb8cd8424caba69c1312d88c7b8feb00fb0e04a2d9a11ee9f89e2fc487"
+    },
+    {
+      "path": "app/src/diagramExports.ts",
+      "git_blob_sha256": "68c034f245743b860639fbd0844ec0a25e89b8387c59566fb83341a60f2521cd",
+      "working_file_sha256": "b9386563f4f49bc7d8857015b6e4f583eb22cbe1b733ad8588a7a77b4a641a20"
+    },
+    {
+      "path": "app/src/incidentModel.ts",
+      "git_blob_sha256": "1cff26056638fb9d265ccbc7e964670f9b124677ba858b7a740b4c697f4ee05c",
+      "working_file_sha256": "dbbc03741c8511c9b4f2cb54c0686950328213ee4549d1e500b682880ae38fc9"
+    },
+    {
+      "path": "app/src/incidentScene.ts",
+      "git_blob_sha256": "c02614de28be8545ba5b4ad3cf6ed787f3a38cacf8ba12df267a6957b7ba0e93",
+      "working_file_sha256": "f152f8a26d6ff8ee2821ddc295f0f1180e1ab3847b80a48fdae23b55686c6e94"
+    },
+    {
+      "path": "app/src/model.ts",
+      "git_blob_sha256": "fe3732540ff354e05b49acb2680c7053f978c0d8e7086c051df6919afb64dff5",
+      "working_file_sha256": "591a58eb1d1c542a2e52702a66748947edf3c78d15660d1d6d23e635cdc591b8"
+    },
+    {
+      "path": "app/src/style.css",
+      "git_blob_sha256": "0ba5f3f952658309fdcf64ca74cde727788325616846ffbe82bc9ec00b8d28e2",
+      "working_file_sha256": "8692ccb9235e5ab9e3c6f4c29e2cee330984d735a8a23332f4a4ac2b71ec9488"
+    },
+    {
+      "path": "runs/008-build-phase7/CONTEXT.md",
+      "git_blob_sha256": "8f0b6c7c6130888467f11fca5b20a226e07e2dc86fd718c73e8ccced97b9f934",
+      "working_file_sha256": "d8eadfe79f9da4a97b89e1b681117eb973896fcb5f458524b7cfc63ae46ad199"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-case.csv",
+      "git_blob_sha256": "feed360b217b0ec5294b9f4b37c6a0654aaafed46c7dc0af4c1781464c78cf6c",
+      "working_file_sha256": "2060bd247a50e0e74b474c4526c8275d43b45825f212faeabb4a1a9aec180d62"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-diagram.pdf",
+      "git_blob_sha256": "99e953bdb101b3caf0a2b3c44b529dc1cb067b1eca715ff6932b27e302c6364b",
+      "working_file_sha256": "99e953bdb101b3caf0a2b3c44b529dc1cb067b1eca715ff6932b27e302c6364b"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-diagram.png",
+      "git_blob_sha256": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c",
+      "working_file_sha256": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-diagram.svg",
+      "git_blob_sha256": "41175860685b955e993e1f5df59a918238363d0420a4ef34057b8dbbda535d37",
+      "working_file_sha256": "41175860685b955e993e1f5df59a918238363d0420a4ef34057b8dbbda535d37"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-methods-case.csv",
+      "git_blob_sha256": "c7a5682eae582457bb75f34cf2674d2e44150afc213a1d6aabeab80572130f8f",
+      "working_file_sha256": "d29835d01fd828b55bbeb4e977e4a63b56a3c20bcf57ec8a00df2428eca6ec6c"
+    },
+    {
+      "path": "runs/008-build-phase7/artifacts/incident-review.docx",
+      "git_blob_sha256": "b574a145297a35d9abd76e162755935ef165eda5b1423d19a24632ac00cadc0a",
+      "working_file_sha256": "b574a145297a35d9abd76e162755935ef165eda5b1423d19a24632ac00cadc0a"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/binary-inspection.json",
+      "git_blob_sha256": "7c99b8404503dba94a262800329d0d05e66f83c711f52d7294e0f2a19828df97",
+      "working_file_sha256": "a0bec159f0034488adcf1af2575d0d93340488039970814e0bf5122da8a1cfd0"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/final-artifacts.json",
+      "git_blob_sha256": "00bc7d35b82e48c6fbbf725e48bf2082691bb3908e592c35f6952a229a256b63",
+      "working_file_sha256": "be6411f3e2eb74a1f5d3e019c75f550e8e7b841e87b285b9d983380b8793bdd4"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/final-run.json",
+      "git_blob_sha256": "7f04ccf0f2f65fac737df740ccd32ae1e866f9fcaa52b8289f71a19d3988728e",
+      "working_file_sha256": "f36954420de4eabff0c0d5339e9ebcf441dbd155f3640bfcceaf3a867296b940"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/intermediate-run.json",
+      "git_blob_sha256": "d23f37d7e133104f8d72a43800c538102d2d653231cf0059dc6c97a719455955",
+      "working_file_sha256": "39f1fac2e6d6be4fe559ed5140810f8ad906be8961e235d8c5013bf09e79e83b"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/migration-artifacts.json",
+      "git_blob_sha256": "982fa9b5f73987e566e39f1848023eff89cdf907b64ec67e9cd1937ad18ed449",
+      "working_file_sha256": "873a5d9113d8d3429ddbc011fa52efdce39c6d2642c104e6c7dae182cd6652e1"
+    },
+    {
+      "path": "runs/008-build-phase7/ci/migration-run.json",
+      "git_blob_sha256": "22294dbce15ebb77917a50614477113981b1d32ead36bc35a0af458af22b185f",
+      "working_file_sha256": "bb59c3a3c176ae16c651b8891ffccb47b3542044321a4561618410dff01d1704"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/bowtie-incident-filter.png",
+      "git_blob_sha256": "1cefc4b830bb047417a0eed1c7366a1efd1d81fb727c482b22b86a3523a49f42",
+      "working_file_sha256": "1cefc4b830bb047417a0eed1c7366a1efd1d81fb727c482b22b86a3523a49f42"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/categorized-analysis.png",
+      "git_blob_sha256": "80c0765b5bfbf2757f0bf2019cc408b379012d3ef53b15dd82974ccced636d4c",
+      "working_file_sha256": "80c0765b5bfbf2757f0bf2019cc408b379012d3ef53b15dd82974ccced636d4c"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/incident-analysis.png",
+      "git_blob_sha256": "84e7af9df6b4c863487497d921fb6f4478d844858b0711039a668c3f6d3524ac",
+      "working_file_sha256": "84e7af9df6b4c863487497d921fb6f4478d844858b0711039a668c3f6d3524ac"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/incident-pdf-render.png",
+      "git_blob_sha256": "2f7059f64bf9b231b0ac07643b3735530b0ec1b85472838189d980f2e558cfa5",
+      "working_file_sha256": "2f7059f64bf9b231b0ac07643b3735530b0ec1b85472838189d980f2e558cfa5"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/incident-timeline.png",
+      "git_blob_sha256": "199cba01e93bf40f2699541949e04ab4c354c5525a8b5a36210a781e35b6fe82",
+      "working_file_sha256": "199cba01e93bf40f2699541949e04ab4c354c5525a8b5a36210a781e35b6fe82"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-1.png",
+      "git_blob_sha256": "3713b059084dcca149d3f487f0b14e7640977a710b3e832aff44ad6312c72ae1",
+      "working_file_sha256": "3713b059084dcca149d3f487f0b14e7640977a710b3e832aff44ad6312c72ae1"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-2.png",
+      "git_blob_sha256": "f99a36d076a64da887d08e82fbe805a8c4d1631fc823959d4cd4c1dcc76df6bf",
+      "working_file_sha256": "f99a36d076a64da887d08e82fbe805a8c4d1631fc823959d4cd4c1dcc76df6bf"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-3.png",
+      "git_blob_sha256": "1dc1422cee53cfa0149cc2b74a0dee1f12101dd5ca4f3fe53ec665935ae8585e",
+      "working_file_sha256": "1dc1422cee53cfa0149cc2b74a0dee1f12101dd5ca4f3fe53ec665935ae8585e"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-4.png",
+      "git_blob_sha256": "687736f753bcd32a1d6608b2690583772aa5ec4211ea9b215bbeb05ca389ce58",
+      "working_file_sha256": "687736f753bcd32a1d6608b2690583772aa5ec4211ea9b215bbeb05ca389ce58"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-5.png",
+      "git_blob_sha256": "6e6783d1e11534858af6fe46180ee8553f36176b49c24c331a13b3c8381ad527",
+      "working_file_sha256": "6e6783d1e11534858af6fe46180ee8553f36176b49c24c331a13b3c8381ad527"
+    },
+    {
+      "path": "runs/008-build-phase7/evidence/report-render/page-6.png",
+      "git_blob_sha256": "0aabccf7d59e24b4cb6013532e297e5308d6ef6c78fea4f55b17106009154f08",
+      "working_file_sha256": "0aabccf7d59e24b4cb6013532e297e5308d6ef6c78fea4f55b17106009154f08"
+    },
+    {
+      "path": "runs/008-build-phase7/gui-validation-results.json",
+      "git_blob_sha256": "128bfbf6735de3b7e84a3fdbff807dbfdc25c1b1b312134a482d70a5cd7c1757",
+      "working_file_sha256": "128bfbf6735de3b7e84a3fdbff807dbfdc25c1b1b312134a482d70a5cd7c1757"
+    },
+    {
+      "path": "runs/008-build-phase7/incident-snapshot.json",
+      "git_blob_sha256": "eb9321e07453be5aa5286e754cc4bbef50a29b7b6729fe6eb5f96b042125e71e",
+      "working_file_sha256": "eb9321e07453be5aa5286e754cc4bbef50a29b7b6729fe6eb5f96b042125e71e"
+    },
+    {
+      "path": "runs/008-build-phase7/migration-proposal.md",
+      "git_blob_sha256": "6db2c33cf2a6e66554e6d02708c7eaf12f05aa03e20737954c0b522dc49c385c",
+      "working_file_sha256": "ef1f89269479ca79eb721ef2006685a1acbb40009943ec14fbd1905ecc36f564"
+    },
+    {
+      "path": "runs/008-build-phase7/platform-ci-sources.md",
+      "git_blob_sha256": "f89c9bdf106738c7a082fea3445292c088b4eaa5b534407cdecfc7792d761c4a",
+      "working_file_sha256": "9db70e2ba946de918b26f9907c8319165b9f0a0870554756d52e62fae3b8994e"
+    },
+    {
+      "path": "runs/008-build-phase7/producer-artifact-checks.json",
+      "git_blob_sha256": "72c3234eb4a1614324bcb421f150b0aa51fad27b909041caddef21158776dc0a",
+      "working_file_sha256": "81e77870a9e62fcb3d4c5210d8ac80cfced6d4192c5e3f5299c0dfa57d533344"
+    },
+    {
+      "path": "runs/008-build-phase7/producer-record.md",
+      "git_blob_sha256": "48c7555f1e108f8a7b35cf159323c985e81c51ac15ffbd2fb928ad2fa6999424",
+      "working_file_sha256": "31b295e14bed7bc8806c6ab1811b99267324d326048d56805b56afb4d82eedcc"
+    },
+    {
+      "path": "runs/008-build-phase7/run-state.yaml",
+      "git_blob_sha256": "fad56764ec33f24fd011fbc89447a521289fbc8203dc8aab6876293f63715892",
+      "working_file_sha256": "75b67149860e6cbf7a875e5515c56e2844a5b13e4a7873d9d5e76737d19c5f3c"
+    },
+    {
+      "path": "runs/008-build-phase7/schema-guard-evidence.json",
+      "git_blob_sha256": "d2c3d7af3fd7cdd9a635ef6fddc91ba02c0e3061b23ea0defaf948179b2fd766",
+      "working_file_sha256": "a1d33950a92e262e6dfff138a67b50544b33cf71c65aa860fd5ecc5c3ab53c34"
+    },
+    {
+      "path": "runs/008-build-phase7/schema-stop-report.md",
+      "git_blob_sha256": "058f8ce13312e87a29074cec5b830f999a39c43364b48e0bb8b1385483f68c3e",
+      "working_file_sha256": "ac538ff624c5e1e32ea41be7fd2fb9508e93f41b7d8397846b8dc473ed130707"
+    },
+    {
+      "path": "runs/008-build-phase7/task-packet.md",
+      "git_blob_sha256": "84f732db7cc1fec9c855ccf4f188b21d60c8800e6fff6b54920d691951eb7e3e",
+      "working_file_sha256": "d911796ec598d755d6ceb1d037aa429a677a777be66a8004c46e5782b45e2dfb"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-context.md",
+      "git_blob_sha256": "6f955d9ef606adbf1410c6bd89c8826415b14d1dc39612c06be8fc83bbe74750",
+      "working_file_sha256": "99933645a11efb6460d465090a2b296db38676ea50f3fccd3034174bdc13b51d"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-case.csv",
+      "git_blob_sha256": "c01dfd99cf5b19235a91491906f62012a8c160d6ad83d62068595d20b53b4392",
+      "working_file_sha256": "b8a4f7aecca357d3fb3287fd0bfb2ee74d9d04926684c1e19975bcfebe3cc0c5"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-diagram.pdf",
+      "git_blob_sha256": "c7c7efc1ca0de574fc0df5c162b1f355b25fcf49dcc481b7b2b39e620b8c6a2e",
+      "working_file_sha256": "c7c7efc1ca0de574fc0df5c162b1f355b25fcf49dcc481b7b2b39e620b8c6a2e"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-diagram.png",
+      "git_blob_sha256": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c",
+      "working_file_sha256": "4c607e27b50dfe63f1abb2d3b6adb1587310506e292b3440e5e26e0e0e50b44c"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-diagram.svg",
+      "git_blob_sha256": "3aeaca72a679c9763a27a4a3a20aadd93f0e37f32981e8836a50272e91143287",
+      "working_file_sha256": "3aeaca72a679c9763a27a4a3a20aadd93f0e37f32981e8836a50272e91143287"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-methods-case.csv",
+      "git_blob_sha256": "6968b7363f6c2e4234defda01893605bb3e5b1f64ce0f3f48ea02deed3f6e749",
+      "working_file_sha256": "f6d976e970ee7023c350444d413058bbbf7a76baca69139b92b3e45a66910cf9"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/artifacts/incident-review.docx",
+      "git_blob_sha256": "18e5f009cb0e3c46d7edb07dd04b3d38a95fe2453a71c6b6925914c31a5ebe24",
+      "working_file_sha256": "18e5f009cb0e3c46d7edb07dd04b3d38a95fe2453a71c6b6925914c31a5ebe24"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/evidence/bowtie-incident-filter.png",
+      "git_blob_sha256": "a73887caccff43656d76b6811bc7873cb407296fbee4ccf47265ebadf08e101c",
+      "working_file_sha256": "a73887caccff43656d76b6811bc7873cb407296fbee4ccf47265ebadf08e101c"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/evidence/categorized-analysis.png",
+      "git_blob_sha256": "de8d7c6d30a09ed64ad8fedea9932b0aabf9a6680a7585e5598432cf0e81de75",
+      "working_file_sha256": "de8d7c6d30a09ed64ad8fedea9932b0aabf9a6680a7585e5598432cf0e81de75"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/evidence/incident-analysis.png",
+      "git_blob_sha256": "91b829ca524279bf8a481060ac2b641453028ee6807c0110c44f3db0771969aa",
+      "working_file_sha256": "91b829ca524279bf8a481060ac2b641453028ee6807c0110c44f3db0771969aa"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/evidence/incident-timeline.png",
+      "git_blob_sha256": "6c2998777e0f3a0921f1875c4e7babc50e9f734818a1a9db93845dd814860150",
+      "working_file_sha256": "6c2998777e0f3a0921f1875c4e7babc50e9f734818a1a9db93845dd814860150"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/gui-validation-results.json",
+      "git_blob_sha256": "9da8a9b9e216f02aad598d126f3e1de6bd329f5854f58445aa2f28a5f1c2df8a",
+      "working_file_sha256": "9da8a9b9e216f02aad598d126f3e1de6bd329f5854f58445aa2f28a5f1c2df8a"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/parser-results-final.json",
+      "git_blob_sha256": "15a97ef543e5fe19aae8f3847031600f569afd2f44df68fcfaf49a828041f395",
+      "working_file_sha256": "d7a22d7ca3f08fde9da3f7b0621183b6d071a81d55b2949e247d1e4ede16e437"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/diagram-1.png",
+      "git_blob_sha256": "2f7059f64bf9b231b0ac07643b3735530b0ec1b85472838189d980f2e558cfa5",
+      "working_file_sha256": "2f7059f64bf9b231b0ac07643b3735530b0ec1b85472838189d980f2e558cfa5"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-1.png",
+      "git_blob_sha256": "3713b059084dcca149d3f487f0b14e7640977a710b3e832aff44ad6312c72ae1",
+      "working_file_sha256": "3713b059084dcca149d3f487f0b14e7640977a710b3e832aff44ad6312c72ae1"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-2.png",
+      "git_blob_sha256": "c85b091932ad69386c8fecc032bad96810d448de66c68448b8d4a0bec7410342",
+      "working_file_sha256": "c85b091932ad69386c8fecc032bad96810d448de66c68448b8d4a0bec7410342"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-3.png",
+      "git_blob_sha256": "b4565901ca20c181180587908d869f0e6812a3637288111bd23cd223d1f685dd",
+      "working_file_sha256": "b4565901ca20c181180587908d869f0e6812a3637288111bd23cd223d1f685dd"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-4.png",
+      "git_blob_sha256": "57abdb47681db18bbfd8bcb5cf9b3b74c1140be2312bf7e56eaf55955a9dc3a7",
+      "working_file_sha256": "57abdb47681db18bbfd8bcb5cf9b3b74c1140be2312bf7e56eaf55955a9dc3a7"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-5.png",
+      "git_blob_sha256": "c2f0f4db2ee1a086632bb6b51aac459edcf777c1b96ef400592760feffa3accc",
+      "working_file_sha256": "c2f0f4db2ee1a086632bb6b51aac459edcf777c1b96ef400592760feffa3accc"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-6.png",
+      "git_blob_sha256": "c94baf0e805b4236a576afa2e9dd88e70cf35e84307116b57c5beeb00f5c512f",
+      "working_file_sha256": "c94baf0e805b4236a576afa2e9dd88e70cf35e84307116b57c5beeb00f5c512f"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-evidence/render-final/report-contact.png",
+      "git_blob_sha256": "56275ddb231671a610c53acaa8939bb2eba23b34ac25455af59e04e23fd06d68",
+      "working_file_sha256": "56275ddb231671a610c53acaa8939bb2eba23b34ac25455af59e04e23fd06d68"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-migration-record.md",
+      "git_blob_sha256": "dad6b702743d393e43dd92b61aa9293f2e3fb4dc982bc83c9412fe2769aa7995",
+      "working_file_sha256": "751cef9fd05748c14455c8097da99184cb333ea4c67e0395b91f978e709901cc"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-record.md",
+      "git_blob_sha256": "dce7a9dc66641d984c46dbba9f4e02bf8335110fe0c7b51b86d63586e3b188fc",
+      "working_file_sha256": "4d1da5cc5d1ca5f2185056b93b07c3df47fcb654b945d6e7b2cb89a831dfe95c"
+    },
+    {
+      "path": "runs/008-build-phase7/validator-schema-fit.md",
+      "git_blob_sha256": "c1fd37331ef7a3539e6307a5dbdf6df016d623e2ba10816b368301b3ef3dd071",
+      "working_file_sha256": "35a4fad8b9478573beb4f613284e0ab549b45a699e578b0efa2943d2e48953b1"
+    },
+    {
+      "path": "scripts/check_phase7_artifacts.py",
+      "git_blob_sha256": "5dedfc796767d3b84b346767dc6d3e931dbde47ce45483f28700b9a2df67c6de",
+      "working_file_sha256": "076600c2c2bc8fd424ed9e98d9691fcd2c9179c2f61b93c9c97c2318564e01fa"
+    },
+    {
+      "path": "scripts/check_phase7_native.mjs",
+      "git_blob_sha256": "ba75ea75374120583ba0f4ca0fc1b4db24e8802a95ab95c1662c78189374d5c9",
+      "working_file_sha256": "d3483e842d5ec16ffec35454f54f1b0ab162e380a6ee1324d9f5866b3ae060b2"
+    },
+    {
+      "path": "scripts/check_phase7_native.ps1",
+      "git_blob_sha256": "8d7d4d03a6e6e58aad417ea5ff8fc0b93505694940ff71c2585434521789fdaf",
+      "working_file_sha256": "97463bda234923929ee9f8ec7dfbfe4ea9e30b673c15cfaebcb35260cf314353"
+    },
+    {
+      "path": "scripts/render_phase7_word.ps1",
+      "git_blob_sha256": "8233da8cea67b87d1d6cfb1a59c4c748210b262457ff53adeb987f823494ebac",
+      "working_file_sha256": "2c80cc00019ddebda67d6fe395ff76589cd8dd615f6b3b02eea3d905fe00bb25"
+    },
+    {
+      "path": "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md",
+      "git_blob_sha256": "292d1e4ae60369739157dc5f98ea19a7d350cbe594298701eeb12c5e100b2372",
+      "working_file_sha256": "59f0c462c7951a9ceeef8450de02c6aa8d58291bc783549fa407a29ae89d08c7"
+    },
+    {
+      "path": "stages/04-build/output/phase-7-report.md",
+      "git_blob_sha256": "1abaff0d2311a8946e8822f17aff22bcdd5f8184d0c2385f32b2ba194739c134",
+      "working_file_sha256": "7fdb29b977534f6a5b6eaeb31a7fe0dd8810f21c25ec4d5a905eb50d725c33dc"
+    },
+    {
+      "path": "stages/04-build/output/schema-design.md",
+      "git_blob_sha256": "bae0233234e14884a49283e5242e339c50e8d48cad075527b1ef126d331b76c5",
+      "working_file_sha256": "38b4def8eecf42a760270928db17c1fc821c8ed10b7d851f2a3d48fca05c5b06"
+    }
+  ]
+}

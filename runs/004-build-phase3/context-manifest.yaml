@@ -1,0 +1,29 @@
+run_id: 004-build-phase3
+compiled_at: 2026-10-13
+
+# Context is compiled, not accumulated. List exactly what was loaded.
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: stages/04-build/CONTEXT.md
+  references:
+    - stages/04-build/references/REBUILD-MASTER-PROMPT.md
+    - stages/01-intake/references/spec/README.md
+    - SPEC-013 sections 7.12-7.13 and 15.1-15.7
+    - app/src-tauri/schema/001-initial.sql (risk tables and triggers)
+    - app/src-tauri/src/case.rs (version and exact schema validation)
+    - scripts/check_phase1_schema.py (existing threat rejection assertion)
+    - stages/04-build/output/AMBIGUITY-RESOLUTIONS.md (AR37-AR44 accepted by current human)
+    - runs/_template/task-packet.md and run-state.yaml
+    - runs/004-build-phase3/task-packet.md
+    - SPEC-013 sections 3.11-3.12, 7.2-7.4, 7.16, 10.1-10.3, 11.1-11.3
+    - SPEC-014 matching action-field locator search (primary workflow reference)
+    - app/src/model.ts, App.tsx, EntityEditor.tsx, DiagramCanvas.tsx, style.css
+    - app/src-tauri/src/editing.rs, commands.rs, lib.rs
+    - app/src/property-catalog.json and new typed property/risk/register modules
+    - scripts/check_phase2_native.mjs and Phase 3 scripts (own-app GUI harness)
+    - SPEC-TRACEABILITY.md
+  prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
+
+tool_profile: build
+live_target_verified_at: 2026-10-13
+live_target_state: Initial clean Phase 2 tip 1fc5d75; continuation clean phase-3 branch at 7e8e2d1 after human AR45 correction. Sole root/origin verified; renewed TARGET GATE PASS; unchanged schema required.

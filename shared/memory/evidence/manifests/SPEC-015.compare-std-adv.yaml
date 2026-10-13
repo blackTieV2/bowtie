@@ -1,6 +1,6 @@
 evidence_id: SPEC-015
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
@@ -13,6 +13,18 @@ source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [01-intake, 03-design]}
-relationships: [{type: supersedes, target: SPEC-005}]
-notes: Standard vs Advanced comparison chart. Clean table format; edition scoping for v1 (build STD first).
+scope:
+  stages:
+  - 01-intake
+  - 03-design
+relationships:
+- type: supersedes
+  target: SPEC-005
+notes: Standard vs Advanced comparison chart. Clean table format; edition scoping
+  for v1 (build STD first).; hash updated to owner-verified local bytes 2026-10-12;
+  original conversion-pass hashes superseded
+superseded_conversion_sha256: 770aa742cf4863f1927480d7fcd13a98647faddacb0a725ef50ec91163b97808
+local_size_bytes: 14544
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/02 Compare BowTieXP Standard &
+  Advanced.md

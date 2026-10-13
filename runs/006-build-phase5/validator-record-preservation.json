@@ -1,0 +1,19 @@
+{
+  "validator": "/root/phase5_validator",
+  "record": "validator-report.md",
+  "preservation": "Returned validator text saved by sole producer writer; validator made no tracked changes",
+  "verifiedArtifactHashes": {
+    "app/src-tauri/target/release/barrier-atlas.exe": "30ad0a0cf62b8a8e119a8776e4fa253a9de8ea1f20b68dfa8c4b8ab67273f0ed",
+    "app/src-tauri/src/case_tools.rs": "bc4302404d4d0ee910b2c421aac19e15c3d0cf289007fe4a3de117be94940e46",
+    "app/src-tauri/src/compare.rs": "0fb17795d23ecadd3e55dbbfaeb974407b780ba4e7d21a6b68e1f2a20a6c9291",
+    "app/src-tauri/src/exchange.rs": "6526dd1401908313bbd2494207a87a303a255e8adb780c4af8ff0615f30d0b5c",
+    "app/src/FindReplace.tsx": "5998f00505925cdea198e36589db5a4b6cfa33f832c9e150bba0a8931f34d083",
+    "app/src/CaseCompare.tsx": "dead057bf75dc5b0cb42e16d7385b0a97a992db794464ef04b32b95387f07b56",
+    "app/src/LookupManager.tsx": "3d2c9988edd3683228fdb675799cd8c0db4660b4000220fc3ed01ac3470a49d7",
+    "app/src/tableWorkbook.ts": "172031d163d84c70c8e2f0497610abbd721e4eeef437763a939c27084685d53b",
+    "app/CASE-TABLE-FORMAT.md": "c8b7b594160930fbbbbe017de6bdeadbda2cb27db48116afddd3699e210395ed",
+    "app/src/CaseExchange.tsx": "6f09f5b7ebdff13be16a9e74909cc7cc0c5df75a7476092d2398f17083cb68f7"
+  },
+  "generatedEvidence": "validator-evidence/",
+  "erratum": "validator-erratum.md (validator-returned correction preserved verbatim; original report retained)"
+}

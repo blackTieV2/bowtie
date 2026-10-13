@@ -1,0 +1,25 @@
+run_id: 004-build-phase3
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: awaiting-review
+
+current_stage: 04-build
+current_step: phase-3-review-boundary-stop
+
+completed_steps: [target-gate-pass, branch-and-packet, primary-spec-review, AR45-stop-and-human-correction, renewed-target-gate, typed-properties-and-custom-fields, matrices-assessments-soft-hide-clear, effectiveness-and-action-register, 22-rust-tests, final-windows-native-build, final-twelve-step-plus-phase3-gui-test, save-reopen-equality, screenshot-review, report-and-evidence]
+pending_steps: [human-phase3-review, native-chooser-and-input-ergonomics, independent-qa, macos-linux-validation, large-case-performance]
+
+approval_required: true
+approval_status: Phase 3 authorized; AR45 resolved-by-correction by human; no migration
+
+actor: codex
+model: model-neutral-record
+
+started_at: 2026-10-13
+updated_at: 2026-10-13
+
+input_hashes: {manifest: runs/004-build-phase3/input-hashes.json}
+output_hashes: {manifest: runs/004-build-phase3/output-hashes.json}
+
+rollback_reference: 1fc5d75a91d25ac031cc47e644b1c9b4766461d7
+resume_instruction: STOP for human Phase 3 review. Phase 4 requires explicit authorization. No merge/push/deploy/release.

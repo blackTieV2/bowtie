@@ -1,0 +1,29 @@
+{
+  "algorithm": "SHA-256",
+  "bytes": "local raw bytes; source corpus unchanged",
+  "startingHead": "ac20e1d4d4992316d34ac724cb4734f81bd62e9a",
+  "files": {
+    "AGENTS.md": "11873b4a617879106977f3a85df44929c93a84efb063e6db53df626acad3e341",
+    "app/src-tauri/schema/001-initial.sql": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+    "CONTEXT.md": "04309ffedd1fcd8065272d415b7b13f2c9209f908b02866151655231e388a891",
+    "PROJECT_STATUS.md": "2368dd90890cb1d234a48848ad08f90c142f8053d3ee2721fee12353e343348e",
+    "stages/01-intake/references/spec/01 GuidingPrinciples(A5 Back) 2017.md": "9cfe3b38afa1a0974bb4892d9c9f2546dca65b03d26a2c1eb4a4cc9d78712f49",
+    "stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md": "582d7a46f9d183328b0758bb4c05eb43fa9ebc4ef4ffcecbf9608e912aa687fc",
+    "stages/01-intake/references/spec/04 All Product Brochures.md": "39ac1dca5db0a5c8aa1dcda6109c457550a6f607af673e9144f44ada76df7423",
+    "stages/01-intake/references/spec/05 RPS Training Slides - Edition 2.3.md": "565ee234a2850c2c0965f8d281c60cc6692738284a5f3348854dd0bb839c011a",
+    "stages/01-intake/references/spec/06 Methodology Manual V15.md": "a7c6855e4e9a6dcd263cc26b2ada89745891714f0b29aeb4275c52d5357671da",
+    "stages/01-intake/references/spec/07 BowTieXP 8.0 and up Quick Start Manual.md": "d4d95339284c4a8c25aabc9478cb29b5b0bad715f3141b4f12fe5e1027597cba",
+    "stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md": "7a6c7d237c7190c37ac547167afe948b5a68d38d0209e862668474a5bae83adc",
+    "stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md": "926ae3eeda9a8390811176b8a317ada4450660e784f40e4e4a8a3d169ed700f5",
+    "stages/01-intake/references/spec/BowTieXP_in_12_steps.md": "3114cae3fe762c0096188cec52de18c35785ccb81d220b8f632def3b76f34da1",
+    "stages/01-intake/references/spec/BowtieXP_Management_document.md": "6e061959f1aa8cb584162493971eae9a517045e91d981a0615e706d51e586e3a",
+    "stages/01-intake/references/spec/IncidentXP Software Manual - For Release 8.2.md": "25d271d7395cf3eb7cdb615e29860943eb43b205257ac3a13f6c26034531ed20",
+    "stages/01-intake/references/spec/IncidentXP.md": "57c877f8f1df82fb7b9b318a4c841e6a667364950f6fe88d756c191a4d51b0b0",
+    "stages/01-intake/references/spec/IncidentXP_Software_Manual_-_For_Release_10.4.md": "f35dac69bd180f686f37b83cbe8ac4145833dc026cfbfea33aac2a6429cf802c",
+    "stages/01-intake/references/spec/README.md": "964f53fd9a691fe42431f319ffb1dfc6eebc12fd578f07e7c15904ee253a536d",
+    "stages/01-intake/references/spec/RPS BowTie Analysis - Training - 2017 Edition.md": "8c305dd6334d821207edf142150052951fdac4f139da1272f8a53f8fb949b763",
+    "stages/01-intake/references/spec/Software User Manual Rev 31 for Ver 8.2 & Up.md": "1fc110b80c0b9be66b7bf5ff27269ddbceba92fd77a6ba93d123a6583dedac6f",
+    "stages/04-build/CONTEXT.md": "492ac6bbcf2a32bda04db2ee98591e787e295598044a283a568ce9e95d3d88d6",
+    "stages/04-build/references/REBUILD-MASTER-PROMPT.md": "4b5efe13bef8fdef4f6c59983584209d0bb3f6cc4175a86b4c5e0b8a0ebaa1bb"
+  }
+}

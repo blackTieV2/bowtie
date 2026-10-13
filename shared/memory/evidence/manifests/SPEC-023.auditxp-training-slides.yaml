@@ -1,6 +1,6 @@
 evidence_id: SPEC-023
 project: bowtie
-timestamp: 2026-10-12T00:00:00Z
+timestamp: 2026-10-12 00:00:00+00:00
 actor: bootstrap-agent
 model: kimi-k3
 source_type: uploaded-document
@@ -13,6 +13,16 @@ source_trust: trusted
 sensitivity: internal
 classification: legacy-spec
 quarantine_state: extracted
-scope: {stages: [03-design, 04-build]}
+scope:
+  stages:
+  - 03-design
+  - 04-build
 relationships: []
-notes: AuditXP Training Slides Rev D. Audit module workflows: prepare audit questions/surveys from bowties, conduct audits, review and report results. New source, no prior equivalent.
+notes: 'AuditXP Training Slides Rev D. Audit module workflows: prepare audit questions/surveys
+  from bowties, conduct audits, review and report results. New source, no prior equivalent.;
+  hash updated to owner-verified local bytes 2026-10-12; original conversion-pass
+  hashes superseded'
+superseded_conversion_sha256: 5a08d6e29a28e391cf8b6bb1aab28b1afacee0aa1e52b90baa1bfcb5cd652c29
+local_size_bytes: 6659
+hash_normalization: CRLF-to-LF; UTF-8 bytes otherwise unchanged
+local_source_path: stages/01-intake/references/spec/AuditXP Training Slides_Rev D.md

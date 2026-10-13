@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "implementationCommit": "88c3867054ccf8dd12d258a8de691f5d1079609a",
+  "platform": "Windows",
+  "command": "npm run tauri build -- --no-bundle",
+  "elapsed": "1m 13s",
+  "exitCode": 0,
+  "executable": {
+    "path": "app/src-tauri/target/release/barrier-atlas.exe",
+    "sha256": "ca755ff472cb653ff6719021ba5fa05d18646b5a2b66b6d757ee94bcc698d0fd"
+  },
+  "rustTests": 25,
+  "schemaSha256": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+  "fontSha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+  "warnings": [
+    "Vite entry bundle approximately 2.1 MB includes local font/fontkit/canvas; native build succeeds."
+  ],
+  "qaDependencies": "Word COM and PyMuPDF only for inspection; application export is fully offline and independent of them."
+}

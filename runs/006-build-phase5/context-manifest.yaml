@@ -1,0 +1,13 @@
+run_id: 006-build-phase5
+compiled_at: 2026-10-13
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: stages/04-build/CONTEXT.md
+  references: [REBUILD-MASTER-PROMPT.md, spec/README.md, SPEC-015 edition chart, SPEC-013 sections 9.4.1 and 19.1, runs/006-build-phase5/task-packet.md]
+  prior_experience: []
+tool_profile: build
+live_target_verified_at: 2026-10-13
+live_target_state: Historical Phase 4 gate; continuation gate clean feature/phase-5-case-tools at ad08c71; expected origin; TARGET GATE PASS.
+continuation_authority: Human D-007 and consolidated instruction preserved verbatim in task-packet.md
+continuation_references: [SPEC-013 sections 7.3 and 9.4 and 9.4.1 and 12.3 and 19.1-19.4, SPEC-015 edition matrix, D-007]
+validator_context: Fresh read-only context with requirements/spec citations and no producer conclusions; independent record separate

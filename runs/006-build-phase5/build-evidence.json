@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "command": "npm run tauri build -- --no-bundle",
+  "platform": "Windows x64",
+  "executable": "app/src-tauri/target/release/barrier-atlas.exe",
+  "sha256": "30ad0a0cf62b8a8e119a8776e4fa253a9de8ea1f20b68dfa8c4b8ab67273f0ed",
+  "dependenciesChanged": false,
+  "bundledInstaller": false
+}

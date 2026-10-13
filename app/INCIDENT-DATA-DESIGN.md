@@ -1,0 +1,13 @@
+# Phase 7 original incident storage contract — implementation design
+
+Approved schema v2 retains all original tables. incident.method_key is the incident's analysis family; one incident can own multiple analysis diagrams of that family and multiple timelines. Separate incidents may use different families. This follows the human-required incident-level method discriminator. Methods have original internal keys systemic, trio, bfa, rca, categorized_rca; timeline is a diagram role, and timeline-only incidents use timeline. Generic UI labels avoid copied third-party content. Plain methodology citations remain in traceability.
+
+Incident metadata envelope version1 owns case details, diagram descriptors/timeline columns, local taxonomy and recommendations. Node metadata envelope version1 owns diagram reference, appearance, descriptions, positions, timeline actor/column slot, criteria/causation, supporting document refs and equivalent diagram links. Persisted nodes/edges/incident links stay in approved relational tables; core barrier links never move into JSON. Validate references, version and method behavior on read/write/open/save/import. No additional table, index or trigger changes.
+
+Existing node ID/kind/incident cannot change. Update title/metadata only; compare against expected baseline; delete edges/links explicitly before deleting removed owned nodes. Block a method change after nodes exist. RCA event source linkage is governed by the approved v2 trigger; runtime validation also restricts linked nodes to analysis diagrams.
+
+A fresh v1 working session applies exactly 002-rca-event-links.sql in the first incident-write transaction. V1 open already migrates its backup. Preserve atomicity and do not rewrite source case files until Save.
+
+Causation uses documented three-level descriptive paths. User-defined taxonomy starts empty; no vendor taxonomy or invented categories are shipped. Systemic analysis: immediate/basic/management factors; barrier failure analysis: primary/secondary/tertiary; trio analysis: immediate/precondition/underlying. Plain RCA uses documented event appearances. Categorized RCA uses only the documented category concepts, with user-entered values. Local recommendations/evidence/document associations are owned case data, never network retrieval.
+
+Timeline columns have timestamp, display format, qualitative label and color. Actors are person/item/system rows. Events/evidence reference a column and optional actor; drop into another cell updates those references. User order is retained and nonchronological columns get a warning. Actor hiding is display only. Copying timeline/analysis events creates new identities and does not change original nodes.

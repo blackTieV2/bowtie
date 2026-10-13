@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "inputReferenceHashesUnchanged": {
+    "AGENTS.md": true,
+    "PROJECT_STATUS.md": true,
+    "CONTEXT.md": true,
+    "stages/04-build/CONTEXT.md": true,
+    "stages/04-build/references/REBUILD-MASTER-PROMPT.md": true,
+    "stages/01-intake/references/spec/README.md": true,
+    "stages/01-intake/references/spec/02 Compare BowTieXP Standard & Advanced.md": true,
+    "stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md": true
+  },
+  "protectedPathsUnchanged": [
+    "app/src-tauri/schema",
+    "app/package.json",
+    "app/package-lock.json",
+    "app/src-tauri/Cargo.toml",
+    "app/src-tauri/Cargo.lock",
+    "AGENTS.md",
+    "PROJECT_STATUS.md",
+    "CONTEXT.md",
+    "stages/01-intake/references/spec",
+    "runs/002-build-phase1",
+    "runs/003-build-phase2",
+    "runs/004-build-phase3",
+    "runs/005-build-phase4"
+  ],
+  "applicationLegacyBrandNameScan": "No matches",
+  "schemaSha256": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
+  "whitespaceCheck": "git diff --cached --check passes excluding verbatim validator-report.md; that report has 7 intentional two-space Markdown hard breaks preserved exactly",
+  "producerAndValidatorSeparate": true
+}

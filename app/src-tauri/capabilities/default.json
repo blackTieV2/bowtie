@@ -1,0 +1,13 @@
+{
+  "identifier": "main-local",
+  "description": "Local case commands and native file dialogs; no network, shell or generic SQL API.",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "core:window:allow-destroy"
+  ]
+}

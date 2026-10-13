@@ -1,0 +1,68 @@
+{
+  "actor": "producer /root",
+  "result": "PASS for tested Windows scope",
+  "startingHead": "ad08c71c025cd8733e5d3a475fed855b6e717d86",
+  "targetGate": "PASS",
+  "commands": [
+    {
+      "command": "C:/Users/BlackTie/.cargo/bin/cargo.exe test --locked --offline",
+      "directory": "app/src-tauri",
+      "result": "PASS",
+      "tests": 37,
+      "failed": 0
+    },
+    {
+      "command": "npm run check",
+      "directory": "app",
+      "result": "PASS"
+    },
+    {
+      "command": "npm run build",
+      "directory": "app",
+      "result": "PASS",
+      "advisory": "Existing large bundle size"
+    },
+    {
+      "command": "npm run tauri build -- --no-bundle",
+      "directory": "app",
+      "result": "PASS",
+      "platform": "Windows x64"
+    },
+    {
+      "command": "./scripts/check_phase5_native.ps1",
+      "result": "PASS on final source/binary",
+      "evidence": "gui-validation-results.json"
+    },
+    {
+      "command": "python scripts/check_phase5_artifacts.py",
+      "result": "PASS",
+      "evidence": "artifact-validation-results.json"
+    }
+  ],
+  "earlierFailures": [
+    {
+      "check": "cargo rejection physical-line assertion",
+      "cause": "Test initially expected logical row number instead of physical line after embedded newline",
+      "resolution": "Corrected assertion; implementation retained correct line number"
+    },
+    {
+      "check": "native XLSX textarea equality",
+      "cause": "DOM textarea normalizes CRLF to LF",
+      "resolution": "Normalized DOM-only comparison; exact file/structural comparisons retained"
+    },
+    {
+      "check": "first native invocation",
+      "result": "Exited 1 without output; captured rerun exposed textarea assertion"
+    }
+  ],
+  "validatorDiscoveredDefectsFixed": [
+    "Validate all case headers/payloads on every destination",
+    "Preserve imported persisted title whitespace; normalized replacement preview",
+    "Append Standard lookup after max sparse order"
+  ],
+  "independentEvidence": "validator-report.md",
+  "humanPhaseApproval": "pending",
+  "phase6Authorized": false,
+  "deployed": false,
+  "released": false
+}

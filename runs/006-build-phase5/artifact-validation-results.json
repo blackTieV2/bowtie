@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "parser": "Python stdlib csv, zipfile, ElementTree, json; independent of application serializers",
+  "recordCounts": {
+    "case": 1,
+    "entity": 21,
+    "lookup": 1,
+    "link": 7,
+    "matrix": 1,
+    "assessment": 4
+  },
+  "entities": 21,
+  "csvReexportByteEquality": true,
+  "xlsxCsvStructuralEquality": true,
+  "diffReportKnownChange": true,
+  "hashes": {
+    "case-data.csv": "d24fdfcdbef59159f3060fda9a281b0085577033369fe1f0fb6b09a6f97a57b0",
+    "case-data-reexport.csv": "d24fdfcdbef59159f3060fda9a281b0085577033369fe1f0fb6b09a6f97a57b0",
+    "case-data.xlsx": "94b639683174258091aae295671a351573ba63555937819d243c406138788bd6",
+    "case-differences.txt": "acd06e3ae4407c3e335fddca164b8cfc98eda3fd47a92b1a5f337a9b1317bb33"
+  }
+}
