@@ -1,0 +1,45 @@
+{
+  "result": "PASS",
+  "scope": "independent format parsers; producer-run validation",
+  "checks": {
+    "run-1": {
+      "pngDimensions": [
+        6680,
+        2112
+      ],
+      "svgVector": true,
+      "pdfPages": 1,
+      "pdfTextExtractable": true,
+      "docxXmlValid": true,
+      "knownCaseStrings": true,
+      "noCreationDates": true
+    },
+    "run-2": {
+      "pngDimensions": [
+        6680,
+        2112
+      ],
+      "svgVector": true,
+      "pdfPages": 1,
+      "pdfTextExtractable": true,
+      "docxXmlValid": true,
+      "knownCaseStrings": true,
+      "noCreationDates": true
+    }
+  },
+  "hashes": {
+    "run-1": {
+      "case-report.docx": "76de3ae3c869d31f611b3f2a1e960422da01d11b92948ac7c99f99c56fc38471",
+      "diagram.pdf": "5d6dabdf8983c823bb434a5d0d2feaf5df350e3a5cd801f1c9f9e9e925bc4337",
+      "diagram.png": "c2c15899f734d422b0abfbd83a829bd154bf401fa3c2bd1b655b3a268e60482e",
+      "diagram.svg": "0a6544cfb089d82f88b9f22a20f4fe8dd640d10b4483abdd35feca4f315f9618"
+    },
+    "run-2": {
+      "case-report.docx": "76de3ae3c869d31f611b3f2a1e960422da01d11b92948ac7c99f99c56fc38471",
+      "diagram.pdf": "5d6dabdf8983c823bb434a5d0d2feaf5df350e3a5cd801f1c9f9e9e925bc4337",
+      "diagram.png": "c2c15899f734d422b0abfbd83a829bd154bf401fa3c2bd1b655b3a268e60482e",
+      "diagram.svg": "0a6544cfb089d82f88b9f22a20f4fe8dd640d10b4483abdd35feca4f315f9618"
+    }
+  },
+  "byteIdentical": true
+}

@@ -1,0 +1,8 @@
+{
+  "renderer": "Microsoft Word DOCX-to-PDF; PyMuPDF page rasterization",
+  "pages": {
+    "diagram": 1,
+    "report": 7
+  },
+  "packagedRenderer": "Unavailable: LibreOffice soffice.exe absent; native Word fallback used"
+}

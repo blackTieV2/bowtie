@@ -1,0 +1,25 @@
+run_id: 005-build-phase4
+project: bowtie
+target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
+status: awaiting-review
+
+current_stage: 04-build
+current_step: phase-4-review-boundary
+
+completed_steps: [target-gate, branch-and-packet, spec-content-schema-check, export-implementation, 25-rust-tests, frontend-build, native-build, gui-two-run-exports, artifact-parsers, visual-render-review, implementation-commit, feature-push]
+pending_steps: [human-review, independent-qa, documented-manual-checks]
+
+approval_required: true
+approval_status: Phase 4 execution and feature-branch push authorized; boundary acceptance pending
+
+actor: codex
+model: model-neutral-record
+
+started_at: 2026-10-13
+updated_at: 2026-10-13
+
+input_hashes: {manifest: runs/005-build-phase4/input-hashes.json}
+output_hashes: {manifest: runs/005-build-phase4/output-hashes.json}
+
+rollback_reference: ac20e1d4d4992316d34ac724cb4734f81bd62e9a
+resume_instruction: STOP. Await human Phase 4 review; no Phase 5, merge or main push authorized.

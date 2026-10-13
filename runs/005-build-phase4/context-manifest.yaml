@@ -1,0 +1,25 @@
+run_id: 005-build-phase4
+compiled_at: 2026-10-13
+
+# Context is compiled, not accumulated. List exactly what was loaded.
+loaded:
+  canonical_doctrine: [AGENTS.md, PROJECT_STATUS.md, CONTEXT.md]
+  stage_contract: stages/04-build/CONTEXT.md
+  references:
+    - stages/04-build/references/REBUILD-MASTER-PROMPT.md
+    - SPEC-013 sections 7.5.6, 13.2-13.6 (core reporting authority)
+    - SPEC-006 management document (role/context)
+    - app/src/model.ts, DiagramCanvas.tsx, App.tsx, main.tsx
+    - app/src-tauri/schema/001-initial.sql and snapshot/IPC services
+    - runs/_template and runs/005-build-phase4/task-packet.md
+    - documents SKILL.md and template-elicitation.md, render_docx.py
+    - pdf SKILL.md
+    - https://pdf-lib.js.org/docs/api/classes/pdfdocument
+    - https://konvajs.org/docs/data_and_serialization/High-Quality-Export.html
+    - https://github.com/101arrowz/fflate
+    - https://github.com/notofonts/noto-fonts (font and OFL license)
+  prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
+
+tool_profile: build
+live_target_verified_at: 2026-10-13
+live_target_state: Sole root and expected origin; clean approved Phase 3 tip ac20e1d; TARGET GATE PASS; new Phase 4 branch owned by this writer.

@@ -1,4 +1,4 @@
-# Spec traceability — Barrier Atlas (Phases 1–3)
+# Spec traceability — Barrier Atlas (Phases 1–4)
 
 Run `002-build-phase1`. The human approved schema/scaffold and AR01–AR33 and authorized runtime case IPC/tree work under the selected name Barrier Atlas. Schema checks, runtime service tests and Windows built-app smoke are distinct evidence; none establishes independent QA or deployment. Source filenames expand in `stages/04-build/output/feature-inventory.md`.
 
@@ -58,3 +58,20 @@ The human approved Phase 2/AR37–AR44 and corrected AR45: risk assessments appl
 | Manual ALARP rationale and local references | SPEC-004 step 12; accepted AR20/AR43 | Typed free-text rationale retained; no automatic ALARP computation/display, network fetch or service |
 
 The native Phase 3 script first reruns all twelve GUI method steps, then authors the above Phase 3 example and verifies tree/links/matrices/assessments/lookups/actions/custom-definition equality after Save/Open. Final results, commands, screenshots and gaps are in phase-3-report.md and run 004. Advanced/server/audit behavior remains in its assigned scope; metadata fields do not enable those modules.
+
+## Phase 4 offline reporting — run 005-build-phase4
+
+| Implemented behavior / artifact | Exact spec locator | Verification |
+|---|---|---|
+| Whole-diagram PNG export with 1–4 size multiplier, persisted layout and annotations | SPEC-013 §§7.5.6, 13.4; current human scope | Shared diagramScene; native GUI export; PNG dimensions and saved-position check |
+| Vector SVG and text/vector PDF replacing proprietary output formats | SPEC-013 §§13.4, 13.6.1.1–13.6.1.2; explicit SVG/PDF authority | SVG text/paths/embedded font, PDF text/vector primitives; XML and PDF parser/render checks |
+| Case/group/hazard/diagram summary and threat/consequence/barrier/escalation hierarchy | SPEC-013 §13.2.2 Hazards/Register/BowTie Diagrams/Threats and Consequences; SPEC-006 management communication context | Original caseReport OOXML layout from live snapshot; known case strings and Word rendering |
+| Risk assessments, axes/coordinates/cells/categories and matrix context | SPEC-013 §13.2.2 Risk Assessment reports; §7.12 | Named matrix/rating sections; rank ordering; hidden matrices omitted as documented |
+| Barrier register/effectiveness, definitions and recorded metadata | SPEC-013 §13.2.2 Barriers/Barrier overview/Color Legends; §§15.6, 13.5 | Original barrier tables and effectiveness context; generated XML/render review |
+| All actions with parent, party, priority/category, dates/completion/sign-off/rationale | SPEC-013 §13.2.2 Actions/All Actions/Actions in context; §3.12.4.1 | Live SQLite-derived action rows/properties/links; known new action and role in DOCX |
+| Linked activities/documents/systems/competencies/job titles/products and assignments | SPEC-013 §13.2.2 Activities/Document Links/Job Titles/Lists/Systems; §7.2 | Supporting-item detail and relationship tables; no remote document fetching |
+| Read-only signed export snapshot and atomic destination writing | Current no-new-persistence/live-case authority; SPEC-013 §§13.2.1, 13.4 | Three new Rust tests; unchanged snapshots/schema after native export |
+| Stable serialization/container dates, no generation timestamps, two-run hashes | Current deterministic-output requirement | Fresh-frontend repeat and independent SHA-256 comparisons for PNG/SVG/PDF/DOCX; AR59 qualifies platform scope |
+| Original offline font/layout/branding | Standing clean-room/offline authority; SPEC-013 §7.5.3 | Bundled OFL font, local font loading/embedding, no legacy templates/assets or network services |
+
+This is the requested consolidated core case report, not a claim to replicate every historical report variant or later module. Content/schema review found no gap requiring a migration. Native chooser, cross-platform raster/Office layout and independent QA limits appear in phase-4-report.md. App-generated artifacts are separate from Word/PDF raster QA intermediates.
