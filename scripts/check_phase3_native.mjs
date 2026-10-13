@@ -2,6 +2,7 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
+const phase3RecordRoot=resolve(process.env.BARRIER_ATLAS_PHASE3_RUN??'runs/004-build-phase3');
 const port=Number(process.env.BARRIER_ATLAS_CDP_PORT??9334),sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const target=(await(await fetch(`http://127.0.0.1:${port}/json/list`)).json()).find(t=>t.type==='page');assert.ok(target);
 const socket=new WebSocket(target.webSocketDebuggerUrl);await new Promise((done,fail)=>{socket.addEventListener('open',done,{once:true});socket.addEventListener('error',fail,{once:true});});
@@ -13,8 +14,8 @@ const invoke=(command,args={})=>evaluate(`window.__TAURI_INTERNALS__.invoke(${JS
 async function button(text,scope='document'){assert.ok(await evaluate(`(()=>{const e=[...${scope}.querySelectorAll('button')].find(b=>b.textContent.trim()===${JSON.stringify(text)});if(!e||e.disabled)return false;e.click();return true;})()`),`GUI button missing: ${text}`);await sleep(60);}
 async function field(selector,value){assert.ok(await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)return false;if(e.type==='checkbox'){if(e.checked!==${JSON.stringify(value)})e.click();return true;}const p=e.tagName==='SELECT'?HTMLSelectElement.prototype:e.tagName==='TEXTAREA'?HTMLTextAreaElement.prototype:HTMLInputElement.prototype;Object.getOwnPropertyDescriptor(p,'value').set.call(e,${JSON.stringify(value)});e.dispatchEvent(new Event(e.tagName==='SELECT'?'change':'input',{bubbles:true}));return true;})()`),selector);await sleep(30);}
 async function select(title){const n=(await snapshot()).tree.find(n=>n.title===title&&n.kind!=='diagram');assert.ok(n);await evaluate(`document.querySelector('[data-entity-id="${n.id}"]').click()`);await sleep(60);return n;}
-async function screenshot(name){const r=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve('runs/004-build-phase3/evidence',name),Buffer.from(r.data,'base64'));}
-const folder=resolve(process.env.BARRIER_ATLAS_SMOKE_OUTPUT??'.runtime/phase3-walkthrough');await mkdir(resolve('runs/004-build-phase3/evidence'),{recursive:true});
+async function screenshot(name){const r=await send('Page.captureScreenshot',{format:'png'});await writeFile(resolve(phase3RecordRoot,'evidence',name),Buffer.from(r.data,'base64'));}
+const folder=resolve(process.env.BARRIER_ATLAS_SMOKE_OUTPUT??'.runtime/phase3-walkthrough');await mkdir(resolve(phase3RecordRoot,'evidence'),{recursive:true});
 try{
  await invoke('case_open',{path:resolve(folder,'twelve-steps.sqlite')});await send('Page.reload');await waitFor("document.body.innerText.includes('Transfer safety review')");
  await button('Risk matrices');await button('New matrix');await field('[name="matrix-name"]','Safety assessment');
@@ -46,5 +47,5 @@ try{
  await send('Page.reload');await waitFor("document.body.innerText.includes('Transfer safety review')");await button('Action register');await screenshot('reopened-register.png');
  const baseline=JSON.parse(await readFile(resolve(folder,'phase2-regression.json'),'utf8'));
  const result={result:'PASS',scope:'Windows built-app Phase 3 GUI authoring',phase2Regression:baseline.result,twelveSteps:baseline.steps,entities:before.tree.length,matrices:1,assessments:4,actions:2,softHidePreservesAssessments:true,clearAllConfirmation:true,customAxesAndYX:true,categoryRankOrder:true,effectivenessAssigned:true,typedCustomFields:true,inlineRegisterCreateEdit:true,registerSortFilter:true,saveReopenEquality:true,manual:['Native file chooser selection/cancellation','Cross-platform native builds/runs','Independent QA','Large case performance']};
- await writeFile(resolve('runs/004-build-phase3/validation-results.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));await invoke('case_close');
+ await writeFile(resolve(phase3RecordRoot,'validation-results.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));await invoke('case_close');
 }finally{socket.close();}

@@ -4,6 +4,22 @@ use std::{path::Path, sync::Mutex};
 use tauri::State;
 
 type Store<'a> = State<'a, Mutex<CaseStore>>;
+#[tauri::command]
+pub fn case_export_context(state: Store<'_>) -> Result<crate::export::ExportContext, String> {
+    with_store(state, |s| s.export_context())
+}
+#[tauri::command]
+pub fn case_write_export(
+    state: Store<'_>,
+    path: String,
+    format: String,
+    bytes: Vec<u8>,
+    signature: String,
+) -> Result<(), String> {
+    with_store(state, |s| {
+        s.write_export(Path::new(&path), &format, &bytes, &signature)
+    })
+}
 fn with_store<T>(
     state: Store<'_>,
     operation: impl FnOnce(&mut CaseStore) -> Result<T, String>,

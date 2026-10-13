@@ -9,6 +9,7 @@ import { MatrixManager, RiskPanel } from "./RiskPanels";
 import LookupManager from "./LookupManager";
 import ActionRegister from "./ActionRegister";
 import { fieldsFor } from "./PropertyFields";
+import ExportDialog from "./ExportDialog";
 
 type FormKind = "new" | "group" | "diagram";
 type Navigation = "new" | "open" | "close" | "quit";
@@ -29,6 +30,7 @@ export default function App() {
   const [deleteRequest,setDeleteRequest] = useState<TreeRow | null>(null);
   const [lastDiagram,setLastDiagram] = useState<string | null>(null);
   const [view,setView] = useState('diagram');
+  const [exportOpen,setExportOpen] = useState(false);
   const current = active?.tree.find(row => row.id === selected);
   const diagram = active ? diagramFor(active.tree,current) ?? active.tree.find(n=>n.id===lastDiagram && n.kind==='diagram') : undefined;
   useEffect(()=>{if(diagram)setLastDiagram(diagram.id);},[diagram?.id]);
@@ -119,6 +121,7 @@ export default function App() {
       <button disabled={!desktop || busy} onClick={() => request("new")}>New case</button><button disabled={!desktop || busy} onClick={() => request("open")}>Open</button>
       <button disabled={!active || busy} onClick={() => void save()}>Save</button><button disabled={!active || busy} onClick={() => void save(true)}>Save as</button>
       <button disabled={!active || busy} onClick={() => request("close")}>Close case</button><span className="case-title">{active ? `${active.title}${active.dirty ? " *" : ""}` : "No case open"}</span>
+      <button disabled={!active||busy} onClick={()=>{setError('');setExportOpen(true);}}>Export</button>
     </nav>
     <aside aria-label="Case explorer"><h2>Case explorer</h2>{active ? <ul className="tree">{tree(null)}</ul> : <p className="muted">Create or open a local case.</p>}</aside>
     <main>
@@ -145,6 +148,7 @@ export default function App() {
       </> : !active&&<section className="empty"><h1>A place to understand risk</h1><p>Hazards, barriers, and the work that keeps them effective.</p></section>}
     </main>
     <footer>{busy ? "Working…" : "Offline · No account required"}</footer>
+    {exportOpen&&active&&<ExportDialog diagram={diagram} busy={busy} error={error} run={operation} close={()=>{setExportOpen(false);setError('');}}/>}
     {editRequest && active && <EntityEditor key={editRequest.node?.id??editRequest.kind} snapshot={active} request={editRequest} busy={busy} error={error} close={()=>{setEditRequest(null);setError('');}} mutate={mutate}/>}
     {deleteRequest && <div className="overlay"><section className="modal" role="dialog" aria-modal="true" aria-labelledby="delete-title"><h2 id="delete-title">Delete {deleteRequest.title}?</h2><p>Children and assigned references must be removed first. Shared items are preserved.</p>{error && <p className="error" role="alert">{error}</p>}<div className="actions"><button disabled={busy} onClick={()=>{setDeleteRequest(null);setError('');}}>Cancel</button><button disabled={busy} onClick={()=>void mutate(()=>invoke<CaseSnapshot>('case_delete_entity',{id:deleteRequest.id})).then(ok=>{if(ok)setDeleteRequest(null);})}>Delete item</button></div></section></div>}
     {form && <div className="overlay"><section role="dialog" aria-modal="true" aria-labelledby="form-title" className="modal"><h2 id="form-title">{form === "new" ? "New case" : form === "group" ? "New group" : "New diagram"}</h2>
