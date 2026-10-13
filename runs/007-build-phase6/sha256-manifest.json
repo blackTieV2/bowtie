@@ -189,8 +189,8 @@
     },
     {
       "path": "runs/007-build-phase6/run-state.yaml",
-      "git_blob_sha256": "96744131218d0a07353075ee9e3553bf2c7233a6c3419ed00841451bd9d0b65e",
-      "working_file_sha256": "828554eac43e1adf6d31ba25205756eeeda345248f09cfd5d4d5e8d4e179c06e"
+      "git_blob_sha256": "98dbb64ebfaed265c8b7a61fc7e534ec54cfa744e28ba4a7a583a16da64dc3a6",
+      "working_file_sha256": "fa4440507f4f548f6d07946043258ea7c1da4471fe71e5928172587099f9b3ae"
     },
     {
       "path": "runs/007-build-phase6/task-packet.md",

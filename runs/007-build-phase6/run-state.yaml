@@ -4,8 +4,8 @@ target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
 status: boundary-review
 current_stage: 04-build
 current_step: human-phase-gate
-completed_steps: [target-gate, branch-and-packet, spec-schema-fit, implementation, producer-tests, fresh-validator, report]
-pending_steps: [feature-push-record, human-review]
+completed_steps: [target-gate, branch-and-packet, spec-schema-fit, implementation, producer-tests, fresh-validator, report, feature-push-record]
+pending_steps: [human-review]
 approval_required: true
 approval_status: Phase 6 implementation and feature push authorized; Phase 6 acceptance and AR70–AR76 pending
 actor: codex
