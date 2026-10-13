@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "source_commit": "b27f2ef5545b0b8cf210dcd26b63ebe16bc37842",
+  "run": 38353119649,
+  "checks": [
+    {
+      "artifact": "barrier-atlas-macos-latest",
+      "binary": "barrier-atlas",
+      "format": "Mach-O64",
+      "machine": 16777228,
+      "bytes": 16152448,
+      "sha256": "ee11e17d650498421a1ecf8ef034bde5f62b20fea5675d7a9f6369dae9c317ae"
+    },
+    {
+      "artifact": "barrier-atlas-ubuntu-latest",
+      "binary": "barrier-atlas",
+      "format": "ELF64",
+      "machine": 62,
+      "bytes": 17977944,
+      "sha256": "cd23e42aef07ebd5e444d9b324da2747e570fcfcaf1407f4f7d9dd595a900144"
+    },
+    {
+      "artifact": "barrier-atlas-windows-latest",
+      "binary": "barrier-atlas.exe",
+      "format": "PE32+ x86_64",
+      "machine": 34404,
+      "bytes": 14134784,
+      "sha256": "bbfde4ac5f2fa2a0b717cd2000947e4cea84991d9a6dc32289609e221b3adc8b"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "applicationCommit": "b27f2ef5545b0b8cf210dcd26b63ebe16bc37842",
+  "producer": {
+    "hashesAndFormats": "PASS",
+    "docxTwoImagesAndResolvedNames": "PASS",
+    "csvAllFiveMethods": "PASS"
+  },
+  "validator": {
+    "hashesAndFormats": "PASS",
+    "docxTwoImagesAndResolvedNames": "PASS",
+    "csvAllFiveMethods": "PASS"
+  },
+  "reportPages": 6,
+  "diagramPages": 1
+}
