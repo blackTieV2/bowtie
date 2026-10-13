@@ -4,8 +4,8 @@ target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
 status: awaiting-review
 current_stage: 04-build
 current_step: phase-5-review-boundary
-completed_steps: [target-gate, AR63-scope-stop, human-D-007, consolidated-authorization, comparison, find-replace, CSV-XLSX-exchange, Standard-lookups, 37-rust-tests, frontend-build, final-windows-native-build, twelve-step-regression, native-phase5-save-reopen, artifact-parsers, independent-validator-pass, validator-defect-fixes, report-and-evidence]
-pending_steps: [implementation-commit, feature-push, human-phase5-review, documented-manual-host-checks]
+completed_steps: [target-gate, AR63-scope-stop, human-D-007, consolidated-authorization, comparison, find-replace, CSV-XLSX-exchange, Standard-lookups, 37-rust-tests, frontend-build, final-windows-native-build, twelve-step-regression, native-phase5-save-reopen, artifact-parsers, independent-validator-pass, validator-defect-fixes, report-and-evidence, implementation-commit, verified-feature-push]
+pending_steps: [human-phase5-review, documented-manual-host-checks]
 approval_required: true
 approval_status: Implementation and feature push authorized; D-007 approved; Phase 5 acceptance and AR64-AR69 human review pending
 actor: codex
@@ -18,3 +18,5 @@ rollback_reference: ad08c71c025cd8733e5d3a475fed855b6e717d86
 independent_validator: /root/phase5_validator
 validator_result: PASS for tested Windows scope
 resume_instruction: STOP at Phase 5 boundary pending human review. No Phase 6, main merge, deployment or release.
+implementation_commit: 76769cd2628e0990a662d17d8a93f88b7569d323
+feature_push: verified origin/feature/phase-5-case-tools

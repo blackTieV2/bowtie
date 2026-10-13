@@ -42,7 +42,7 @@
     "runs/006-build-phase5/phase2-regression.json": "83feeb2809339ccfe52853fbce60787c0ecd919f43f41420ba05191090931747",
     "runs/006-build-phase5/phase3-regression.json": "cbe14541f6ad0ea4f102f4fb401dbf031323f50c64ab53d11bf940e2dc19e681",
     "runs/006-build-phase5/producer-validation-results.json": "8b0513efe10b2346e14f83520d4e9bc2e6d8ee6a825df3199fc8c362e3b5ced0",
-    "runs/006-build-phase5/run-state.yaml": "b0561f91646d991cc4792432f179fe0260707a99031c84dc7ea4fce50fa852f5",
+    "runs/006-build-phase5/run-state.yaml": "c2a1239ccedd304fb40558109e13f83765b52b9669c42f5e90a5af58cc7eca5a",
     "runs/006-build-phase5/runtime-case-hashes.json": "c86d569caf819724324976d8baf782b0819e84e49ebd2475a437fea18ecafa79",
     "runs/006-build-phase5/task-packet.md": "ed7cf4ac6638a4530c0a8c0d875bf2700f1b0b0a8b3d6fa2d71c8e38d25b6049",
     "runs/006-build-phase5/validator-erratum.md": "01083c00ae9dbaf4e2ce797a02e5af182abdda749a54b722fd6b1de8804414df",
@@ -69,6 +69,7 @@
     "shared/knowledge/okf/decisions/D-007.md": "6748e277d0ed48bc3f152dbb05c79d99bb458cd92fec596a78f31e5a58d1072d",
     "shared/knowledge/okf/decisions/index.md": "d438a7a856f7116134176edcc345b6f54bd0123cf740f2553133db68c8140623",
     "stages/04-build/output/AMBIGUITY-RESOLUTIONS.md": "33fc299b9b4f7e7fbae9131daa2769ba737becea734f198281d115603192563c",
-    "stages/04-build/output/phase-5-report.md": "a993dca293856c6233f81e3e61bcc858959a386f18699e1f0eaf8a98e8ec95d0"
+    "stages/04-build/output/phase-5-report.md": "e329d3a2654bd2bae96e26dedd57d77c492c3bd8923fcadcd80333c938d4e13f",
+    "runs/006-build-phase5/push-evidence.json": "ef2f57dff22381639985f83a01e94d0da5df5f74221eed5becc03f0624fa6d22"
   }
 }
