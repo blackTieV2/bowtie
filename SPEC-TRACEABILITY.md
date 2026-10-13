@@ -1,4 +1,4 @@
-# Spec traceability — Barrier Atlas (Phases 1–2)
+# Spec traceability — Barrier Atlas (Phases 1–3)
 
 Run `002-build-phase1`. The human approved schema/scaffold and AR01–AR33 and authorized runtime case IPC/tree work under the selected name Barrier Atlas. Schema checks, runtime service tests and Windows built-app smoke are distinct evidence; none establishes independent QA or deployment. Source filenames expand in `stages/04-build/output/feature-inventory.md`.
 
@@ -36,3 +36,25 @@ The Phase 1 evidence above is retained as history. The human approved its runtim
 | Named RESTRICT blockers, explicit owned-property cleanup, shared-item preservation | SPEC-013 §§3.11.2–3.11.3.3; human RESTRICT requirement | Rust rollback/named-reference tests; GUI blocked/successful deletion |
 
 Source filenames are indexed in stages/01-intake/references/spec/README.md. Actual outcomes are recorded in the Phase 2 report/run packet. Producer validation is not independent QA; native chooser UX and macOS/Linux execution remain manual/pending.
+
+## Phase 3 properties/risk/register — run 004-build-phase3
+
+The human approved Phase 2/AR37–AR44 and corrected AR45: risk assessments apply to top events and consequences. The SQL schema remains unchanged.
+
+| Implemented behavior / artifacts | Exact spec locator | Verification |
+|---|---|---|
+| Typed per-kind scalar controls, description, code, taxonomy/reference selectors and manual criteria/sign-off/revision fields | SPEC-013 §§3.11.2, 3.12.4.1, 7.4, 7.13, 7.16, 15.2–15.7 (including unnumbered Fields on Threats) | property-catalog.json + properties.rs + PropertyFields.tsx; detailed phase-3-property-inventory.md; typed/rollback tests |
+| Type-wide user-data text/number/boolean definitions, add/rename/delete and values | SPEC-013 §7.4.1 | CustomFields + case_custom_field; entity/taxonomy kind-wide rename/delete and invalid-type tests |
+| Central property choices and effectiveness metadata | SPEC-013 §§3.11.2, 7.3, 7.4.1, 15.6 | LookupManager + case_save_lookup/delete_lookup; taxonomy-type/ref/metadata checks |
+| Barrier effectiveness FK, annotation and color | SPEC-013 §§3.11.2, 7.5.2, 15.6 | Transactional field/FK synchronization; native GUI assignment; canvas screenshot |
+| Named configurable matrices, axes, cells, low-to-high category ranks; maximum eight | SPEC-013 §7.12 | RiskPanels + risk.rs; authoritative trigger-limit and complete-cell validation tests |
+| Soft-hide by clearing displayed name, restore and retained assessments | SPEC-013 §7.12; current human clarification | AR46 metadata representation; Rust/native GUI preservation tests |
+| Horizontal likelihood / vertical severity, custom codes/labels, XY/YX display | SPEC-013 §7.12 | Matrix editor/YX coordinate helper; Rust/native GUI and editor screenshot |
+| Category selection/cell painting, cell labels, ordered category updates | SPEC-013 §7.12 | Direct cell model, rank upserts and duplicate-ID rejection; native authoring |
+| Top-event/consequence inherent/residual assessment create/update/delete | SPEC-013 §7.12; human AR45 correction | Existing target/cell triggers; Rust CRUD/rejection and GUI four-rating workflow |
+| Clear all ratings with confirmation, including hidden matrices; referenced-cell resize/delete restrictions | SPEC-013 §7.12; current human clarification; approved RESTRICT contract | Global transactional clear, GUI cancel/confirm, Rust hidden/resize preservation |
+| Case-wide action register, all documented action fields, typed roles, inline create/edit and sort/filter | SPEC-013 §§3.12.4.1, 7.9 | SQLite-derived action rows; existing entity IPC; Rust register/tree equality and native inline/filter tests |
+| Ordinal category-rank sorting per selected matrix/phase | SPEC-013 §7.12; current human clarification | AR49 contextual parent assessment; native low-before-high register check; properties rank order |
+| Manual ALARP rationale and local references | SPEC-004 step 12; accepted AR20/AR43 | Typed free-text rationale retained; no automatic ALARP computation/display, network fetch or service |
+
+The native Phase 3 script first reruns all twelve GUI method steps, then authors the above Phase 3 example and verifies tree/links/matrices/assessments/lookups/actions/custom-definition equality after Save/Open. Final results, commands, screenshots and gaps are in phase-3-report.md and run 004. Advanced/server/audit behavior remains in its assigned scope; metadata fields do not enable those modules.

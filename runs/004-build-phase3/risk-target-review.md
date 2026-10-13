@@ -1,5 +1,7 @@
 # AR45 — risk assessment target review
 
+**Resolved-by-correction (human): Option A accepted.** "Threats" was a reviewer error. Assessments target top events/consequences; no migration is authorized or needed. The proposal below is historical evidence, not an active migration plan.
+
 Current Phase 3 instruction §3b requests inherent/residual assessments on **threats/consequences**. SPEC-013 §7.12, the approved master model, and the approved v1 schema target **top events/consequences**. The schema has both insert and update triggers enforcing those kinds. The manual does not strictly require threat assessments.
 
 ## Option A — spec-aligned scope correction (recommended)

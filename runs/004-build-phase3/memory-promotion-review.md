@@ -4,7 +4,8 @@ Candidates proposed during this run. For each: memory type, status, authority, s
 
 | Candidate | Type | Proposed status | Needs human review | Outcome |
 |---|---|---|---|---|
-| AR45 risk targets | scope/migration proposal | candidate | yes | Unresolved; stop for explicit human choice; no memory promotion |
+| AR45 risk targets | human scope correction | accepted by explicit human | reviewed | Resolved-by-correction; no migration, approved triggers retained |
+| AR46–AR54 | implementation interpretations | candidate | yes | Stage boundary review only; no shared-memory promotion |
 
 Rule: the write gate determines eligibility; it never silently makes consequential memory canonical.
 

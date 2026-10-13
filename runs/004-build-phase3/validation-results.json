@@ -1,17 +1,38 @@
 {
-  "status": "STOPPED_FOR_AR45_REVIEW",
-  "phase3Implemented": false,
-  "scope": "read-only repository recon and in-memory approved-schema risk-target probe",
-  "targetGate": "PASS",
-  "foreignKeys": 1,
-  "probe": {
-    "top_event": "accepted",
-    "consequence": "accepted",
-    "threat": "rejected: Only top events and consequences have risk assessments"
-  },
-  "applicationFilesChanged": false,
-  "schemaChanged": false,
-  "phase3RustSuite": "not run; implementation stopped before source changes",
-  "phase3NativeGuiWalkthrough": "not run; implementation stopped before source changes",
-  "independentValidation": "pending; probe is producer evidence"
+  "result": "PASS",
+  "scope": "Windows built-app Phase 3 GUI authoring",
+  "phase2Regression": "PASS",
+  "twelveSteps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "entities": 21,
+  "matrices": 1,
+  "assessments": 4,
+  "actions": 2,
+  "softHidePreservesAssessments": true,
+  "clearAllConfirmation": true,
+  "customAxesAndYX": true,
+  "categoryRankOrder": true,
+  "effectivenessAssigned": true,
+  "typedCustomFields": true,
+  "inlineRegisterCreateEdit": true,
+  "registerSortFilter": true,
+  "saveReopenEquality": true,
+  "manual": [
+    "Native file chooser selection/cancellation",
+    "Cross-platform native builds/runs",
+    "Independent QA",
+    "Large case performance"
+  ]
 }

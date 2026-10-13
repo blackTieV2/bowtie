@@ -15,8 +15,15 @@ loaded:
     - stages/04-build/output/AMBIGUITY-RESOLUTIONS.md (AR37-AR44 accepted by current human)
     - runs/_template/task-packet.md and run-state.yaml
     - runs/004-build-phase3/task-packet.md
+    - SPEC-013 sections 3.11-3.12, 7.2-7.4, 7.16, 10.1-10.3, 11.1-11.3
+    - SPEC-014 matching action-field locator search (primary workflow reference)
+    - app/src/model.ts, App.tsx, EntityEditor.tsx, DiagramCanvas.tsx, style.css
+    - app/src-tauri/src/editing.rs, commands.rs, lib.rs
+    - app/src/property-catalog.json and new typed property/risk/register modules
+    - scripts/check_phase2_native.mjs and Phase 3 scripts (own-app GUI harness)
+    - SPEC-TRACEABILITY.md
   prior_experience: []     # each must carry: "Historical experience only. Current verified target state controls execution."
 
 tool_profile: build
 live_target_verified_at: 2026-10-13
-live_target_state: Sole root and origin verified; clean Phase 2 tip 1fc5d75; TARGET GATE PASS; new Phase 3 branch owned by this writer.
+live_target_state: Initial clean Phase 2 tip 1fc5d75; continuation clean phase-3 branch at 7e8e2d1 after human AR45 correction. Sole root/origin verified; renewed TARGET GATE PASS; unchanged schema required.

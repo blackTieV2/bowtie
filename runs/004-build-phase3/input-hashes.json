@@ -11,5 +11,7 @@
     "stages/01-intake/references/spec/08 BowTieXP Software Manual Rev 31 for Ver 8.2.md": "7a6c7d237c7190c37ac547167afe948b5a68d38d0209e862668474a5bae83adc",
     "app/src-tauri/schema/001-initial.sql": "b374e872cb44bc7477a8c7a8ba0f094eb17fcadb9ccdd1ec3826c1e216180ce6",
     "app/src-tauri/src/case.rs": "40979cb67c289c9b632f1e6a3d297477c0315703ab9907ff8af0e1baed8658b8"
-  }
+  },
+  "continuation_starting_head": "7e8e2d1992726502dd4709a95bdaf8223ea4f025",
+  "resolution": "Human AR45 correction; unchanged schema; renewed target gate PASS"
 }
