@@ -34,3 +34,7 @@ Example for a group (payload abbreviated here; production files include complete
 ```
 
 This illustrative row is not a complete package; a valid package also needs its case and root records.
+
+| `incident` | Stable incident ID/title; kind is original method_key; parent/description empty; order 0 | Full original incident bundle, versioned metadata, diagrams/timelines, nodes/edges/core links, user taxonomy and recommendations |
+
+Phase 7 incident bundles are validated after core dependencies. Existing incident IDs and conflicting node identities are rejected. A pristine v1 import session applies the authorized v2 migration within its transaction before incident records; case open/save validates both exact approved versions. Full export/import/export retains incident identities, links, coordinates, timeline cells and all owned data. The earlier incident exclusion describes the Phase 5/6 boundary and is superseded by this Phase 7 row. No historical incident format is read or reproduced.

@@ -111,3 +111,23 @@ Storage contract: app/AUDIT-DATA-DESIGN.md. Approved schema/trigger files remain
 ## Phase 7 constrained migration — AR78 resolved by human authorization
 
 SPEC-002 §§7.1.1,8.1.2,ch.10 requires ordinary/categorized RCA events to link to case barriers. schema/002-rca-event-links.sql replaces ONLY the two link triggers and sets user_version=2. Source is a barrier of any method or an event whose owning incident method_key is rca/categorized_rca; target remains a case barrier. Identity/FKs unchanged. case.rs accepts exact v1/v2 signatures, migrates the working-copy backup transactionally on open, and persists on explicit atomic Save. migration_tests covers v1 file roundtrip, all source kinds/methods, insert/update and schema-change scope; original 43 tests unchanged.
+
+## Phase 7 incident module — run 008-build-phase7
+
+| Implemented feature | Spec authority | Implementation / acceptance |
+|---|---|---|
+| Incident details, method selection, multiple analysis diagrams/timelines, draft/completed status | SPEC-002 §§3.2–3.3; SPEC-022 §3.2 | incident.rs/IncidentPanel; original method labels, versioned metadata and native preparation |
+| Event flow, incoming/outgoing/parallel events, connector event/barrier insertion, grid/free move | SPEC-002 §§4.2–4.4,4.6–4.7,6.2–6.4,6.6–6.7; SPEC-022 chs.4,6 | Relational nodes/edges, IncidentCanvas/incidentScene; Rust flow/integrity and native pointer tests |
+| Event–agent–object construction and three-level cause paths | SPEC-002 §§5.2–5.6 | Generic trio UI, actor roles and connector pair; Rust/native trio checks; no vendor content |
+| Method-specific descriptive causation and user-owned chart references | SPEC-002 §§4.5,5.5,6.5 | Versioned cause records, taxonomy level/reference validation, editor/report; empty user-authored charts |
+| RCA appearances/categories/equivalent analyses and five categorized regions | SPEC-002 §§7.2–7.6,8.2–8.7; §14.2.2 five zone fields | Event metadata, same-incident diagram navigation; initialized original region headers; Rust/native checks |
+| Timeline columns, timestamps/formats/qualitative labels, actors, cell moves, unused-row hiding and order warning | SPEC-002 §§3.4.1–3.4.5; SPEC-022 §3.3 | Shared displayed-row geometry, original Konva timeline, clone-by-new-identity; native hidden actor and wrapped evidence tests |
+| Evidence descriptions and supporting document/case-event assignments | SPEC-002 §§3.4.3,10.2,13.2–13.3 | Versioned metadata refs validated on read/write/open/import; existing-event editor and read-only document context |
+| Core barrier linkage, RCA event linkage, bow-tie templated flow | SPEC-002 §§7.1.1,8.1.2,10.1–10.2; human AR78 migration | Approved incident_barrier_link v2 triggers; typed CaseStore writes, original core names retained read-only; method/kind tests |
+| Read-only linked effectiveness/audit context and incident observation display | SPEC-002 §§10.2–10.3; current human context scope | IncidentPanel + existing AuditTargetResults; core diagram filter counts observed states, no effectiveness rewrite |
+| Recommendations scoped to incident/diagram/node and operation undo | SPEC-002 §§3.3.1,9.1–9.5; existing one-operation checkpoint contract | Versioned owned recommendations, normal transaction and signature-guarded session undo; Rust delete/undo equality |
+| Selected analysis/multiple timelines in original DOCX; PNG/SVG/PDF incident/timeline images | SPEC-002 §§3.3.1 Report,14.2–14.3; Phase 4 SVG/PDF authority | Shared sceneExport/reportDocx/signed atomic writer; original diagrams embedded; native exports and independent parser/render QA |
+| Incident data save/reopen and full original CSV/XLSX package preservation | SPEC-002 §3.2 case persistence; standing exchange scope | incident bundle record, full case validators and one-transaction apply; Rust/native structural equality |
+| Windows/macOS/Linux builds, cargo acceptance and binary artifacts | Master Rule4; explicit Phase7 platform debt authority | desktop-platforms.yml matrix, exact run/commit/artifact evidence in run008/ci |
+
+SPEC-002 10.4 supersedes SPEC-022's RCA exclusion (AR77); AR78's exact two-trigger migration was authorized and independently revalidated. AR79 onward are bounded original-layout/storage interpretations for human final review. No vendor binary/content/taxonomy/logo is an input.

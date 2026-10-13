@@ -285,6 +285,7 @@ fn deletion_references(db: &Connection, id: &str) -> Result<Vec<String>> {
         let (relation, title, direction) = row.map_err(err)?;
         blockers.push(format!("{direction} {relation} link: {title}"));
     }
+    blockers.extend(crate::incident::references(db, id)?);
     // All remaining entity FK tables in the approved schema, including future modules.
     for (table, column) in [
         ("risk_assessment", "target_id"),

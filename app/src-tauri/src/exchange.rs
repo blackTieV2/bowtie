@@ -198,6 +198,7 @@ fn parse(text: &str) -> (Vec<Record>, Vec<ImportIssue>) {
             "matrix",
             "assessment",
             "audit",
+            "incident",
         ]
         .contains(&cells[0].as_str())
         {
@@ -262,12 +263,13 @@ fn parse(text: &str) -> (Vec<Record>, Vec<ImportIssue>) {
                 errors.push(issue("Malformed or unsupported case header payload"));
             }
         }
-        if ["case", "lookup", "matrix", "audit"].contains(&cells[0].as_str())
+        if ["case", "lookup", "matrix", "audit", "incident"].contains(&cells[0].as_str())
             && !cells[2].is_empty()
         {
             errors.push(issue("This record type has no parent column"));
         }
-        if ["case", "link", "matrix", "assessment", "audit"].contains(&cells[0].as_str())
+        if ["case", "link", "matrix", "assessment", "audit", "incident"]
+            .contains(&cells[0].as_str())
             && (!cells[5].is_empty() || cells[6] != "0")
         {
             errors.push(issue("Reserved description/order columns must be empty/0"));
@@ -686,6 +688,24 @@ fn apply_records(tx: &Transaction<'_>, records: &[Record]) -> std::result::Resul
         }
         crate::audit::write_bundle(tx, &a).map_err(|e| fail(r, e))?;
     }
+    for r in records.iter().filter(|r| r.typ() == "incident") {
+        let a: crate::incident::Incident =
+            serde_json::from_value(r.payload.clone()).map_err(|e| fail(r, err(e)))?;
+        if a.id != r.id() || a.title != r.cells[4] || a.method_key != r.kind() {
+            return Err(fail(r, "Incident columns and payload disagree".into()));
+        }
+        let exists: bool = tx
+            .query_row(
+                "SELECT EXISTS(SELECT 1 FROM incident WHERE id=?)",
+                [r.id()],
+                |v| v.get(0),
+            )
+            .map_err(|e| fail(r, err(e)))?;
+        if exists {
+            return Err(fail(r, "Duplicate existing incident identity".into()));
+        }
+        crate::incident::write_bundle(tx, &a).map_err(|e| fail(r, e))?;
+    }
     validate(tx).map_err(|e| ImportIssue {
         line: 1,
         message: e,
@@ -774,6 +794,18 @@ impl CaseStore {
                 a.target_id.clone(),
                 a.phase.clone(),
                 "".into(),
+                "".into(),
+                "0".into(),
+                serde_json::to_string(a).map_err(err)?,
+            ]);
+        }
+        for a in &s.incidents {
+            rows.push(vec![
+                "incident".into(),
+                a.id.clone(),
+                "".into(),
+                a.method_key.clone(),
+                a.title.clone(),
                 "".into(),
                 "0".into(),
                 serde_json::to_string(a).map_err(err)?,

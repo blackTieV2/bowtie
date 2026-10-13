@@ -134,6 +134,7 @@ pub(crate) fn validate(db: &Connection) -> CaseResult<()> {
         return Err("The case has an incomplete or disconnected hierarchy".into());
     }
     crate::audit::validate(db)?;
+    crate::incident::validate(db)?;
     Ok(())
 }
 
@@ -172,6 +173,7 @@ pub struct CaseSnapshot {
     pub custom_fields: serde_json::Value,
     pub audits: Vec<crate::audit::Audit>,
     pub audit_results: std::collections::BTreeMap<String, Vec<crate::audit::ResultRow>>,
+    pub incidents: Vec<crate::incident::Incident>,
 }
 pub(crate) struct ActiveCase {
     pub(crate) db: Connection,
@@ -242,6 +244,7 @@ impl CaseStore {
             custom_fields: crate::properties::definitions(&case.db)?,
             audits: crate::audit::audits(&case.db)?,
             audit_results: crate::audit::summaries(&case.db)?,
+            incidents: crate::incident::incidents(&case.db)?,
         }))
     }
     pub fn create(&mut self, title: &str, organization: &str) -> CaseResult<CaseSnapshot> {

@@ -5,6 +5,22 @@ use tauri::State;
 
 type Store<'a> = State<'a, Mutex<CaseStore>>;
 #[tauri::command]
+pub fn case_save_incident(
+    state: Store<'_>,
+    incident: crate::incident::Incident,
+    expected: Option<crate::incident::Incident>,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.save_incident(&incident, expected.as_ref()))
+}
+#[tauri::command]
+pub fn case_delete_incident(
+    state: Store<'_>,
+    id: String,
+    expected: crate::incident::Incident,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.delete_incident(&id, &expected))
+}
+#[tauri::command]
 pub fn case_save_audit(
     state: Store<'_>,
     audit: crate::audit::Audit,

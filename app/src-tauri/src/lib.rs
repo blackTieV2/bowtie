@@ -6,10 +6,13 @@ mod compare;
 mod editing;
 mod exchange;
 mod export;
+mod incident;
 #[cfg(test)]
 mod phase3_tests;
 #[cfg(test)]
 mod phase6_tests;
+#[cfg(test)]
+mod phase7_tests;
 mod properties;
 mod risk;
 pub const INITIAL_SCHEMA: &str = include_str!("../schema/001-initial.sql");
@@ -22,6 +25,8 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .invoke_handler(tauri::generate_handler![
             commands::case_get,
+            commands::case_save_incident,
+            commands::case_delete_incident,
             commands::case_save_audit,
             commands::case_delete_audit,
             commands::case_audit_results,

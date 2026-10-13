@@ -13,6 +13,7 @@ import ExportDialog from "./ExportDialog";
 import CaseCompare from "./CaseCompare";
 import FindReplace from "./FindReplace";
 import CaseExchange from "./CaseExchange";
+import IncidentPanel,{IncidentBarrierContext} from "./IncidentPanel";
 import AuditPanel,{AuditTargetResults} from "./AuditPanel";
 
 type FormKind = "new" | "group" | "diagram";
@@ -130,7 +131,8 @@ export default function App() {
     <aside aria-label="Case explorer"><h2>Case explorer</h2>{active ? <ul className="tree">{tree(null)}</ul> : <p className="muted">Create or open a local case.</p>}</aside>
     <main>
       {error && <p className="error" role="alert">{error}</p>}{!desktop && <p className="notice">Use the desktop app to create and open local case files.</p>}
-      {active&&<div className="workspace-tabs" aria-label="Workspace views">{[['diagram','Diagram'],['matrices','Risk matrices'],['choices','Property choices'],['actions','Action register'],['compare','Compare cases'],['replace','Find & replace'],['exchange','CSV & spreadsheet'],['audits','Audits']].map(([key,title])=><button key={key} disabled={busy} aria-pressed={view===key} onClick={()=>setView(key)}>{title}</button>)}</div>}
+      {active&&<div className="workspace-tabs" aria-label="Workspace views">{[['diagram','Diagram'],['matrices','Risk matrices'],['choices','Property choices'],['actions','Action register'],['compare','Compare cases'],['replace','Find & replace'],['exchange','CSV & spreadsheet'],['audits','Audits'],['incidents','Incidents']].map(([key,title])=><button key={key} disabled={busy} aria-pressed={view===key} onClick={()=>setView(key)}>{title}</button>)}</div>}
+      {active&&view==='incidents'&&<IncidentPanel key={active.path??active.tree[0]?.id} snapshot={active} busy={busy} error={error} mutate={mutate} run={operation}/>}
       {active&&view==='audits'&&<AuditPanel key={active.path??active.tree[0]?.id} snapshot={active} selected={selected} busy={busy} error={error} mutate={mutate} run={operation}/>}
       {active&&view==='compare'&&<CaseCompare key={active.path??active.tree[0]?.id} busy={busy} run={operation}/>}
       {active&&view==='replace'&&<FindReplace key={active.path??active.tree[0]?.id} busy={busy} run={operation} mutate={mutate}/>}
@@ -153,6 +155,7 @@ export default function App() {
       {diagram && <DiagramCanvas snapshot={active} diagram={diagram} selected={selected} busy={busy} mutate={mutate} select={setSelected} edit={editEntity} persist={positions=>mutate(()=>invoke<CaseSnapshot>('case_set_positions',{diagramId:diagram.id,positions}))}/>}
       <section className="support-panel"><div className="support-tools"><h3>Supporting items</h3>{['activity','document','job_title','product','system','competency'].map(kind=><button key={kind} disabled={busy} onClick={()=>addEntity(kind,kind===current?.kind && ['activity','document','system'].includes(kind)?current.id:active.tree.find(n=>n.kind==='organization')?.id)}>New {label(kind)}</button>)}</div>
       {current && <><p className="muted">{current.description}</p>{Object.entries(current.properties).filter(([k,v])=>!['canvas.position','custom_definitions','user_data'].includes(k)&&v!==''&&v!==null).map(([k,v])=><p key={k}><strong>{fieldsFor(current.kind).find(f=>f.key===k)?.label??label(k)}:</strong> {active.lookups.find(l=>l.id===v)?.title??active.tree.find(n=>n.id===v)?.title??String(v)}</p>)}<RiskPanel key={`risk/${current.id}`} node={current} snapshot={active} busy={busy} mutate={mutate}/><LinkEditor key={current.id} node={current} snapshot={active} busy={busy} mutate={mutate}/></>}</section>
+      {current?.kind==='barrier'&&<IncidentBarrierContext snapshot={active} barrierId={current.id}/>}
       {current&&['barrier','activity','document'].includes(current.kind)&&<AuditTargetResults key={`audit/${current.id}`} snapshot={active} targetId={current.id}/>}
       </> : !active&&<section className="empty"><h1>A place to understand risk</h1><p>Hazards, barriers, and the work that keeps them effective.</p></section>}
     </main>

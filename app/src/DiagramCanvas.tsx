@@ -12,6 +12,7 @@ export default function DiagramCanvas({snapshot, diagram, selected, busy, mutate
   const [size,setSize] = useState({width:800,height:550});
   const [view,setView] = useState({x:15,y:15,scale:0.6});
   const [moving,setMoving] = useState<Record<string,Point>>({});
+  const [incidentVisible,setIncidentVisible]=useState(false),[incidentIds,setIncidentIds]=useState<string[]|null>(null),[incidentDrafts,setIncidentDrafts]=useState(false),[incidentFrom,setIncidentFrom]=useState(''),[incidentTo,setIncidentTo]=useState('');
   const nodes = useMemo(() => diagramNodes(snapshot.tree,diagram),[snapshot.tree,diagram]);
   const positions = {...savedPositions(nodes),...moving};
   const audit=useAuditDiagram(snapshot,nodes.filter(n=>n.kind==='barrier').map(n=>n.id),mutate,busy);
@@ -37,10 +38,17 @@ export default function DiagramCanvas({snapshot, diagram, selected, busy, mutate
     const layout=classicLayout(nodes);
     if (await persist(Object.entries(layout).map(([id,p])=>({id,...p})))) fit(layout);
   }
-  const drawing=scene(snapshot,diagram,positions,audit.questionAnnotations);
+  const annotations:Record<string,string[]>={...audit.questionAnnotations};
+  if(incidentVisible)for(const barrier of nodes.filter(n=>n.kind==='barrier')){
+    const observations=snapshot.incidents.filter(a=>(incidentIds===null||incidentIds.includes(a.id))&&(!incidentFrom||a.metadata.date.slice(0,10)>=incidentFrom)&&(!incidentTo||a.metadata.date.slice(0,10)<=incidentTo)).flatMap(a=>a.nodes.filter(n=>n.barrierIds.includes(barrier.id)&&(incidentDrafts||a.metadata.diagrams.find(d=>d.id===n.metadata.diagramId)?.completed)).map(n=>({a,n})));
+    const counts:Record<string,number>={};for(const {n} of observations){const state=n.metadata.state||'event finding';counts[state]=(counts[state]??0)+1;}
+    annotations[barrier.id]=[...(annotations[barrier.id]??[]),...Object.entries(counts).map(([state,count])=>`Incident ${state}: ${count}`),...observations.map(({a,n})=>`${a.title}: ${n.metadata.failureShort||n.title}`)];
+  }
+  const drawing=scene(snapshot,diagram,positions,annotations);
   return <section className="diagram-area" aria-label="Diagram canvas">
     {audit.controls}
     {audit.dialog}
+    {!!snapshot.incidents.length&&<details className="incident-diagram-filter"><summary>Incident display filter</summary><label><input type="checkbox" name="show-incident-observations" checked={incidentVisible} onChange={e=>setIncidentVisible(e.target.checked)}/>Show incident observations on barriers</label><label><input type="checkbox" checked={incidentDrafts} onChange={e=>setIncidentDrafts(e.target.checked)}/>Include draft analyses</label><label>From<input type="date" value={incidentFrom} onChange={e=>setIncidentFrom(e.target.value)}/></label><label>To<input type="date" value={incidentTo} onChange={e=>setIncidentTo(e.target.value)}/></label><button onClick={()=>setIncidentIds(null)}>All incidents</button>{snapshot.incidents.map(a=><label key={a.id}><input type="checkbox" checked={incidentIds===null||incidentIds.includes(a.id)} onChange={e=>{const ids=incidentIds??snapshot.incidents.map(v=>v.id);setIncidentIds(e.target.checked?[...ids,a.id]:ids.filter(id=>id!==a.id));}}/>{a.title}</label>)}</details>}
     <div className="canvas-tools"><button disabled={busy} onClick={()=>void autoLayout()}>Auto-layout</button><button onClick={()=>fit()}>Fit</button><button aria-label="Zoom in" onClick={()=>zoom(1.2)}>＋</button><button aria-label="Zoom out" onClick={()=>zoom(1/1.2)}>−</button><button onClick={()=>setView({x:15,y:15,scale:1})}>100%</button><output aria-label="Canvas zoom">{Math.round(view.scale*100)}%</output><span>Drag shapes to move · Drag background to pan · Ctrl + wheel to zoom</span></div>
     <div ref={host} className="canvas-host" tabIndex={0} aria-label="Interactive diagram" data-view-x={view.x} data-view-y={view.y} data-view-scale={view.scale} onKeyDown={event=>{
       const delta=event.ctrlKey?200:35;
