@@ -5,6 +5,87 @@ use tauri::State;
 
 type Store<'a> = State<'a, Mutex<CaseStore>>;
 #[tauri::command]
+pub fn case_reorder_lookup(
+    state: Store<'_>,
+    id: String,
+    direction: i64,
+) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.reorder_lookup(&id, direction))
+}
+#[tauri::command]
+pub fn case_replace_preview(
+    state: Store<'_>,
+    find: String,
+    replacement: String,
+) -> Result<crate::case_tools::ReplacePreview, String> {
+    with_store(state, |s| s.replace_preview(&find, &replacement))
+}
+#[tauri::command]
+pub fn case_replace_apply(
+    state: Store<'_>,
+    find: String,
+    replacement: String,
+    signature: String,
+    selected: Vec<usize>,
+) -> Result<crate::case_tools::ToolResult, String> {
+    with_store(state, |s| {
+        s.replace_apply(&find, &replacement, &signature, &selected)
+    })
+}
+#[tauri::command]
+pub fn case_tool_undo(state: Store<'_>) -> Result<CaseSnapshot, String> {
+    with_store(state, |s| s.undo_tool())
+}
+#[tauri::command]
+pub fn case_table_export(state: Store<'_>) -> Result<crate::exchange::TableExport, String> {
+    with_store(state, |s| s.table_export())
+}
+#[tauri::command]
+pub fn case_read_table(state: Store<'_>, path: String) -> Result<Vec<u8>, String> {
+    with_store(state, |s| s.read_table(Path::new(&path)))
+}
+#[tauri::command]
+pub fn case_write_table(
+    state: Store<'_>,
+    path: String,
+    bytes: Vec<u8>,
+    signature: String,
+) -> Result<(), String> {
+    with_store(state, |s| {
+        s.write_table(Path::new(&path), &bytes, &signature)
+    })
+}
+#[tauri::command]
+pub fn case_import_preview(
+    state: Store<'_>,
+    text: String,
+) -> Result<crate::exchange::ImportPreview, String> {
+    with_store(state, |s| s.import_preview(&text))
+}
+#[tauri::command]
+pub fn case_import_apply(
+    state: Store<'_>,
+    text: String,
+    signature: String,
+) -> Result<crate::exchange::ImportResult, String> {
+    with_store(state, |s| s.import_apply(&text, &signature))
+}
+#[tauri::command]
+pub fn case_compare(state: Store<'_>, path: String) -> Result<crate::compare::Comparison, String> {
+    with_store(state, |s| s.compare_case(Path::new(&path)))
+}
+#[tauri::command]
+pub fn case_comparison_report(
+    state: Store<'_>,
+    path: String,
+    destination: String,
+    signature: String,
+) -> Result<(), String> {
+    with_store(state, |s| {
+        s.write_comparison(Path::new(&path), Path::new(&destination), &signature)
+    })
+}
+#[tauri::command]
 pub fn case_export_context(state: Store<'_>) -> Result<crate::export::ExportContext, String> {
     with_store(state, |s| s.export_context())
 }

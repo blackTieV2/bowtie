@@ -1,0 +1,15 @@
+{
+  "actor": "producer /root",
+  "result": "PASS",
+  "images": [
+    "evidence/find-replace-preview.png",
+    "evidence/full-case-comparison.png",
+    "evidence/csv-dry-run.png"
+  ],
+  "checks": [
+    "Replacement entity path/full values readable",
+    "Comparison orientation/source clear; scrollable complete field table",
+    "Import input/validation controls and scrollable dry run accessible"
+  ],
+  "notHumanApproval": true
+}

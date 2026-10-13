@@ -1,0 +1,12 @@
+{
+  "algorithm": "SHA-256",
+  "purpose": "Generated producer runtime fixtures; save/reopen and rejection equality asserted in native acceptance, not input legacy files",
+  "files": {
+    ".runtime/phase5-walkthrough/twelve-steps.sqlite": "af706aa547e7e4caa942e091878ac8c8258852cf6686ac0f5cd10107b4aad3e0",
+    ".runtime/phase5-walkthrough/phase3.sqlite": "e3c59ea189acd3a40fbaba39b48773ba67eb7efb14ae144c3c7ab37f3e504bba",
+    ".runtime/phase5-walkthrough/compare-reference.sqlite": "ff6b2f228fbdaa23c704597560617aab639c4b7b9bf7daf7d807a4564bcdbd97",
+    ".runtime/phase5-walkthrough/imported.sqlite": "5c36fdcd3cd8c3bed145bca42a43c6335f18bd090ea32a44bf1642ab802a6879",
+    ".runtime/phase5-walkthrough/spreadsheet-imported.sqlite": "dae9849d7a83e852b2ad276dd4dad8d697c8eb8d26ba92984377dfa4efe74b7f",
+    ".runtime/phase5-walkthrough/lookup-reordered.sqlite": "e426e18c30820ded05abeb20fb2c001c6e595fe2abd0273f06fcf4bcf3615e2f"
+  }
+}

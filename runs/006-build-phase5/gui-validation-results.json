@@ -1,0 +1,44 @@
+{
+  "result": "PASS",
+  "scope": "Windows native Phase 5 acceptance",
+  "twelveSteps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "phase3Regression": "PASS",
+  "findReplacePreviewPaths": true,
+  "findReplaceApplyCount": true,
+  "findReplaceSaveReopen": true,
+  "twoCaseCompareReadOnly": true,
+  "compareSaveReopen": true,
+  "csvGuiRoundTrip": true,
+  "csvStructuralByteEquality": true,
+  "csvSaveReopen": true,
+  "xlsxGuiRoundTrip": true,
+  "xlsxDeterministicBytes": true,
+  "xlsxSaveReopen": true,
+  "rejectionByteEquality": true,
+  "lookupNewChoiceAppendsAfterSparseOrders": true,
+  "lookupReorderPreservesAssignments": true,
+  "lookupSaveReopen": true,
+  "artifactHashes": {
+    "case-data.csv": "d24fdfcdbef59159f3060fda9a281b0085577033369fe1f0fb6b09a6f97a57b0",
+    "case-data-reexport.csv": "d24fdfcdbef59159f3060fda9a281b0085577033369fe1f0fb6b09a6f97a57b0",
+    "case-data.xlsx": "94b639683174258091aae295671a351573ba63555937819d243c406138788bd6",
+    "case-differences.txt": "acd06e3ae4407c3e335fddca164b8cfc98eda3fd47a92b1a5f337a9b1317bb33"
+  },
+  "manual": [
+    "Native Browse chooser",
+    "macOS/Linux native execution"
+  ]
+}

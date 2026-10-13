@@ -66,7 +66,14 @@ impl CaseStore {
             .transaction()
             .map_err(err)?;
         let id = uuid::Uuid::new_v4().to_string();
-        tx.execute("INSERT INTO entity(id,parent_id,kind,title,description,sort_order) VALUES(?,?,?,?,?,(SELECT coalesce(max(sort_order),-1)+1 FROM entity WHERE parent_id=? AND kind=?))", params![id,parent,kind,title.trim(),description,parent,kind]).map_err(err)?;
+        let order: i64 = tx
+            .query_row(
+                "SELECT coalesce(max(sort_order),-1)+1 FROM entity WHERE parent_id=? AND kind=?",
+                params![parent, kind],
+                |r| r.get(0),
+            )
+            .map_err(err)?;
+        insert_entity(&tx, &id, parent, kind, title.trim(), description, order)?;
         properties(&tx, &id, values)?;
         tx.commit().map_err(err)?;
         self.edited()
@@ -219,6 +226,22 @@ impl CaseStore {
         tx.commit().map_err(err)?;
         self.edited()
     }
+}
+pub(crate) fn insert_entity(
+    tx: &Transaction<'_>,
+    id: &str,
+    parent: &str,
+    kind: &str,
+    title: &str,
+    description: &str,
+    order: i64,
+) -> Result<()> {
+    tx.execute(
+        "INSERT INTO entity(id,parent_id,kind,title,description,sort_order) VALUES(?,?,?,?,?,?)",
+        params![id, parent, kind, title, description, order],
+    )
+    .map_err(err)?;
+    Ok(())
 }
 fn deletion_references(db: &Connection, id: &str) -> Result<Vec<String>> {
     let mut blockers = vec![];

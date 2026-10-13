@@ -7,4 +7,7 @@ loaded:
   prior_experience: []
 tool_profile: build
 live_target_verified_at: 2026-10-13
-live_target_state: Sole root; clean approved Phase 4 tip 72e9a1c; expected origin; TARGET GATE PASS.
+live_target_state: Historical Phase 4 gate; continuation gate clean feature/phase-5-case-tools at ad08c71; expected origin; TARGET GATE PASS.
+continuation_authority: Human D-007 and consolidated instruction preserved verbatim in task-packet.md
+continuation_references: [SPEC-013 sections 7.3 and 9.4 and 9.4.1 and 12.3 and 19.1-19.4, SPEC-015 edition matrix, D-007]
+validator_context: Fresh read-only context with requirements/spec citations and no producer conclusions; independent record separate

@@ -75,3 +75,16 @@ The native Phase 3 script first reruns all twelve GUI method steps, then authors
 | Original offline font/layout/branding | Standing clean-room/offline authority; SPEC-013 §7.5.3 | Bundled OFL font, local font loading/embedding, no legacy templates/assets or network services |
 
 This is the requested consolidated core case report, not a claim to replicate every historical report variant or later module. Content/schema review found no gap requiring a migration. Native chooser, cross-platform raster/Office layout and independent QA limits appear in phase-4-report.md. App-generated artifacts are separate from Word/PDF raster QA intermediates.
+
+# Phase 5 continuation — D-007
+
+| Feature | Spec authority | Implementation | Evidence |
+|---|---|---|---|
+| Validated read-only case comparison, added/removed/changed field view, textual diff report | SPEC-013 §§19.1, 19.2.2, 19.3; SPEC-015 case comparison Advanced row; human D-007 per-feature exception | `app/src-tauri/src/compare.rs`, `app/src/CaseCompare.tsx`, typed CaseStore IPC | `compare::tests`; native reference-byte/session equality and save/reopen; original parsed diff report |
+| Text find/replace preview with entity paths, individual/selected/all fields, transaction and count | SPEC-013 §§9.4–9.4.1; SPEC-015 Find & Replace one-by-one/en masse; D-007 | `case_tools.rs`, `FindReplace.tsx`, shared typed property/lookup/matrix writers | Atomic failure rollback, unchanged preview, stale/query-bound preview, individual/all tests; native preview/apply/save/reopen |
+| Original CSV/XLSX export of entities/actions, links, matrices and their dependencies | SPEC-013 §§12.3,19.3; current original-layout authority; D-007 | `exchange.rs`, `tableWorkbook.ts`, `CaseExchange.tsx`, `app/CASE-TABLE-FORMAT.md` | Native CSV/XLSX round trips, repeat workbook bytes, stdlib CSV/ZIP/XML/JSON parser equality |
+| Validate-first import, line diagnostics, dry-run counts, one CaseStore transaction with triggers | SPEC-013 §12.3; current strict duplicate rejection and transactional import authority; D-007 | Shared entity/property/lookup/matrix writers; isolated scratch preview and revalidated active apply | Bad parent/cycle/identity/kind/CSV/property/header rejection; session/saved-byte equality; structural round-trip and save/reopen |
+| Standard lookup add/edit/delete/order and assignment visibility | SPEC-013 §7.3; SPEC-015 Standard Lookup Tables Basic | `LookupManager.tsx`, `risk.rs`, existing Phase 3 validators | Sparse-order append native check, atomic move test, unchanged assigned entity identities and save/reopen |
+| Whole-operation session undo for replacement/import | SPEC-013 §§9.4.1,12.3 | Validated bounded in-memory tool checkpoint in `case_tools.rs` | Replace undo equality; stale guard and save/open/new/close invalidation; no schema additions |
+
+Comparison uses the application's original schema and stored primary-key identities. Semantic JSON comparison avoids whitespace/key-order false differences. Report export revalidates both case contents against the preview signature. No comparison merge/copy/apply path exists. AR64–AR69 document the bounded interpretations for human phase review. All Phase 5 examples and results are in `runs/006-build-phase5/`.

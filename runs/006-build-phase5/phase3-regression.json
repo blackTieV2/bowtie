@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "scope": "Windows built-app Phase 3 GUI authoring",
+  "phase2Regression": "PASS",
+  "twelveSteps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "entities": 21,
+  "matrices": 1,
+  "assessments": 4,
+  "actions": 2,
+  "softHidePreservesAssessments": true,
+  "clearAllConfirmation": true,
+  "customAxesAndYX": true,
+  "categoryRankOrder": true,
+  "effectivenessAssigned": true,
+  "typedCustomFields": true,
+  "inlineRegisterCreateEdit": true,
+  "registerSortFilter": true,
+  "saveReopenEquality": true,
+  "manual": [
+    "Native file chooser selection/cancellation",
+    "Cross-platform native builds/runs",
+    "Independent QA",
+    "Large case performance"
+  ]
+}

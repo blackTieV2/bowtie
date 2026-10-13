@@ -1,18 +1,20 @@
 run_id: 006-build-phase5
 project: bowtie
 target: C:/Users/BlackTie/Documents/GitHub/bowtie/bowtie
-status: blocked
+status: awaiting-review
 current_stage: 04-build
-current_step: edition-scope-stop
-completed_steps: [target-gate, edition-references, branch-and-packet, AR63-blocker-report]
-pending_steps: [human-scope-correction, implementation, validation, completion-push]
+current_step: phase-5-review-boundary
+completed_steps: [target-gate, AR63-scope-stop, human-D-007, consolidated-authorization, comparison, find-replace, CSV-XLSX-exchange, Standard-lookups, 37-rust-tests, frontend-build, final-windows-native-build, twelve-step-regression, native-phase5-save-reopen, artifact-parsers, independent-validator-pass, validator-defect-fixes, report-and-evidence]
+pending_steps: [implementation-commit, feature-push, human-phase5-review, documented-manual-host-checks]
 approval_required: true
-approval_status: Explicit edition stop; human scope decision required
+approval_status: Implementation and feature push authorized; D-007 approved; Phase 5 acceptance and AR64-AR69 human review pending
 actor: codex
 model: model-neutral-record
 started_at: 2026-10-13
 updated_at: 2026-10-13
 input_hashes: {manifest: runs/006-build-phase5/input-hashes.json}
 output_hashes: {manifest: runs/006-build-phase5/output-hashes.json}
-rollback_reference: 72e9a1c138b55aedd5e7979c18c4d473a5357b4a
-resume_instruction: STOP pending human scope correction; no Phase 6.
+rollback_reference: ad08c71c025cd8733e5d3a475fed855b6e717d86
+independent_validator: /root/phase5_validator
+validator_result: PASS for tested Windows scope
+resume_instruction: STOP at Phase 5 boundary pending human review. No Phase 6, main merge, deployment or release.

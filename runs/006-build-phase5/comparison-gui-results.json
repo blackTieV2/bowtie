@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "scope": "Windows native comparison checks; full Phase 5 checked separately",
+  "guiPreview": true,
+  "guiTextReport": true,
+  "unsavedCurrentCaseIncluded": true,
+  "activeSessionUnchangedByComparison": true,
+  "secondFileByteEquality": true,
+  "staleReportRejected": true,
+  "invalidSecondCaseRejected": true,
+  "reportSha256": "c9ea913dd5eb3760c52a52fafc59dd78bc4de44c1f01244f2863cd19b4ea7955",
+  "manual": [
+    "macOS/Linux native validation"
+  ]
+}

@@ -1,6 +1,9 @@
 mod case;
+mod case_tools;
 mod commands;
+mod compare;
 mod editing;
+mod exchange;
 mod export;
 #[cfg(test)]
 mod phase3_tests;
@@ -30,9 +33,20 @@ pub fn run() {
             commands::case_clear_assessments,
             commands::case_save_lookup,
             commands::case_delete_lookup,
+            commands::case_reorder_lookup,
             commands::case_custom_field,
             commands::case_export_context,
             commands::case_write_export,
+            commands::case_compare,
+            commands::case_comparison_report,
+            commands::case_replace_preview,
+            commands::case_replace_apply,
+            commands::case_tool_undo,
+            commands::case_table_export,
+            commands::case_read_table,
+            commands::case_write_table,
+            commands::case_import_preview,
+            commands::case_import_apply,
         ])
         .run(tauri::generate_context!())
         .expect("Unable to start Barrier Atlas");

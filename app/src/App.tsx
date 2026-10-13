@@ -10,6 +10,9 @@ import LookupManager from "./LookupManager";
 import ActionRegister from "./ActionRegister";
 import { fieldsFor } from "./PropertyFields";
 import ExportDialog from "./ExportDialog";
+import CaseCompare from "./CaseCompare";
+import FindReplace from "./FindReplace";
+import CaseExchange from "./CaseExchange";
 
 type FormKind = "new" | "group" | "diagram";
 type Navigation = "new" | "open" | "close" | "quit";
@@ -126,7 +129,10 @@ export default function App() {
     <aside aria-label="Case explorer"><h2>Case explorer</h2>{active ? <ul className="tree">{tree(null)}</ul> : <p className="muted">Create or open a local case.</p>}</aside>
     <main>
       {error && <p className="error" role="alert">{error}</p>}{!desktop && <p className="notice">Use the desktop app to create and open local case files.</p>}
-      {active&&<div className="workspace-tabs" aria-label="Workspace views">{[['diagram','Diagram'],['matrices','Risk matrices'],['choices','Property choices'],['actions','Action register']].map(([key,title])=><button key={key} disabled={busy} aria-pressed={view===key} onClick={()=>setView(key)}>{title}</button>)}</div>}
+      {active&&<div className="workspace-tabs" aria-label="Workspace views">{[['diagram','Diagram'],['matrices','Risk matrices'],['choices','Property choices'],['actions','Action register'],['compare','Compare cases'],['replace','Find & replace'],['exchange','CSV & spreadsheet']].map(([key,title])=><button key={key} disabled={busy} aria-pressed={view===key} onClick={()=>setView(key)}>{title}</button>)}</div>}
+      {active&&view==='compare'&&<CaseCompare key={active.path??active.tree[0]?.id} busy={busy} run={operation}/>}
+      {active&&view==='replace'&&<FindReplace key={active.path??active.tree[0]?.id} busy={busy} run={operation} mutate={mutate}/>}
+      {active&&view==='exchange'&&<CaseExchange key={active.path??active.tree[0]?.id} busy={busy} run={operation} mutate={mutate}/>}
       {active&&view==='matrices'&&<MatrixManager snapshot={active} busy={busy} error={error} mutate={mutate}/>}
       {active&&view==='choices'&&<LookupManager snapshot={active} busy={busy} error={error} mutate={mutate}/>}
       {active&&view==='actions'&&<ActionRegister snapshot={active} busy={busy} error={error} mutate={mutate}/>}

@@ -37,15 +37,15 @@ fn configured(connection: Connection) -> CaseResult<Connection> {
     }
     Ok(connection)
 }
-fn memory() -> CaseResult<Connection> {
+pub(crate) fn memory() -> CaseResult<Connection> {
     configured(Connection::open_in_memory().map_err(error_text)?)
 }
-fn read_only(path: &Path) -> CaseResult<Connection> {
+pub(crate) fn read_only(path: &Path) -> CaseResult<Connection> {
     configured(
         Connection::open_with_flags(path, OpenFlags::SQLITE_OPEN_READ_ONLY).map_err(error_text)?,
     )
 }
-fn copy_database(from: &Connection, to: &mut Connection) -> CaseResult<()> {
+pub(crate) fn copy_database(from: &Connection, to: &mut Connection) -> CaseResult<()> {
     let backup = Backup::new(from, to).map_err(error_text)?;
     match backup.step(-1).map_err(error_text)? {
         StepResult::Done => Ok(()),
@@ -63,7 +63,7 @@ fn schema_objects(db: &Connection) -> CaseResult<Vec<(String, String, String)>> 
     rows.collect::<rusqlite::Result<Vec<_>>>()
         .map_err(error_text)
 }
-fn validate(db: &Connection) -> CaseResult<()> {
+pub(crate) fn validate(db: &Connection) -> CaseResult<()> {
     let version: i64 = db
         .query_row("PRAGMA user_version", [], |r| r.get(0))
         .map_err(error_text)?;
@@ -173,6 +173,7 @@ pub(crate) struct ActiveCase {
 #[derive(Default)]
 pub struct CaseStore {
     pub(crate) active: Option<ActiveCase>,
+    pub(crate) tool_undo: Option<crate::case_tools::ToolUndo>,
 }
 
 impl CaseStore {
@@ -257,6 +258,7 @@ impl CaseStore {
             path: None,
             dirty: true,
         });
+        self.tool_undo = None;
         self.snapshot()?.ok_or_else(|| "No case is open".into())
     }
     pub fn open(&mut self, path: &Path) -> CaseResult<CaseSnapshot> {
@@ -270,6 +272,7 @@ impl CaseStore {
             path: Some(path.to_path_buf()),
             dirty: false,
         });
+        self.tool_undo = None;
         self.snapshot()?.ok_or_else(|| "No case is open".into())
     }
     pub fn save(&mut self, destination: Option<&Path>) -> CaseResult<CaseSnapshot> {
@@ -304,10 +307,12 @@ impl CaseStore {
         temporary.persist(&path).map_err(error_text)?;
         case.path = Some(path);
         case.dirty = false;
+        self.tool_undo = None;
         self.snapshot()?.ok_or_else(|| "No case is open".into())
     }
     pub fn close(&mut self) {
         self.active = None;
+        self.tool_undo = None;
     }
     pub fn add_group(&mut self, parent: &str, title: &str) -> CaseResult<CaseSnapshot> {
         let case = self.active.as_mut().ok_or("No case is open")?;

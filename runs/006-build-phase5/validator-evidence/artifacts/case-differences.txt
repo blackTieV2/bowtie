@@ -1,0 +1,15 @@
+{
+  "leftTitle": "Transfer safety review",
+  "rightTitle": "Transfer safety review",
+  "signature": "e6509ad03fd49ec6e03ceef4c6c1ef34f36b5abbe09115ef1f00ad779a886e90",
+  "differences": [
+    {
+      "table": "entity",
+      "key": "[\"0598128c-111e-43f0-b43c-b47d8b5bfaf0\"]",
+      "field": "title",
+      "status": "changed",
+      "before": "Scheduled hose inspection",
+      "after": "Pre-transfer hose inspection"
+    }
+  ]
+}
